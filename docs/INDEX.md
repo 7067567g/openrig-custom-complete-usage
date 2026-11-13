@@ -11,6 +11,7 @@
 | **Project-local governance layers** | [OPENRIG-WORKFLOW-GUIDE.md §0.2](OPENRIG-WORKFLOW-GUIDE.md) | [OPENRIG-WORKFLOW-GUIDE.zh-CN.md §0.2](OPENRIG-WORKFLOW-GUIDE.zh-CN.md) |
 | **Sanitized process archive** | [../process/README.md](../process/README.md) | [../process/README.md](../process/README.md) |
 | **Benchmark status** | [../process/BENCHMARK-STATUS.md](../process/BENCHMARK-STATUS.md) | [../process/BENCHMARK-STATUS.md](../process/BENCHMARK-STATUS.md) |
+| **Lead onboarding guide** | [../tools/lead-guide/README.md](../tools/lead-guide/README.md) | [../tools/lead-guide/README.md](../tools/lead-guide/README.md) |
 | Publishing | [PUBLISHING.md](PUBLISHING.md) | [PUBLISHING.zh-CN.md](PUBLISHING.zh-CN.md) |
 | Versioning | [VERSIONING.md](VERSIONING.md) | [VERSIONING.zh-CN.md](VERSIONING.zh-CN.md) |
 | Environment | [ENVIRONMENT.md](ENVIRONMENT.md) | [ENVIRONMENT.zh-CN.md](ENVIRONMENT.zh-CN.md) |

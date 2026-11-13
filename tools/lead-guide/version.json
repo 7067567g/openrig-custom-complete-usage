@@ -1,0 +1,17 @@
+{
+  "schema": "openrig-lead-guide-version/v1",
+  "guideVersion": "1.0.1",
+  "openrigGuideVersion": "0.1.12",
+  "openrigGuideCommit": "c1d9c11ef60a891745c2f5b02647b755a140c779",
+  "mainDoc": "docs/OPENRIG-WORKFLOW-GUIDE.zh-CN.md",
+  "mainDocSha256": "c6fcab4b0c11befb8457e55ff0e7a8bd06bae66e0cac866cffb7234c08e9871c",
+  "contentIndex": "tools/lead-guide/content-index.json",
+  "contentIndexSha256": "8d7b96eb3602341a041974bf7396d7327a3f4d28e8b0f433debbdbedb6c9d713",
+  "persona": "tools/lead-guide/persona/LEAD-ONBOARDING.md",
+  "stages": "tools/lead-guide/stages.json",
+  "reviewer": "dsh --profile headless",
+  "finalStrings": {
+    "pass": "引导完成",
+    "rerun": "请重新运行引导"
+  }
+}

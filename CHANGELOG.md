@@ -13,6 +13,11 @@
   cost, latency, or model-quality result is claimed.
 - Added a public index link and validation note for the process archive and
   benchmark status.
+- Added `tools/lead-guide/`: a staged OpenRig Lead onboarding guide with a
+  headless reviewer, exact `引导完成` / `请重新运行引导` outcomes, version/hash
+  drift blocking, and 17 local tests wired into `make test`.
+- `make bench-smoke` is now budget-gated and prints `BENCHMARK NOT RUN` instead
+  of invoking the paid benchmark harness.
 
 ## 0.1.12
 

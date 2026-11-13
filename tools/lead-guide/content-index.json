@@ -1,0 +1,71 @@
+{
+  "schema": "openrig-lead-guide-content-index/v1",
+  "openrigGuide": {
+    "version": "0.1.12",
+    "mainDoc": "docs/OPENRIG-WORKFLOW-GUIDE.zh-CN.md",
+    "mainDocSha256": "c6fcab4b0c11befb8457e55ff0e7a8bd06bae66e0cac866cffb7234c08e9871c",
+    "commitAtPin": "c1d9c11ef60a891745c2f5b02647b755a140c779"
+  },
+  "entries": [
+    {
+      "id": "layers",
+      "title": "三层模型",
+      "path": "docs/OPENRIG-WORKFLOW-GUIDE.zh-CN.md#2-三层模型",
+      "mustKnow": "SCTG 是协议/kit；workflow-group 是控制面；OpenRig 是执行面。"
+    },
+    {
+      "id": "units",
+      "title": "round 与 step",
+      "path": "docs/OPENRIG-WORKFLOW-GUIDE.zh-CN.md#3-llm-最容易混淆的术语",
+      "mustKnow": "round 是控制面循环；step 是 OpenRig packet。packet done 不等于验收通过。"
+    },
+    {
+      "id": "clarification",
+      "title": "澄清门",
+      "path": "docs/OPENRIG-WORKFLOW-GUIDE.zh-CN.md#01-怎么用一句话要求",
+      "mustKnow": "开始前一次合并澄清；开始后零提问；阻塞写 BLOCKED/NEED_MAIN。"
+    },
+    {
+      "id": "governance",
+      "title": "四个治理维度",
+      "path": "docs/OPENRIG-WORKFLOW-GUIDE.zh-CN.md#02-项目侧治理层不是-openrig-内核",
+      "mustKnow": "总指挥部管轮次/冲突；总参谋部管思考/评估/咨询；单独轮管一次性受控工作；医护中心管伤员/坏数据。"
+    },
+    {
+      "id": "aliases",
+      "title": "别名与语义匹配",
+      "path": "docs/OPENRIG-WORKFLOW-GUIDE.zh-CN.md#021-常见误用别名与含义匹配",
+      "mustKnow": "组织部=总指挥部；按职责维度匹配，不按名字猜；匹配不到先问一次，不新建第五层。"
+    },
+    {
+      "id": "safety",
+      "title": "安全边界",
+      "path": "docs/OPENRIG-WORKFLOW-GUIDE.zh-CN.md#8-preflightbridgeteardown",
+      "mustKnow": "发布/删除/重写历史/teardown 必须授权；不泄露 token、原始聊天、截图、设备标识、个人路径。"
+    },
+    {
+      "id": "memory",
+      "title": "内存与并发",
+      "path": "docs/MEMORY-SAFETY.zh-CN.md",
+      "mustKnow": "用 cgroup MemoryHigh/MemoryMax/MemorySwapMax；不是 ulimit；避免 broad scan 放大 page cache。"
+    },
+    {
+      "id": "patch",
+      "title": "补丁提案边界",
+      "path": "process/governance/medical-center-plan.md",
+      "mustKnow": "医护中心只生成 PROPOSE_ONLY 补丁；应用必须另开修复轮，经 QA/MAIN。"
+    },
+    {
+      "id": "benchmark",
+      "title": "Benchmark 状态",
+      "path": "process/BENCHMARK-STATUS.md",
+      "mustKnow": "benchmark 因预算未跑；不声称 token/成本、延迟/吞吐、模型质量结果。"
+    },
+    {
+      "id": "version",
+      "title": "版本漂移优先",
+      "path": "tools/lead-guide/version.json",
+      "mustKnow": "主文档版本或哈希变化时，先更新引导文件版本，再继续引导。"
+    }
+  ]
+}

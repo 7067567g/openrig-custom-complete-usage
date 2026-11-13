@@ -8,9 +8,10 @@ check:
 > $(PY) scripts/check_repo.py
 > $(PY) scripts/check_content.py
 > $(PY) scripts/check_sanitization.py
-> $(PY) -m compileall -q scripts sctg-kit tests
+> $(PY) -m compileall -q scripts sctg-kit tests tools/lead-guide
 
 test: check
+> $(PY) tools/lead-guide/tests/test_lead_guide.py
 > $(PYTEST) tests -q
 
 demo:
@@ -35,7 +36,9 @@ smoke:
 > $(PY) scripts/openrig_smoke.py --rounds 3
 
 bench-smoke:
-> $(PY) benchmark/harness/run_benchmark.py
+> @echo "BENCHMARK NOT RUN: budget unavailable; see process/BENCHMARK-STATUS.md"
+> @echo "The real harness is benchmark/harness/run_benchmark.py; do not run it without an explicit budget."
+> @exit 0
 
 clean:
 > find . -type d -name '__pycache__' -prune -exec rm -rf {} +
