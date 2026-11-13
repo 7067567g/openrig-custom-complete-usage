@@ -1,4 +1,4 @@
-# OpenRig Custom Complete Usage
+# OpenRig Personal Use and Workflow
 
 **A complete, runnable example of SCTG + workflow-group multi-round orchestration + OpenRig hybrid execution.**
 
