@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.10
+
+- Added bilingual `docs/LLM-MISREAD-QUICKREF.md` / `.zh-CN.md`: common user
+  misreads, default interpretation, deviation thresholds, and concrete
+  clarification templates.
+- Linked the quick reference from README, the OpenRig + workflow guide, and the
+  docs index.
+
+
 ## 0.1.9
 
 - Added a “how to ask for this” phrase table to the OpenRig + workflow guide

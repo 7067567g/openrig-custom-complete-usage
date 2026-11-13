@@ -12,6 +12,7 @@
 ## 文档
 
 - **OpenRig + workflow 完整指引：** [`docs/OPENRIG-WORKFLOW-GUIDE.zh-CN.md`](docs/OPENRIG-WORKFLOW-GUIDE.zh-CN.md)
+- **LLM 常见用户误读速查：** [`docs/LLM-MISREAD-QUICKREF.zh-CN.md`](docs/LLM-MISREAD-QUICKREF.zh-CN.md)
   - 默认说法：**“用 OpenRig 跑工作流。”** 最精确：**“用 OpenRig 执行 SCTG 工作流，单线跑。”**
 
 - 中英双语索引：[`docs/INDEX.md`](docs/INDEX.md)

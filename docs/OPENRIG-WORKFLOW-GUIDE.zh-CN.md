@@ -17,6 +17,8 @@
 
 只记一句话：**round 属于 workflow-group；step 和 queue packet 属于 OpenRig。**
 
+> 常见用户误读和“什么时候该问”的清单见 [`LLM-MISREAD-QUICKREF.zh-CN.md`](LLM-MISREAD-QUICKREF.zh-CN.md)。
+
 ## 0.1 怎么用一句话要求
 
 用带意图的短句。只说“使用 OpenRig”太容易歧义——它可能被理解成“建个 rig”、

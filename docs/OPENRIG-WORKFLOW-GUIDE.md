@@ -19,6 +19,8 @@ different layers, and because LLMs reliably conflate them.
 If you remember only one thing: **rounds belong to workflow-group; steps and
 queue packets belong to OpenRig.**
 
+> For a checklist of common user misreads and when to ask, see [`LLM-MISREAD-QUICKREF.md`](LLM-MISREAD-QUICKREF.md).
+
 ## 0.1 How to ask for this (short phrases)
 
 Use an intent-specific phrase. A bare “use OpenRig” is ambiguous — it can mean
