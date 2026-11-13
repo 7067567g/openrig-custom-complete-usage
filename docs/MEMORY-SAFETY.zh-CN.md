@@ -42,6 +42,25 @@ systemd-run --user --scope --quiet \
   -- dsh --profile headless "run one bounded task"
 ```
 
+## 长驻服务
+
+用户级 drop-in 可以限制共享的 agent host 和 app service：
+
+```text
+agent host:    MemoryHigh=2500M  MemoryMax=4G    MemorySwapMax=1G
+app service:   MemoryHigh=512M   MemoryMax=1G    MemorySwapMax=256M
+```
+
+运行时应用，无需重启服务：
+
+```bash
+systemctl --user set-property --runtime <service> \
+  MemoryHigh=2500M MemoryMax=4G MemorySwapMax=1G
+```
+
+这些限制是用户级全局的，所有使用该服务的 workspace 共享同一个上限。每个 run
+的 seat 仍需要自己的 scope 限制。
+
 ## Guard 示例
 
 通用 guard 在 [`examples/memory-limits/`](../examples/memory-limits/)，只演示 cgroup 限流路径；阈值需要按你的主机复核。

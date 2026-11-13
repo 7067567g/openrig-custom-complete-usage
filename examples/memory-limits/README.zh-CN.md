@@ -5,6 +5,7 @@
 Agent seat 的 cgroup 限制和非破坏性内存守护参考。
 
 ```text
+服务 drop-in：`agent-host-memory.conf`、`app-service-memory.conf`
 seat-launch.example.sh   systemd-run --scope，5G/6G/1G
 guard.example.sh         对 dsh-terminal scope 做 dry-run 限流
 ```

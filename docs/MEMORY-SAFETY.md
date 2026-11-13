@@ -47,6 +47,25 @@ systemd-run --user --scope --quiet \
   -- dsh --profile headless "run one bounded task"
 ```
 
+## Long-running services
+
+User-level drop-ins can bound the shared agent host and app service:
+
+```text
+agent host:    MemoryHigh=2500M  MemoryMax=4G    MemorySwapMax=1G
+app service:   MemoryHigh=512M   MemoryMax=1G    MemorySwapMax=256M
+```
+
+Apply at runtime without restarting the service:
+
+```bash
+systemctl --user set-property --runtime <service> \
+  MemoryHigh=2500M MemoryMax=4G MemorySwapMax=1G
+```
+
+These limits are global to the user-level service, so all workspaces using that
+service share the same ceiling. A per-run seat still needs its own scope limit.
+
 ## Guard example
 
 A generic guard is in [`examples/memory-limits/`](../examples/memory-limits/).

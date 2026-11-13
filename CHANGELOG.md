@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.6
+
+- Added long-running service memory guidance: shared agent host and app service
+  drop-ins.
+- Added `examples/memory-limits/agent-host-memory.conf` and
+  `app-service-memory.conf`.
+- Clarified global user-service limits vs per-run seat scopes.
+- Tests: 154 passed, 1 skipped.
+
+
 ## 0.1.5
 
 - Added `docs/MEMORY-SAFETY.md` + Chinese counterpart: cgroup semantics,
