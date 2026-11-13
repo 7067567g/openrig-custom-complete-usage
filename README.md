@@ -8,7 +8,7 @@ This repository is the "full usage" companion to the distilled
 - `SCTG-public` = the small, stable kit: task card, gates, submission schema, ledger, minimal examples.
 - **this repository** = the operational layer: roles, multi-round state machine, templates, headless adapters, OpenRig preflight/render/bridge, and end-to-end examples.
 
-> Status: release candidate. 142 workflow/adapter tests pass; three independent OpenRig
+> Status: release candidate. 146 workflow/adapter tests pass; twelve independent OpenRig
 > bundles passed render + bridge doctor + `rig workflow validate` + `rig up --plan`.
 > No live 5-seat execution is claimed yet; see [`VALIDATION.md`](VALIDATION.md).
 

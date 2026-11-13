@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: repo-check
+        name: repo hygiene
+        entry: python3 scripts/check_repo.py
+        language: system
+        pass_filenames: false

@@ -8,4 +8,4 @@
 - Added SCTG reference kit under `sctg-kit/`.
 - Added local multi-round and OpenRig minimal examples.
 - Added docs for quickstart, architecture, multi-round, OpenRig, publishing.
-- Tests: 142 passed, 1 skipped in the local validation environment.
+- Tests: 146 passed, 1 skipped in the local validation environment.

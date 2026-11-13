@@ -1,6 +1,6 @@
 # openrig-workflow-master — OpenRig 混合编排母版
 
-版本：`1.2.0`（见 `VERSION` / `CHANGELOG.md` / [`validation/v1.2.0/RELEASE.md`](validation/v1.2.0/RELEASE.md)）
+版本：`1.2.0`（见 `VERSION` / `CHANGELOG.md` / [`validation/v1.2.0/RELEASE.md`](../../../VALIDATION.md)）
 
 ## 是什么
 
@@ -10,7 +10,7 @@
 - OpenRig：rig、seat、queue、workflow、transcript、恢复；
 - `render_master.py`：每个 run 生成唯一、自包含的 OpenRig bundle + bridge。
 
-详细设计见 [`ARCHITECTURE.md`](ARCHITECTURE.md)；**进入与调用先看 [`ENTRYPOINTS.md`](ENTRYPOINTS.md)**；v1.2.0 发布验证见 [`validation/v1.2.0/RELEASE.md`](validation/v1.2.0/RELEASE.md)；v1.1.0 自优化验证见 [`validation/v1.1.0/`](validation/v1.1.0/)；最终基线见 `BASELINE-post.sha256`。
+详细设计见 [`ARCHITECTURE.md`](ARCHITECTURE.md)；**进入与调用先看 [`ENTRYPOINTS.md`](ENTRYPOINTS.md)**；v1.2.0 发布验证见 [`validation/v1.2.0/RELEASE.md`](../../../VALIDATION.md)；v1.1.0 自优化验证见 [`validation/v1.1.0/`](../../../VALIDATION.md)；最终基线见 `BASELINE-post.sha256`。
 
 ## v1.1.0 自优化新增
 
@@ -25,7 +25,7 @@
 - **有界 QA→TDO 返工边**：workflow 模板改为分支专属 QA（`qa_opencode` / `qa_dsh` → `qa_join` → `close_round`）。各分支 `next_hop.on.failed` **静态**回边到本分支 TDO，失败可回到正确 TDO 并再次进入该分支 QA；只用既有 `next_hop.on` + `loop_guards.max_hops`，不新增引擎字段/API。
 - **doctor 兼容**：v2 正例 PASS；绝对 `workflowSpec`/绝对 `bundleDir`/逃逸 `rigSpec` 等负例 rc=1 并指名字段；**v1 legacy bridge 仍只读兼容**（给出迁移提示，不静默改写）。
 - **pytest 前置**：全仓测试全绿需 **`rig` 与 `node` 均可解析**。无 `rig`（保留 `node`，CI 等价）→ 137 passed + 2 skipped / rc=0；缺 `node` → 135/4；两者皆缺 → 133/6。M1 结论必须连同环境陈述。
-- 发布证据与已知限制见 [`validation/v1.2.0/RELEASE.md`](validation/v1.2.0/RELEASE.md)。
+- 发布证据与已知限制见 [`validation/v1.2.0/RELEASE.md`](../../../VALIDATION.md)。
 
 ## 目录
 

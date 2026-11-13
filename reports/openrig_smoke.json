@@ -1,0 +1,150 @@
+{
+  "rounds": 12,
+  "passed": 12,
+  "results": [
+    {
+      "round": 1,
+      "runId": "smoke-001",
+      "port": 47901,
+      "render": 0,
+      "bridgeDoctor": 0,
+      "bridgeDoctorPass": true,
+      "workflowValidateRc": 0,
+      "workflowOk": true,
+      "upPlanRc": 0,
+      "upPlanStatus": "planned"
+    },
+    {
+      "round": 2,
+      "runId": "smoke-002",
+      "port": 47902,
+      "render": 0,
+      "bridgeDoctor": 0,
+      "bridgeDoctorPass": true,
+      "workflowValidateRc": 0,
+      "workflowOk": true,
+      "upPlanRc": 0,
+      "upPlanStatus": "planned"
+    },
+    {
+      "round": 3,
+      "runId": "smoke-003",
+      "port": 47903,
+      "render": 0,
+      "bridgeDoctor": 0,
+      "bridgeDoctorPass": true,
+      "workflowValidateRc": 0,
+      "workflowOk": true,
+      "upPlanRc": 0,
+      "upPlanStatus": "planned"
+    },
+    {
+      "round": 4,
+      "runId": "smoke-004",
+      "port": 47904,
+      "render": 0,
+      "bridgeDoctor": 0,
+      "bridgeDoctorPass": true,
+      "workflowValidateRc": 0,
+      "workflowOk": true,
+      "upPlanRc": 0,
+      "upPlanStatus": "planned"
+    },
+    {
+      "round": 5,
+      "runId": "smoke-005",
+      "port": 47905,
+      "render": 0,
+      "bridgeDoctor": 0,
+      "bridgeDoctorPass": true,
+      "workflowValidateRc": 0,
+      "workflowOk": true,
+      "upPlanRc": 0,
+      "upPlanStatus": "planned"
+    },
+    {
+      "round": 6,
+      "runId": "smoke-006",
+      "port": 47906,
+      "render": 0,
+      "bridgeDoctor": 0,
+      "bridgeDoctorPass": true,
+      "workflowValidateRc": 0,
+      "workflowOk": true,
+      "upPlanRc": 0,
+      "upPlanStatus": "planned"
+    },
+    {
+      "round": 7,
+      "runId": "smoke-007",
+      "port": 47907,
+      "render": 0,
+      "bridgeDoctor": 0,
+      "bridgeDoctorPass": true,
+      "workflowValidateRc": 0,
+      "workflowOk": true,
+      "upPlanRc": 0,
+      "upPlanStatus": "planned"
+    },
+    {
+      "round": 8,
+      "runId": "smoke-008",
+      "port": 47908,
+      "render": 0,
+      "bridgeDoctor": 0,
+      "bridgeDoctorPass": true,
+      "workflowValidateRc": 0,
+      "workflowOk": true,
+      "upPlanRc": 0,
+      "upPlanStatus": "planned"
+    },
+    {
+      "round": 9,
+      "runId": "smoke-009",
+      "port": 47909,
+      "render": 0,
+      "bridgeDoctor": 0,
+      "bridgeDoctorPass": true,
+      "workflowValidateRc": 0,
+      "workflowOk": true,
+      "upPlanRc": 0,
+      "upPlanStatus": "planned"
+    },
+    {
+      "round": 10,
+      "runId": "smoke-010",
+      "port": 47910,
+      "render": 0,
+      "bridgeDoctor": 0,
+      "bridgeDoctorPass": true,
+      "workflowValidateRc": 0,
+      "workflowOk": true,
+      "upPlanRc": 0,
+      "upPlanStatus": "planned"
+    },
+    {
+      "round": 11,
+      "runId": "smoke-011",
+      "port": 47911,
+      "render": 0,
+      "bridgeDoctor": 0,
+      "bridgeDoctorPass": true,
+      "workflowValidateRc": 0,
+      "workflowOk": true,
+      "upPlanRc": 0,
+      "upPlanStatus": "planned"
+    },
+    {
+      "round": 12,
+      "runId": "smoke-012",
+      "port": 47912,
+      "render": 0,
+      "bridgeDoctor": 0,
+      "bridgeDoctorPass": true,
+      "workflowValidateRc": 0,
+      "workflowOk": true,
+      "upPlanRc": 0,
+      "upPlanStatus": "planned"
+    }
+  ]
+}

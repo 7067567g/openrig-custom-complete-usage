@@ -1,3 +1,4 @@
-# workflow-group 本地/CI 开发依赖
-openpyxl>=3.1,<4
+-r requirements.txt
 pytest>=8,<10
+ruff>=0.6
+mypy>=1.10
