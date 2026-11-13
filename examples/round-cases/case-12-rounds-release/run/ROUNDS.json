@@ -1,0 +1,78 @@
+{
+  "case": "case-12-rounds-release",
+  "goal": "Prepare a release over 12 rounds",
+  "rounds": [
+    {
+      "round": 1,
+      "action": "freeze scope",
+      "evidence": "evidence/round-1.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 2,
+      "action": "verify version consistency",
+      "evidence": "evidence/round-2.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 3,
+      "action": "audit docs links",
+      "evidence": "evidence/round-3.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 4,
+      "action": "run example demo",
+      "evidence": "evidence/round-4.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 5,
+      "action": "run sanitization scan",
+      "evidence": "evidence/round-5.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 6,
+      "action": "verify OpenRig render",
+      "evidence": "evidence/round-6.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 7,
+      "action": "verify bridge doctor",
+      "evidence": "evidence/round-7.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 8,
+      "action": "review release notes",
+      "evidence": "evidence/round-8.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 9,
+      "action": "check CI matrix",
+      "evidence": "evidence/round-9.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 10,
+      "action": "prepare tag checklist",
+      "evidence": "evidence/round-10.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 11,
+      "action": "run final smoke",
+      "evidence": "evidence/round-11.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 12,
+      "action": "close release case",
+      "evidence": "evidence/round-12.log",
+      "verdict": "PASS"
+    }
+  ]
+}

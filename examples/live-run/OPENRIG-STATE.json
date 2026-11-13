@@ -1,0 +1,89 @@
+{
+  "instanceId": "01M7965BP7Y917J4CDAG6TDX4M",
+  "workflowName": "content-audit",
+  "workflowVersion": "1",
+  "createdBySession": "main-analyst@content-audit-analyst",
+  "createdAt": "2026-11-13T00:50:45.063Z",
+  "status": "completed",
+  "currentFrontier": [],
+  "currentStepId": null,
+  "hopCount": 0,
+  "fallbackSynthesis": null,
+  "lastContinuationDecision": {
+    "exit": "done",
+    "actorSession": "main-analyst@content-audit-analyst",
+    "closedPacket": "qitem-20261113005045-095d7359",
+    "nextPacket": null,
+    "resultNote": "Report delivered: READY WITH GAPS; top 5 gaps vs SCTG-public, P0/P1/P2 classification, file-level recommendations, sanitization risks. Only reports/openrig_analyst_report.md added.",
+    "blockedOn": null,
+    "currentStep": "audit",
+    "branchTaken": null
+  },
+  "completedAt": "2026-11-13T00:50:57.756Z",
+  "version": 2,
+  "resumeCount": 0,
+  "hopsBaseline": 0,
+  "boundRig": "content-audit-analyst",
+  "lifecycleOperationKey": null,
+  "compiledInputDigest": null,
+  "lifecycleBinding": null,
+  "scope": null,
+  "deadline": {
+    "state": "healthy",
+    "evidence": null
+  },
+  "guidance": {
+    "state": "unselected",
+    "selectionSource": null,
+    "catalogSource": null,
+    "catalogPath": null,
+    "catalogHash": null,
+    "sources": [],
+    "position": "UNKNOWN: component position is not authored. Exact owner matches establish relevance, not a stage; choose from selected components and explicit edges using current evidence. Array order is presentation only.",
+    "ownerSession": null,
+    "unknowns": [],
+    "expansionCommand": "rig workflow guidance '01M7965BP7Y917J4CDAG6TDX4M' --full",
+    "lines": [
+      "Workflow method: No SDLC composition selected in the available authored context.",
+      "Workflow method: Expand relevant teaching: rig workflow guidance '01M7965BP7Y917J4CDAG6TDX4M' --full; select another with --component <id>. Read authored caveats and edges before adapting; advice grants no extra assignment."
+    ]
+  },
+  "exceptionReadiness": {
+    "scope": "future-occurrences",
+    "posture": "advisory",
+    "selection": {
+      "state": "missing",
+      "role": null,
+      "source": "<workflow-spec>#workflow.exception_routing.orchestrator_role",
+      "entryRole": "analyst"
+    },
+    "routes": [
+      {
+        "exceptionClass": "unmapped_failed",
+        "state": "registry-unavailable",
+        "roleResolution": "missing-selection",
+        "destinationSession": null,
+        "position": "orchestrator",
+        "resolvedVia": "engine-default",
+        "identity": "unverified",
+        "message": "no human configured yet — register one: rig gateway human add <entityId> --display-name … --binding … --delivery-class …"
+      },
+      {
+        "exceptionClass": "stuck_overdue",
+        "state": "registry-unavailable",
+        "roleResolution": "missing-selection",
+        "destinationSession": null,
+        "position": "orchestrator",
+        "resolvedVia": "engine-default",
+        "identity": "unverified",
+        "message": "no human configured yet — register one: rig gateway human add <entityId> --display-name … --binding … --delivery-class …"
+      }
+    ],
+    "nextAction": "A defined entry/ordinary role does not select exception ownership. Select the intended declared role at <workflow-spec>#workflow.exception_routing.orchestrator_role. After a source correction, inspect rig workflow revise 01M7965BP7Y917J4CDAG6TDX4M and deliberately apply its compatible proposal. Editing a file does not change the running owner. Existing exception obligations keep their owners."
+  },
+  "exceptionObligations": [],
+  "frontierPackets": [],
+  "failureOccurrences": [],
+  "unknowns": [],
+  "boundaryObligations": []
+}

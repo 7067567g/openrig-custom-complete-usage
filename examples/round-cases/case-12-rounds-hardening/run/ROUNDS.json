@@ -1,0 +1,78 @@
+{
+  "case": "case-12-rounds-hardening",
+  "goal": "Harden a small service over 12 rounds",
+  "rounds": [
+    {
+      "round": 1,
+      "action": "stabilize input validation",
+      "evidence": "evidence/round-1.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 2,
+      "action": "add retry/backoff",
+      "evidence": "evidence/round-2.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 3,
+      "action": "tighten evidence capture",
+      "evidence": "evidence/round-3.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 4,
+      "action": "reduce flaky tests",
+      "evidence": "evidence/round-4.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 5,
+      "action": "document failure modes",
+      "evidence": "evidence/round-5.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 6,
+      "action": "add rollback drill",
+      "evidence": "evidence/round-6.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 7,
+      "action": "review scope boundaries",
+      "evidence": "evidence/round-7.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 8,
+      "action": "harden CI gate",
+      "evidence": "evidence/round-8.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 9,
+      "action": "compress duplicated checks",
+      "evidence": "evidence/round-9.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 10,
+      "action": "verify idempotency",
+      "evidence": "evidence/round-10.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 11,
+      "action": "run close lint",
+      "evidence": "evidence/round-11.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 12,
+      "action": "write final handoff",
+      "evidence": "evidence/round-12.log",
+      "verdict": "PASS"
+    }
+  ]
+}

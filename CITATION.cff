@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "OpenRig Custom Complete Usage — SCTG complete usage"
+message: "If you use this reference implementation, cite the repository and version tag."
+type: software
+authors:
+  - name: "SCTG contributors"
+repository-code: "https://github.com/7067567g/openrig-custom-complete-usage"
+license: Apache-2.0
+version: 0.1.0
+date-released: "2026-11-13"

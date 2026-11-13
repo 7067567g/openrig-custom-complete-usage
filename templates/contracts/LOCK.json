@@ -1,0 +1,38 @@
+{
+  "baseMaster": {
+    "files": {
+      "WORKFLOW.md": "826646449176f283860fa37d4f81b8e1ae8eb2c0dad51cb40a2c17590bc196f6",
+      "roles/MAIN.md": "71e6f819e8eb7dda24b88fe0e535a6873e568d8bbb4c231623a4cafe2ec98c72",
+      "roles/PMO.md": "4adeb93ec6293d8d1f1ea0786e1e73929f4e1ae0c9e4578b4292964208fac407",
+      "roles/QA.md": "6941f1e8f043d233fd765e4d544fdf4766fc3b815bc42ee184a16e60879c58ee",
+      "roles/SAFETY.md": "7d60f20acec1ab6258b925b70cd32feef670a34d8870c388718dab9c9f1f46fb",
+      "roles/TDO.md": "007824bec0a39156fbd088dbe72c13dc7201602d66175e4c54053e4dc85a644a",
+      "roles/common-contract.md": "9b8290ee41ab490b578550f433a6413d19648e87d3ed7f5362c84bfe76039bdf",
+      "templates/DECISIONS.md": "168d711981435f84750a397c0d6046e6b4b59887d323c2fd0e6ebb5dd438adc3",
+      "templates/ISSUES.xlsx": "732b2613218b2b7b69ddac0d396ad30cf23c4914f64a9d36712f78285b88f302",
+      "templates/PROJECT.md": "2cb1407fb1e9f1fdbe333d17f147f304b5494dd77ee40a3da6b6ec62f983a713",
+      "templates/STATUS-Round-n.md": "aee31c7fab0a1a112744bbd10290651b4e5066f522bf82a2f7307d9a464a2949"
+    },
+    "id": "workflow-group-base",
+    "version": "1.2.0"
+  },
+  "contractSet": {
+    "files": {
+      "BASE-MASTER.md": "bf7b6a90675217b7fbc8e86bea85feb9df33fdbc836ace27ef9980d904aca25c",
+      "FREEZE-NOTES.md": "fb3d81cdd5e59262c35e027dc18367400c41856f06c5e4c2db75443dba3b18f7",
+      "README.md": "8bff99afec3262136978a7a31dee5d60e07e175d2e6dcb557531fbf6c30edb7f",
+      "VERSION": "59854984853104df5c353e2f681a15fc7924742f9a2e468c29af248dce45ce03",
+      "_shared/PLAN-GATE.md": "d09fea278322a2961538d5898283ca01ce4e6998d6f33f4691af09d963b482e7",
+      "_shared/VERDICT.md": "cfb41e5762da959ce4a1c1186fcc88704d64b3788ac54857bb30ad403672d3dc",
+      "architecture/CONTRACT.md": "0df13977cc823359571950c35b4d3eca947d2f4e9d062d1ab8307f7ac903061f",
+      "audit/CONTRACT.md": "8f0bcad0441fbda7a6a7b2e3b355c6991466429b48c0f542776911f74feec9c8",
+      "diff/CONTRACT.md": "e50ccb912f6651ac9a9006f8ee89f719f556f8f68e1b2e808326ce74c550b405",
+      "optimize/CONTRACT.md": "e8fae2a4b01cc5256da38f5c6f3364862befc47441dc09e7a6c5cb3c9755d4e6",
+      "research/CONTRACT.md": "d3f9f54ed5dfbcfe8e2231ac3cf8e4d9f2483cd13e89d81eca6b98ef0fd5c58e",
+      "strategy/CONTRACT.md": "e68ba44c48bb3672bb08073f247525ddb2729ec02586f6fc4bc3eb655946baaf",
+      "verify/CONTRACT.md": "3c54ad9e83c9a062f76d987188a0a230e8394df4cc79fd5c12238f9b1d95285f"
+    },
+    "version": "1.0.0"
+  },
+  "lockVersion": 1
+}

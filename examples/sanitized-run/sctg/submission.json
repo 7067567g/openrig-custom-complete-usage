@@ -1,0 +1,8 @@
+{
+  "task_id": "demo-run",
+  "attempt": 1,
+  "summary": "Added a feature and one focused test.",
+  "changed_files": ["src/feature.py", "tests/test_feature.py"],
+  "test_command": "python3 -m pytest tests/test_feature.py -q",
+  "evidence": ["evidence/ws-1-test.log"]
+}

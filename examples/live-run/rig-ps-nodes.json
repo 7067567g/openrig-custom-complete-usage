@@ -1,0 +1,25 @@
+[
+  {
+    "rigId": "01M79627JMK2G3CD837PCJNZEW",
+    "rigName": "content-audit-analyst",
+    "logicalId": "main.analyst",
+    "canonicalSessionName": "main-analyst@content-audit-analyst",
+    "hostSelfId": "host-ccdd697a",
+    "runtime": "opencode",
+    "model": "deepseek/deepseek-flash",
+    "sessionStatus": "running",
+    "startupStatus": "ready",
+    "oriented": "n-a",
+    "lifecycleState": "running",
+    "agentActivity": {
+      "state": "unknown"
+    },
+    "hasAssignedWork": false,
+    "assignedWorkCount": 0,
+    "pendingWorkCount": 0,
+    "resumeType": null,
+    "resumeTokenPresent": false,
+    "lastActivity": "2026-11-13T00:52:21.539Z",
+    "intentionallyStopped": false
+  }
+]

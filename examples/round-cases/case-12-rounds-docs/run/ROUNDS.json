@@ -1,0 +1,78 @@
+{
+  "case": "case-12-rounds-docs",
+  "goal": "Improve bilingual docs over 12 rounds",
+  "rounds": [
+    {
+      "round": 1,
+      "action": "inventory EN/ZH pairs",
+      "evidence": "evidence/round-1.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 2,
+      "action": "fix quickstart",
+      "evidence": "evidence/round-2.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 3,
+      "action": "fix architecture",
+      "evidence": "evidence/round-3.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 4,
+      "action": "fix multi-round guide",
+      "evidence": "evidence/round-4.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 5,
+      "action": "fix OpenRig guide",
+      "evidence": "evidence/round-5.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 6,
+      "action": "fix publishing policy",
+      "evidence": "evidence/round-6.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 7,
+      "action": "add concepts glossary",
+      "evidence": "evidence/round-7.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 8,
+      "action": "add examples index",
+      "evidence": "evidence/round-8.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 9,
+      "action": "check link integrity",
+      "evidence": "evidence/round-9.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 10,
+      "action": "review sanitization wording",
+      "evidence": "evidence/round-10.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 11,
+      "action": "update validation report",
+      "evidence": "evidence/round-11.log",
+      "verdict": "PASS"
+    },
+    {
+      "round": 12,
+      "action": "close docs case",
+      "evidence": "evidence/round-12.log",
+      "verdict": "PASS"
+    }
+  ]
+}

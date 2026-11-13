@@ -1,0 +1,100 @@
+{
+  "instance": {
+    "instanceId": "01M7965BP7Y917J4CDAG6TDX4M",
+    "workflowName": "content-audit",
+    "workflowVersion": "1",
+    "createdBySession": "main-analyst@content-audit-analyst",
+    "createdAt": "2026-11-13T00:50:45.063Z",
+    "status": "completed",
+    "currentFrontier": [],
+    "currentStepId": null,
+    "hopCount": 0,
+    "fallbackSynthesis": null,
+    "lastContinuationDecision": {
+      "exit": "done",
+      "actorSession": "main-analyst@content-audit-analyst",
+      "closedPacket": "qitem-20261113005045-095d7359",
+      "nextPacket": null,
+      "resultNote": "Report delivered: READY WITH GAPS; top 5 gaps vs SCTG-public, P0/P1/P2 classification, file-level recommendations, sanitization risks. Only reports/openrig_analyst_report.md added.",
+      "blockedOn": null,
+      "currentStep": "audit",
+      "branchTaken": null
+    },
+    "completedAt": "2026-11-13T00:50:57.756Z",
+    "version": 2,
+    "resumeCount": 0,
+    "hopsBaseline": 0,
+    "boundRig": "content-audit-analyst",
+    "lifecycleOperationKey": null,
+    "compiledInputDigest": null,
+    "lifecycleBinding": null,
+    "scope": null,
+    "deadline": {
+      "state": "healthy",
+      "evidence": null
+    }
+  },
+  "trail": [
+    {
+      "trailId": "01M7965R2YR1Y2KTB61GKGWZRK",
+      "instanceId": "01M7965BP7Y917J4CDAG6TDX4M",
+      "stepId": "audit",
+      "stepRole": "analyst",
+      "closedAt": "2026-11-13T00:50:57.756Z",
+      "closureReason": "done",
+      "closureEvidence": {
+        "evidence_ref": "<repo-root>/reports/openrig_analyst_report.md",
+        "evidence_digest": "ef769045cd1f736c434099c2710252fe218280d6fea1d5013401a3ce7b6042f9"
+      },
+      "actorSession": "main-analyst@content-audit-analyst",
+      "nextQitemId": null,
+      "priorQitemId": "qitem-20261113005045-095d7359"
+    }
+  ],
+  "guidance": {
+    "state": "unselected",
+    "selectionSource": null,
+    "catalogSource": null,
+    "catalogPath": null,
+    "catalogHash": null,
+    "sources": [],
+    "position": "UNKNOWN: component position is not authored. Exact owner matches establish relevance, not a stage; choose from selected components and explicit edges using current evidence. Array order is presentation only.",
+    "ownerSession": null,
+    "unknowns": [],
+    "expansionCommand": "rig workflow guidance '01M7965BP7Y917J4CDAG6TDX4M' --full",
+    "lines": [
+      "Workflow method: No SDLC composition selected in the available authored context.",
+      "Workflow method: Expand relevant teaching: rig workflow guidance '01M7965BP7Y917J4CDAG6TDX4M' --full; select another with --component <id>. Read authored caveats and edges before adapting; advice grants no extra assignment."
+    ]
+  },
+  "reconciliation": {
+    "status": "unbound",
+    "adopted": null,
+    "boundDigest": null,
+    "proposedDigest": null,
+    "boundVersion": "1",
+    "proposedVersion": null,
+    "compatible": false,
+    "expectedVersion": 2,
+    "changes": [],
+    "reasons": [
+      "This is not a manifest-bound lifecycle. Inspect its authored spec; lifecycle revision does not migrate arbitrary workflows."
+    ],
+    "composition": {
+      "mode": "unbound",
+      "explanation": "The project profile and mission extension/override define outer steps. Slice manifests bind sources and proof, not automatic nested children. Waves group agent planning; they do not schedule child work. Current packets and blockers carry actual custody.",
+      "boundSlices": [],
+      "executableSteps": [
+        {
+          "id": "audit",
+          "dependsOn": []
+        }
+      ]
+    },
+    "nextAction": "rig workflow trace 01M7965BP7Y917J4CDAG6TDX4M"
+  },
+  "frontier": [],
+  "failures": [],
+  "unknowns": [],
+  "boundaryObligations": []
+}

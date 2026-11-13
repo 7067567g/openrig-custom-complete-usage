@@ -1,0 +1,36 @@
+{
+  "runId": "01M795RWNM4P3DR8RG6Z8HZTPG",
+  "status": "planned",
+  "stages": [
+    {
+      "stage": "resolve_spec",
+      "status": "ok",
+      "detail": {
+        "specName": "openrig-demo-run",
+        "specVersion": "0.2"
+      }
+    },
+    {
+      "stage": "preflight",
+      "status": "ok",
+      "detail": {
+        "errors": [],
+        "warnings": [
+          "control.main: permission_policy absent; launch_posture=floor",
+          "control.pmo: permission_policy absent; launch_posture=floor",
+          "exec.tdo-oc: permission_policy absent; launch_posture=floor",
+          "exec.tdo-dsh: permission_policy absent; launch_posture=floor",
+          "assurance.qa: permission_policy absent; launch_posture=floor"
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "control.main: permission_policy absent; launch_posture=floor",
+    "control.pmo: permission_policy absent; launch_posture=floor",
+    "exec.tdo-oc: permission_policy absent; launch_posture=floor",
+    "exec.tdo-dsh: permission_policy absent; launch_posture=floor",
+    "assurance.qa: permission_policy absent; launch_posture=floor"
+  ]
+}

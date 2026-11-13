@@ -1,0 +1,9 @@
+PASS bridge runId=demo-run rig=openrig-demo-run workflow=openrig-workflow-demo-run schema=2
+  bridge schemaVersion=2 (bundle-relative paths)
+  home=<openrig-home> missing but creatable
+seat map:
+  main         control-main@openrig-demo-run
+  pmo          control-pmo@openrig-demo-run
+  tdo_opencode exec-tdo-oc@openrig-demo-run
+  tdo_dsh      exec-tdo-dsh@openrig-demo-run
+  qa           assurance-qa@openrig-demo-run

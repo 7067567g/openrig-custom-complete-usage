@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 2,
+  "runId": "demo-run",
+  "projectRoot": "<project-root>",
+  "bundleDir": ".",
+  "rigName": "openrig-demo-run",
+  "workflowId": "openrig-workflow-demo-run",
+  "rigSpec": "rig.yaml",
+  "workflowSpec": "workflow.yaml",
+  "openrigCli": "rig",
+  "openrigHome": "<openrig-home>",
+  "daemonPort": 47950,
+  "seatMap": {
+    "main": "control-main@openrig-demo-run",
+    "pmo": "control-pmo@openrig-demo-run",
+    "tdo_opencode": "exec-tdo-oc@openrig-demo-run",
+    "tdo_dsh": "exec-tdo-dsh@openrig-demo-run",
+    "qa": "assurance-qa@openrig-demo-run"
+  },
+  "runtimeEnv": {
+    "OPENRIG_OPENCODE_BIN": "opencode",
+    "OPENRIG_DSH_BIN": "dsh",
+    "OPENRIG_OPENCODE_MODEL": "deepseek/deepseek-flash",
+    "OPENRIG_DSH_PROFILE": "headless"
+  },
+  "policy": {
+    "mode": "managed-isolated",
+    "maxActiveAgents": 2,
+    "maxHops": 10,
+    "preferResume": true,
+    "safetyMode": "on-demand",
+    "allowSourceChanges": true
+  }
+}

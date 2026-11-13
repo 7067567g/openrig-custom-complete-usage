@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.coverage
+.coverage.*
+htmlcov/
+
+# Secrets / local config
+.env
+.env.*
+*.local
+*.key
+*.pem
+*.token
+
+# Run artifacts
+runs/*
+!runs/.gitkeep
+!examples/**/runs/
+*.log
+!examples/round-cases/**/run/evidence/*.log
+*.sqlite
+*.db
+
+# OpenRig local state
+.openrig/
+OPENRIG-BRIDGE.local.json
+*transcript*
+*.snapshot
+
+# OS
+.DS_Store
+Thumbs.db
+
+# OpenRig-managed seat artifacts
+.agents/

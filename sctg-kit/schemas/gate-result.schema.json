@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SCTG GateResult",
+  "type": "object",
+  "required": [
+    "gate",
+    "verdict",
+    "reason"
+  ],
+  "properties": {
+    "gate": {
+      "type": "string"
+    },
+    "verdict": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "SKIP"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "exit_code": {
+      "type": "integer"
+    },
+    "reason_code": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "failure": {
+      "type": "object",
+      "required": [
+        "check",
+        "expected",
+        "actual",
+        "fix_scope"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "verdict": {
+            "const": "FAIL"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "failure"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "verdict": {
+            "const": "SKIP"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "reason_code"
+        ]
+      }
+    }
+  ]
+}

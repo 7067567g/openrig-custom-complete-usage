@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SCTG LedgerEvent",
+  "type": "object",
+  "required": [
+    "ts",
+    "event"
+  ],
+  "properties": {
+    "ts": {
+      "type": "string"
+    },
+    "event": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "attempt": {
+      "type": "integer"
+    },
+    "prev_hash": {
+      "type": "string"
+    },
+    "card_hash": {
+      "type": "string"
+    },
+    "verdict": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "SKIP"
+      ]
+    },
+    "gate_result": {
+      "type": "string"
+    }
+  }
+}

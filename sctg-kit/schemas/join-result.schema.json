@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SCTG JoinResult",
+  "type": "object",
+  "required": [
+    "reviewer",
+    "producer",
+    "handoff_hash",
+    "verdict",
+    "scope_conflicts"
+  ],
+  "properties": {
+    "reviewer": {
+      "type": "string"
+    },
+    "producer": {
+      "type": "string"
+    },
+    "handoff_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]+$"
+    },
+    "verdict": {
+      "enum": [
+        "PASS",
+        "PASS_WITH_WARN",
+        "FAIL"
+      ]
+    },
+    "scope_conflicts": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

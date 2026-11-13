@@ -1,0 +1,62 @@
+{
+  "ok": true,
+  "summary": {
+    "workflowId": "openrig-workflow-demo-run",
+    "workflowVersion": "1",
+    "targetRig": "openrig-demo-run",
+    "entryRole": "pmo",
+    "stepCount": 7
+  },
+  "warnings": [
+    {
+      "code": "declared_not_enforced_v1",
+      "severity": "warning",
+      "field": "workflow.invariants.continuation_required"
+    },
+    {
+      "code": "declared_not_enforced_v1",
+      "severity": "warning",
+      "field": "workflow.invariants.preserve_lineage"
+    },
+    {
+      "code": "declared_not_enforced_v1",
+      "severity": "warning",
+      "field": "workflow.invariants.closure_required"
+    },
+    {
+      "code": "declared_not_enforced_v1",
+      "severity": "warning",
+      "field": "workflow.closure"
+    },
+    {
+      "code": "declared_not_enforced_v1",
+      "severity": "warning",
+      "field": "workflow.loop_guards.spawn_budget"
+    },
+    {
+      "code": "role_no_live_preferred_target",
+      "severity": "warning",
+      "field": "workflow.roles.pmo.preferred_targets"
+    },
+    {
+      "code": "role_no_live_preferred_target",
+      "severity": "warning",
+      "field": "workflow.roles.tdo_opencode.preferred_targets"
+    },
+    {
+      "code": "role_no_live_preferred_target",
+      "severity": "warning",
+      "field": "workflow.roles.tdo_dsh.preferred_targets"
+    },
+    {
+      "code": "role_no_live_preferred_target",
+      "severity": "warning",
+      "field": "workflow.roles.qa.preferred_targets"
+    },
+    {
+      "code": "role_no_live_preferred_target",
+      "severity": "warning",
+      "field": "workflow.roles.main.preferred_targets"
+    }
+  ]
+}

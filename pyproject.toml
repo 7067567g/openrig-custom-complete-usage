@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openrig-custom-complete-usage"
+version = "0.1.4"
+description = "Complete SCTG + workflow-group multi-round + OpenRig hybrid usage example"
+readme = "README.md"
+authors = [{name = "OpenRig usage contributors"}]
+keywords = ["openrig", "sctg", "workflow", "multi-agent", "orchestration", "evidence"]
+classifiers = [
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+dependencies = [
+  "PyYAML>=6.0",
+  "jsonschema>=4.0",
+  "openpyxl>=3.1,<4",
+  "psutil>=5.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.urls]
+Homepage = "https://github.com/7067567g/openrig-custom-complete-usage"
+Changelog = "https://github.com/7067567g/openrig-custom-complete-usage/blob/main/CHANGELOG.md"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

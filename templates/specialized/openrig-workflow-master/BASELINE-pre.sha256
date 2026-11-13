@@ -1,0 +1,44 @@
+# BASELINE-pre — openrig-workflow-master v1.1.0 → v1.2.0
+# generated-at: 2026-10-20 05:59 CST (2026-10-20T05:59Z)
+# commit: 167b652109dbcab7965a4366ae4886e41d109b31（KB HEAD；母版目录在建立本基线时无 tracked diff）
+# scope: 本目录（相对路径 ./）36 个文件；不含本文件自身。
+# verify: cd templates/specialized/openrig-workflow-master && sha256sum -c BASELINE-pre.sha256
+# expected: 36/36 OK
+# purpose: v1.2.0 改动前快照；post 基线由收口后全量重算，用于 pre→post 差异审计。
+# format: sha256sum 标准格式（<64 hex><两空格><path>）；# 行为注释，sha256sum -c 会忽略。
+9fd734a33956ed23b63d1544fc8b639e349876cb87416ef49e0d56ebf0b51b97  ./ARCHITECTURE.md
+6e384163c74078307c5888f60283b324c187dccecb2573ccae4834c75d4b492f  ./BASELINE-post.sha256
+42d0803fa22a57d74c573bcd2ad4c19fe1811e9fef4daa4d9c300b78d0d6afd4  ./CHANGELOG.md
+488ae9e0a48598015ef9f6945db6615bfddbaeb8beee15015bdceccfd86255c6  ./DECISIONS.md
+4f8702e3069884806b920fd4073d3521b3cda2f095ea713ed1d4d7930050e9bf  ./PROJECT.md
+2e7cb81c5c8d7b43fdf5ac0db55ca2cacc2d0b1006d25d4855f37d872a6e4de4  ./README.md
+540e6da9037fd9018eaa3c3de78ff024a53d9956d718ff864683fc8e39a27907  ./SPEC.md
+1575e1af4a95f12f70b4ee6a6adce8160953d93ea17dc2611b90883ccc3ad3b8  ./VERSION
+4f0e32e6e215c0004e2859bbfeac30719163af5f7f078844234552e812bafcee  ./render_master.py
+aabb001f1ed6ce36eb15384d67d4de0127d8097e333876436ea40a0f314f977c  ./templates/agent.yaml.tpl
+317db1b04dfd8c2380099d93f47a99a3d7f1cd263e2d0eb3057fcbe067b75e50  ./templates/guidance-team.md
+8a71fa354413e92c7072ca1ab0d55bdfcc56d8033843d46fc3d0116cd72b655c  ./templates/rig.yaml.tpl
+ddc6e80a3860893a31f6770affbcf2a984dbbf87685dd9b4ebaf6a78173d043d  ./templates/workflow.yaml.tpl
+e3bdeed1db92fbb0c1b21736af4c856daabda5187655cfc8a8cc3d6f1ae408c5  ./tools/openrig_bridge.py
+2ee1cc02452b52140aa2a5e191b0d1045ef0b2f514785931ef0e543ee1be6f6b  ./validation/README.md
+4bbcdc8eb65a514ae70acba2d425855be1511714bf3e16803197495466078568  ./validation/bridge-doctor.txt
+dc180c011c2d9d3c0b0acdaac974e8c1ccfdc79394eadaf9fd9693090304ad04  ./validation/daemon-stop.txt
+592ec8d6cf38e8816be4987f7c3a4e7776bc47f20a4f78daa47a97f65b0c9c00  ./validation/ps.txt
+8add5613888e1d3a91a42fd6a3d62fced71ebabc10734003ae06ef732dcee466  ./validation/render-smoke.txt
+197162ca134f26d95aa404f41d40a0d7f80a4cce276f5d48eec2c3f7fbcc9889  ./validation/rig-down.json
+462c9daebfc0c5cc9f2097a5437f50ae9522e60732f59c8bf827c1e3965319e8  ./validation/rig-plan.json
+d27343d334502b9c30e089a4a5817a9bdaccbe8574a3fb037c31311eb32d8c70  ./validation/rig-up.json
+ab393b652e6139822b72d14ecdfadd85452e997b32420c215eded00073d32f95  ./validation/v1.1.0/FINAL-SELF-OPT.md
+2817598f01f29dee0f523d82ab1502a3b036f615cef4a1e68538e8237c376d30  ./validation/v1.1.0/QA-SELF-OPT-RECHECK.md
+35fef8385876970064b29fecde573eec1dee8225c7ea102a2352022a5b46bb65  ./validation/v1.1.0/QA-SELF-OPT.md
+bf6019386780a59c7d7951bfded57402c4cb7820f16b3c57c0ae7e2d1994d96e  ./validation/v1.1.0/README.md
+fc491b4062d4bd71b1c4cafa51e52cfcedeba5969c8fcbb683a1e4add135ae43  ./validation/v1.1.0/SELF-OPT-PLAN.md
+415d60c4cf34a010e4cad9001af3745d939fb9835c2c220e224e5a0291bb3eb1  ./validation/v1.1.0/TDO-DSH-FIX-REPORT.md
+8b224d080138796c74c5ebca21566008d188af3848e6714574c6df4ce717de75  ./validation/v1.1.0/TDO-DSH-REPORT.md
+9da84aa44fa4b2253f8f3f74715ca99a6f54fe3a114cb3177bbef1befb24f637  ./validation/v1.1.0/TDO-OC-REPORT.md
+7fc6397505230c80b685393b39e5d42b7b2981b006e7f7464439d09f7dfb9b73  ./validation/wf-newrun-doctor.txt
+3850d38cbfa94c74d482cb1b04e8ab4189b9833469181e46f2970de67fa72b84  ./validation/wf-newrun.txt
+8f781fed3da0139267b5ade5cc4156505a81516072f35fff87de3043cc0d224f  ./validation/workflow-abort.json
+2ac53c8b67e79bb14dde54b073134d288df3a95963d9007858a5a7020ce2187a  ./validation/workflow-instantiate.json
+409ee86cb45239e39bd4e801d73370ff4e8f789bbfad3a6d5914800a01c923bb  ./validation/workflow-show.json
+6622f5fbaef0f9a3b6bb3929f51ebd7d219a3ff7d1c2a04231a25ef92e5eab2b  ./validation/workflow-validate.json

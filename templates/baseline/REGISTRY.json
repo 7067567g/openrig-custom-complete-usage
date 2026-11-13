@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 1,
+  "baselineSet": "composite-baselines",
+  "version": "1.1.0",
+  "baseMaster": "workflow-group-base@1.2.0",
+  "atomicContractSet": "atomic-contract-set@1.0.0",
+  "directTemplate": false,
+  "semantics": "Composite-type reference templates. Consult before creating a specialized run template; not directly instantiable.",
+  "baselines": [
+    {
+      "id": "fix-wave",
+      "title": "修复波：票源驱动的验证→修订→复跑→门禁化",
+      "maturity": "M3",
+      "direction": "把已有审计票源/缺陷清单变成批量、可回归、可门禁化的修复成果，而不是“改完文件就算完成”。",
+      "chars": [
+        "每条票必须先有失败/复现证据，再修订，再复跑，最后进入门禁。",
+        "一 WS 一域/一文件边界；全内容覆盖，不抽样。",
+        "每个修复必须带回归或反例；门禁不得低于基线。",
+        "票源去向必须闭合：修复/合并/降级/排除各有 owner 和证据。"
+      ],
+      "contracts": ["audit@1.0.0", "optimize@1.0.0", "verify@1.0.0"],
+      "pipeline": [
+        "audit：核验票源、确认可复现与优先级",
+        "optimize：按票修订并补回归",
+        "verify：独立复跑与门禁化确认"
+      ],
+      "refs": [
+        "templates/specialized/kb-fix-wave",
+        "templates/specialized/geophysics-correctness",
+        "templates/specialized/project-freeze-facts",
+        "obsidian-localization:nutstore-cache-fix",
+        "obsidian-localization:nutstore-tools-wave1"
+      ],
+      "evidence": [
+        "每票的失败命令/输出 → 修订路径 → 复跑输出 → 门禁步骤",
+        "反例或变异必须点红；否则判假守卫",
+        "reports/VERIFY.md + 最终 DoD；关票状态与证据一一对应"
+      ],
+      "risk": "中高：可能跨仓、改测试/门禁；必须保留“不能为绿删测试”的负向门。"
+    },
+    {
+      "id": "refactor-decompose",
+      "title": "拆解/重整：先归属与冻结，再分区执行",
+      "maturity": "M2",
+      "direction": "在代码仓/文档集/资产的结构重整前，先完成 100% 清点、唯一归属、冻结基线与门禁基线，再按波次保持行为不变地执行。",
+      "chars": [
+        "清点覆盖 100%，每个对象有唯一归属；不允许“未分类”被静默吞掉。",
+        "先冻结接口/行为/门禁基线，再 refactor；old→new 映射可机械核验。",
+        "按分区/波次推进，一片一 owner；行为变更与结构变更分开。",
+        "必须准备回滚；默认不改对象语义，只改结构。"
+      ],
+      "contracts": [
+        "research@1.0.0",
+        "diff@1.0.0",
+        "architecture@1.0.0",
+        "optimize@1.0.0",
+        "verify@1.0.0"
+      ],
+      "pipeline": [
+        "research/diff/architecture：清点、分区、唯一归属、冻结基线",
+        "optimize：分区波次重整，行为不变",
+        "verify：门禁与语义回归 + 回滚核验"
+      ],
+      "refs": [
+        "60-外部仓库:research-decompose",
+        "templates/specialized/openrig-local-refit",
+        "obsidian-localization:nutstore-refactor-prep",
+        "obsidian-localization:nutstore-sandbox-refactor",
+        "60-外部仓库:lingshu-code-reorg"
+      ],
+      "evidence": [
+        "清点表：path → partition → owner → old→new",
+        "冻结基线 hash + 门禁基线 + 回滚脚本/清单",
+        "分区覆盖对账与最终 diff 统计；未处置项必须有去向"
+      ],
+      "risk": "中高：代表 run 仍有 plan-ready；模板重、周期长，必须限制批次与预算。"
+    },
+    {
+      "id": "ops-hardening",
+      "title": "运维加固：恢复性、入口健康与负向门",
+      "maturity": "M3",
+      "direction": "提高分发、同步、调度和日常入口的可靠性：先证明能恢复、能 clone、能解回，再证明改动不会破坏现有入口。",
+      "chars": [
+        "先做只读健康报告，再做写修复；多仓/无版本控制路径必须留文件清单和 diff 摘要。",
+        "恢复性优先：归档可解回、bundle 可 clone 复验、篡改/缺失反例必须 FAIL。",
+        "先红后绿；入口检查要有命令、退出码和耗时。",
+        "不 push、不改数据本体、不用形式通过代替真实验证。"
+      ],
+      "contracts": ["audit@1.0.0", "optimize@1.0.0", "verify@1.0.0"],
+      "pipeline": [
+        "audit：盘点分发/同步/调度入口与恢复路径",
+        "optimize：加固脚本、门禁、负向测试",
+        "verify：复跑入口健康、恢复演练和反例"
+      ],
+      "refs": [
+        "templates/specialized/dist-ops-hardening",
+        "templates/specialized/ops-reliability"
+      ],
+      "evidence": [
+        "恢复演练记录（解压/解回/clone/rollback）",
+        "篡改 1 字节、缺条目、remote 空等反例输出",
+        "入口健康报告与 FAIL→PASS 对照"
+      ],
+      "risk": "中：可能跨仓/无版本控制；禁止把未纳管改动写成“无需提交”。"
+    },
+    {
+      "id": "safe-cleanup",
+      "title": "安全整理：move-only、逐条门控与人工批准",
+      "maturity": "M3",
+      "direction": "对真实文件系统做可回滚整理/迁移：默认拒绝、move-only、一次一个 action、独立 SAFETY 逐条审核、red 人工批准。",
+      "chars": [
+        "动作必须结构化（mkdir/move; Windows 仅此二类），禁止 shell 通配符、delete、copy、exec、purge 作为默认路径。",
+        "每个 action 绑定 digest；改动即失效，必须重新 propose。",
+        "POSIX 与 Windows 后端分开：POSIX 走 hdrive_gate.py，Windows 走 scripts/windows/hgate.py，语义相同、路径/op 能力不同。",
+        "整理前全量清单、protected manifest、move-ledger、前后差异、回滚路径齐全；失败即停。"
+      ],
+      "contracts": ["audit@1.0.0", "optimize@1.0.0", "verify@1.0.0"],
+      "pipeline": [
+        "audit：只读预检、全量盘点、protected 审核",
+        "optimize：处置计划→gate→逐条 SAFETY→人工批准→一次一个执行",
+        "verify：QA 核对账本/前后清单/回滚/无越界"
+      ],
+      "refs": [
+        "templates/specialized/h-drive-cleanup",
+        "runs/h-drive-cleanup-20261018",
+        "runs/h-drive-od-dismantle-20261018",
+        "runs/h-drive-root-layout-20261018"
+      ],
+      "evidence": [
+        "inventory 100% + item→action 映射",
+        "actions/gates/reviews/human-approvals/executions 五类账本",
+        "前后清单、move-ledger、回滚清单、safety_pending=0"
+      ],
+      "risk": "最高：真实数据/不可逆风险；默认 move-only、不删除、不 purge。"
+    },
+    {
+      "id": "knowledge-pipeline",
+      "title": "知识流水线：来源入库→检索消费→方法回写",
+      "maturity": "M3",
+      "direction": "把知识从来源整理到 canonical，再到可检索、可度量、可被真实任务消费，并把实战反馈回写知识库。",
+      "chars": [
+        "来源→canonical→视图/检索→消费日志是一条链，不能用“文档已写”代替“已被消费”。",
+        "全内容覆盖：每篇/每条待入库材料有采用/取代/桥接/不动的处置。",
+        "检索需要有金问题/阈值/命中率；接口/投影门禁用反例。",
+        "知识消费必须记录真实查询/真实任务，不得用维护性 grep 冒充。"
+      ],
+      "contracts": [
+        "research@1.0.0",
+        "optimize@1.0.0",
+        "verify@1.0.0",
+        "audit@1.0.0"
+      ],
+      "pipeline": [
+        "research/audit：来源盘点、欠账/断言/检索基线",
+        "optimize：入库、接口、别名、消费闭环",
+        "verify：命中率、投影门禁、真实查询日志、validate/genviews"
+      ],
+      "refs": [
+        "templates/specialized/kb-debt-burn",
+        "templates/specialized/kb-consume-interface",
+        "templates/specialized/kb-method-action",
+        "templates/specialized/kb-claim-verify"
+      ],
+      "evidence": [
+        "来源处置表 + canonical 落点",
+        "hit@1/2/3 或其它可复算指标 + 命令/输出",
+        "router/frontmatter/视图门禁反例与通过证据",
+        "真实查询日志 ≥阈值，不能由维护性 grep 次数填充"
+      ],
+      "risk": "中：可能触碰 KB 正式域；每次豁免需显式记录并限制写权限。"
+    },
+    {
+      "id": "two-plane-orchestration",
+      "title": "双平面编排：workflow-group 控制面 + OpenRig 执行面",
+      "maturity": "M3",
+      "direction": "把目标、决策、验收和证据留在 workflow-group，把 seat、queue、workflow、transcript 和恢复状态交给 OpenRig；两边通过 bridge/证据指针同步。",
+      "chars": [
+        "双权威：控制面管目标/决策/验收，执行面管实时执行状态；不允许一边冒充另一边。",
+        "每个 run 独立 OPENRIG_HOME/端口/rig 名；默认 managed isolated，不碰 live daemon。",
+        "workflow 图允许分支 QA + join + 有界返工（静态回边 + max_hops），不新增引擎 API。",
+        "严格归档顺序：capture/status/archive 到 COMPLETE 后才允许 rig down/daemon stop；历史 PARTIAL 仅作缺口记录。"
+      ],
+      "contracts": [
+        "strategy@1.0.0",
+        "research@1.0.0",
+        "architecture@1.0.0",
+        "optimize@1.0.0",
+        "verify@1.0.0",
+        "audit@1.0.0"
+      ],
+      "pipeline": [
+        "preflight：隔离 home/端口/bridge/预算",
+        "strategy/research/architecture：控制面目标与方案",
+        "optimize：多 seat 执行；执行者只声明证据",
+        "verify/audit：分支 QA + join + 有界返工",
+        "close：归档→teardown→复盘"
+      ],
+      "refs": [
+        "templates/specialized/openrig-workflow-master@1.2.0",
+        "runs/openrig-master-v12-20261020",
+        "runs/openrig-unparsed-bytes-20261020",
+        "runs/openrig-master-selfopt-20261020"
+      ],
+      "evidence": [
+        "OPENRIG-BRIDGE.json + rig/workflow validate/instantiate/show",
+        "queue packet + transcript + local STATUS 证据指针",
+        "pre/post baseline、workflow trace、archive MANIFEST/RECORD",
+        "teardown 后无残留的 hygiene 证据"
+      ],
+      "risk": "高：双平面状态漂移、生产 live rig、secrets、archive PARTIAL；所有执行必须绑定隔离环境。"
+    },
+    {
+      "id": "postmortem-meta-governance",
+      "title": "复盘/元治理：把失败模式变成规则与模板改动",
+      "maturity": "M2",
+      "direction": "从完整运行记录、失败模式和角色冲突中提炼可执行规则、文档或模板改动，并验证回写有效。",
+      "chars": [
+        "数据先行：成本/轮次/失败率/开放项必须有可复核表或来源。",
+        "失败模式要能回到具体日志/文件/行，改进要有观察出处→改动文件/位置→改法。",
+        "治理变更需红队/影子验证；非规范文档必须标清边界。",
+        "至少 N 处有效回写（默认 ≥3），且不把“下一 run”当行动。"
+      ],
+      "contracts": [
+        "audit@1.0.0",
+        "strategy@1.0.0",
+        "optimize@1.0.0",
+        "verify@1.0.0"
+      ],
+      "pipeline": [
+        "audit：数据/失败模式/角色权责/开放项",
+        "strategy：决定改什么/不改什么/复杂度预算",
+        "optimize：写回规则或模板",
+        "verify：机械冒烟、影子验证、红队复核"
+      ],
+      "refs": [
+        "templates/specialized/burn-postmortem",
+        "templates/specialized/wf-docs-distill",
+        "runs/role-boundary-audit-20261015",
+        "runs/so-necessity-research-20261015",
+        "runs/master-adoption-20261015"
+      ],
+      "evidence": [
+        "复盘数据表 + 失败模式清单（带日志/路径）",
+        "改进清单：观察→改动→验证",
+        "红队/影子验证报告；非规范边界声明"
+      ],
+      "risk": "中：容易产出无证据建议或过度制度；必须控制规则复杂度预算。"
+    },
+    {
+      "id": "product-redesign-live",
+      "title": "产品重设计并安全切 live",
+      "maturity": "M2",
+      "direction": "在单窗口/多端产品上先做反目标与信息架构判断，再多 seat 评审、实现、staging QA，最后安全地应用到 live 并可回滚。",
+      "chars": [
+        "先写“不该补/反目标”，防止功能齐全变成复杂；菜单/状态/长回复是产品约束而非实现细节。",
+        "研究/设计/QA 由独立 seat 或角色完成，MAIN 负责整合与 live 决策。",
+        "staging→QA→统一合并→finalize live，live 动作有快照、回滚、通知和证据。",
+        "上线后保留真机待观察项，不把一次测试通过当永久稳定。"
+      ],
+      "contracts": [
+        "research@1.0.0",
+        "architecture@1.0.0",
+        "optimize@1.0.0",
+        "verify@1.0.0"
+      ],
+      "pipeline": [
+        "research/architecture：现状/历史/竞品/信息架构/反目标",
+        "optimize：实现与集成",
+        "verify：staging QA + 真机/离线测试",
+        "live：finalize + 快照/回滚/通知/观察"
+      ],
+      "refs": [
+        "templates/specialized/<your-domain>",
+        "snapshot:<your-domain>-example",
+        "snapshot:<your-domain>-example",
+        "snapshot:<your-domain>-example",
+        "snapshot:<your-domain>-example"
+      ],
+      "evidence": [
+        "反目标/功能取舍表 + 设计报告",
+        "staging 测试结果 + QA 独立报告",
+        "finalize 日志、live 状态、回滚脚本/演练、通知证据"
+      ],
+      "risk": "高：生产服务/live 用户；必须 staging-first、回滚优先、不在桥内跑辅助功能。"
+    },
+    {
+      "id": "hypothesis-analysis",
+      "title": "假设分析：证据矩阵 + 可证伪实验",
+      "maturity": "M3",
+      "direction": "面对未知数据/字节/语义，不做“猜语义”，而是建立逐字段/逐项的假设矩阵、置信度与可证伪实验，并通过双分支 QA 汇合。",
+      "chars": [
+        "事实/推断/建议严格分层；不得把观察结构直接写成固件语义。",
+        "每个未解析项必须有偏移/长度/样本/候选含义/支持与反证/置信度/区分实验。",
+        "分支专属 QA + join；任何语义命名要有证据或保留未知。",
+        "源数据只读；结论用可复现实验而非“看起来像”。"
+      ],
+      "contracts": ["research@1.0.0", "verify@1.0.0", "audit@1.0.0"],
+      "pipeline": [
+        "research：盘点未知项、分分支并做逐项差分实验",
+        "verify：分支 QA + join + 一致性复核",
+        "audit：最终矩阵、残余未知与下一轮探针排序"
+      ],
+      "refs": [
+        "templates/specialized/openrig-unparsed-bytes-analysis",
+        "runs/openrig-unparsed-bytes-20261020"
+      ],
+      "evidence": [
+        "逐项假设矩阵（offset/length/samples/candidates/evidence/confidence/test）",
+        "差分/实验命令与结果；事实 vs 假设分栏",
+        "分支 QA verdict + join 报告 + 残余未知清单"
+      ],
+      "risk": "中：容易过度声称语义/被样本误导；必须保留反证与可证伪实验。"
+    }
+  ]
+}

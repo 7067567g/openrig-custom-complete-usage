@@ -1,0 +1,3 @@
+id: hello
+title: Write a deterministic answer file.
+statement: Write "hello from benchmark" to answer.txt.

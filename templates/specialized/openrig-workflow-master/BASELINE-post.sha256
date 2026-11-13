@@ -1,0 +1,47 @@
+# BASELINE-post — openrig-workflow-master v1.2.0（项目侧入口票块落地后）
+# generated-at: 2026-10-20 09:17 CST
+# commit: 80cfbb7393015108cdc851f315cffe932d8ad80a（生成时 KB HEAD；随后统一提交）
+# scope: 本目录（相对路径 ./）38 个文件；不含本文件自身，不含 __pycache__。
+# verify: cd templates/specialized/openrig-workflow-master && sha256sum -c BASELINE-post.sha256
+# expected: 38/38 OK
+# purpose: v1.2.0 最终快照；与 BASELINE-pre.sha256 成对，用于 pre→post 差异审计。
+# note: 本次补入项目侧 deepseek-project-openrig 块（0038–0041）后全量重算。
+# format: sha256sum 标准格式（<64 hex><两空格><path>）；# 行为注释，sha256sum -c 会忽略。
+5eb6ef2e853a275cd6a2cfe74b9e033daec9bde4109d089c2a6ebd1382165c99  ./ARCHITECTURE.md
+c58cb081c17ad19bdd4c5d12e66eff7c922f7b5fe593d19da76b01471412e564  ./BASELINE-pre.sha256
+f66328d80c1963e2b1eb5fa0de1279a650841301bd64ffe501849c0d8c72d2e1  ./CHANGELOG.md
+488ae9e0a48598015ef9f6945db6615bfddbaeb8beee15015bdceccfd86255c6  ./DECISIONS.md
+1b6f77e68ded1153c0a169a940d819ca4a4eeb451cb166d3e76cb1e32594c2e7  ./ENTRYPOINTS.md
+4f8702e3069884806b920fd4073d3521b3cda2f095ea713ed1d4d7930050e9bf  ./PROJECT.md
+cbf03aa70e0eccb27941aff44730efaa7fc46dce4c5b1a845d1f863f25172da4  ./README.md
+dd930d9b9256550e2b77dcd03adaa844df799cc1f20adda10ee871dd45b90520  ./SPEC.md
+1e5b51cde515396a9fa762909cf8ca6584ccc564b325d2eebeea76175fe95c4d  ./VERSION
+12c23559b75d9d3cce2fd513e28661dbfceeab8d1ee782e118497a3b831437ed  ./render_master.py
+aabb001f1ed6ce36eb15384d67d4de0127d8097e333876436ea40a0f314f977c  ./templates/agent.yaml.tpl
+317db1b04dfd8c2380099d93f47a99a3d7f1cd263e2d0eb3057fcbe067b75e50  ./templates/guidance-team.md
+8a71fa354413e92c7072ca1ab0d55bdfcc56d8033843d46fc3d0116cd72b655c  ./templates/rig.yaml.tpl
+73915634e3d94190a576bef00dd279777dd6d179187e23d8391d59e483a2d7e4  ./templates/workflow.yaml.tpl
+0c83f298c37ea1c82d873e8db9337954fb1301e84703c92ebc244aef3401311c  ./tools/openrig_bridge.py
+2ee1cc02452b52140aa2a5e191b0d1045ef0b2f514785931ef0e543ee1be6f6b  ./validation/README.md
+4bbcdc8eb65a514ae70acba2d425855be1511714bf3e16803197495466078568  ./validation/bridge-doctor.txt
+dc180c011c2d9d3c0b0acdaac974e8c1ccfdc79394eadaf9fd9693090304ad04  ./validation/daemon-stop.txt
+592ec8d6cf38e8816be4987f7c3a4e7776bc47f20a4f78daa47a97f65b0c9c00  ./validation/ps.txt
+8add5613888e1d3a91a42fd6a3d62fced71ebabc10734003ae06ef732dcee466  ./validation/render-smoke.txt
+197162ca134f26d95aa404f41d40a0d7f80a4cce276f5d48eec2c3f7fbcc9889  ./validation/rig-down.json
+462c9daebfc0c5cc9f2097a5437f50ae9522e60732f59c8bf827c1e3965319e8  ./validation/rig-plan.json
+d27343d334502b9c30e089a4a5817a9bdaccbe8574a3fb037c31311eb32d8c70  ./validation/rig-up.json
+ab393b652e6139822b72d14ecdfadd85452e997b32420c215eded00073d32f95  ./validation/v1.1.0/FINAL-SELF-OPT.md
+2817598f01f29dee0f523d82ab1502a3b036f615cef4a1e68538e8237c376d30  ./validation/v1.1.0/QA-SELF-OPT-RECHECK.md
+35fef8385876970064b29fecde573eec1dee8225c7ea102a2352022a5b46bb65  ./validation/v1.1.0/QA-SELF-OPT.md
+bf6019386780a59c7d7951bfded57402c4cb7820f16b3c57c0ae7e2d1994d96e  ./validation/v1.1.0/README.md
+fc491b4062d4bd71b1c4cafa51e52cfcedeba5969c8fcbb683a1e4add135ae43  ./validation/v1.1.0/SELF-OPT-PLAN.md
+415d60c4cf34a010e4cad9001af3745d939fb9835c2c220e224e5a0291bb3eb1  ./validation/v1.1.0/TDO-DSH-FIX-REPORT.md
+8b224d080138796c74c5ebca21566008d188af3848e6714574c6df4ce717de75  ./validation/v1.1.0/TDO-DSH-REPORT.md
+9da84aa44fa4b2253f8f3f74715ca99a6f54fe3a114cb3177bbef1befb24f637  ./validation/v1.1.0/TDO-OC-REPORT.md
+6681f2293012aa8fb3fc5d869960554edfaf26b6c3f7305a559bfc7e9c9060b1  ./validation/v1.2.0/RELEASE.md
+7fc6397505230c80b685393b39e5d42b7b2981b006e7f7464439d09f7dfb9b73  ./validation/wf-newrun-doctor.txt
+3850d38cbfa94c74d482cb1b04e8ab4189b9833469181e46f2970de67fa72b84  ./validation/wf-newrun.txt
+8f781fed3da0139267b5ade5cc4156505a81516072f35fff87de3043cc0d224f  ./validation/workflow-abort.json
+2ac53c8b67e79bb14dde54b073134d288df3a95963d9007858a5a7020ce2187a  ./validation/workflow-instantiate.json
+409ee86cb45239e39bd4e801d73370ff4e8f789bbfad3a6d5914800a01c923bb  ./validation/workflow-show.json
+6622f5fbaef0f9a3b6bb3929f51ebd7d219a3ff7d1c2a04231a25ef92e5eab2b  ./validation/workflow-validate.json

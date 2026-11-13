@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "masterVersion": "1.2.0",
+  "renderedAt": "2026-11-13T00:43:50Z",
+  "runId": "demo-run",
+  "rigName": "openrig-demo-run",
+  "workflowId": "openrig-workflow-demo-run",
+  "daemonPort": 47950,
+  "files": {
+    "rig.yaml": {
+      "template": "rig.yaml.tpl",
+      "bytes": 1885,
+      "sha256": "10d8739cd95178e9c5a2462b1727789f17cf613662061a8ba1a883535f06d9ab"
+    },
+    "workflow.yaml": {
+      "template": "workflow.yaml.tpl",
+      "bytes": 3920,
+      "sha256": "1992d15fa741ca3626a9c7399fd2310b1dc0088ed5958e4ed598d19f15756a11"
+    },
+    "agents/worker/agent.yaml": {
+      "template": "agent.yaml.tpl",
+      "bytes": 222,
+      "sha256": "aabb001f1ed6ce36eb15384d67d4de0127d8097e333876436ea40a0f314f977c"
+    },
+    "guidance/team.md": {
+      "template": "guidance-team.md",
+      "bytes": 605,
+      "sha256": "e646e1b48560d2788417d6df0ef954e036f8b99385952f4d3909781f00c12dd2"
+    },
+    "OPENRIG-BRIDGE.json": {
+      "template": null,
+      "bytes": 967,
+      "sha256": "936f7e53ff61bf59bb9b2eb3e8da5b153361662872b352567ad7e0e2657c645f"
+    }
+  },
+  "templates": {
+    "rig.yaml.tpl": "8a71fa354413e92c7072ca1ab0d55bdfcc56d8033843d46fc3d0116cd72b655c",
+    "workflow.yaml.tpl": "73915634e3d94190a576bef00dd279777dd6d179187e23d8391d59e483a2d7e4",
+    "agent.yaml.tpl": "aabb001f1ed6ce36eb15384d67d4de0127d8097e333876436ea40a0f314f977c",
+    "guidance-team.md": "317db1b04dfd8c2380099d93f47a99a3d7f1cd263e2d0eb3057fcbe067b75e50"
+  }
+}

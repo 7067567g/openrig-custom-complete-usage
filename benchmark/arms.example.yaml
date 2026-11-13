@@ -1,0 +1,6 @@
+# Mechanics smoke arms. Replace commands with real workflow launchers.
+arms:
+  - name: raw
+    command: [python3, solve.py]
+  - name: sctg
+    command: [python3, solve.py]

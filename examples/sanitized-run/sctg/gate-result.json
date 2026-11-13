@@ -1,0 +1,11 @@
+{
+  "task_id": "demo-run",
+  "attempt": 1,
+  "verdict": "PASS",
+  "gates": [
+    {"gate": "g0_schema", "verdict": "PASS"},
+    {"gate": "g1_scope", "verdict": "PASS"},
+    {"gate": "g2_evidence", "verdict": "PASS"},
+    {"gate": "g3_command", "verdict": "PASS"}
+  ]
+}
