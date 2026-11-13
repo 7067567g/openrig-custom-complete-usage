@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.7
+
+- Added global `dsh.slice` example (8G/9G/2G).
+- Documented heavy/light concurrency profiles and lock-based degradation.
+- Added `examples/memory-limits/dsh.slice`.
+- Tests: 154 passed, 1 skipped.
+
+
 ## 0.1.6
 
 - Added long-running service memory guidance: shared agent host and app service

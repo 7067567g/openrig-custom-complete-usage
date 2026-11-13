@@ -25,7 +25,7 @@ REQUIRED = [
     "docs/cases/03-memory-incident.md", "docs/cases/03-memory-incident.zh-CN.md",
     "examples/memory-limits/README.md", "examples/memory-limits/README.zh-CN.md",
     "examples/memory-limits/seat-launch.example.sh", "examples/memory-limits/guard.example.sh",
-    "examples/memory-limits/agent-host-memory.conf", "examples/memory-limits/app-service-memory.conf",
+    "examples/memory-limits/agent-host-memory.conf", "examples/memory-limits/app-service-memory.conf", "examples/memory-limits/dsh.slice",
     "docs/cases/README.md", "docs/cases/README.zh-CN.md",
     "docs/cases/01-render-smoke.md", "docs/cases/01-render-smoke.zh-CN.md",
     "docs/releases/v0.1.0.md",

@@ -47,6 +47,43 @@ systemd-run --user --scope --quiet \
   -- dsh --profile headless "run one bounded task"
 ```
 
+## Global slice and concurrency
+
+Per-seat limits do not bound the sum of parallel seats. Add a user slice:
+
+```ini
+# ~/.config/systemd/user/dsh.slice
+[Unit]
+Description=DSH agent workload slice
+
+[Slice]
+MemoryAccounting=yes
+MemoryHigh=8G
+MemoryMax=9G
+MemorySwapMax=2G
+```
+
+Launch seats with:
+
+```bash
+systemd-run --user --scope --slice=dsh.slice \
+  --property=MemoryHigh=5G \
+  --property=MemoryMax=6G \
+  --property=MemorySwapMax=1G \
+  -- dsh --profile headless "..."
+```
+
+Concurrency profile:
+
+```text
+first seat:  heavy  5G high / 6G max / 1G swap
+second seat: light  3.5G high / 4.5G max / 0.5G swap
+global:             8G high / 9G max / 2G swap
+```
+
+Use a lock file so the second seat degrades to the light profile instead of
+blocking or killing the first workflow.
+
 ## Long-running services
 
 User-level drop-ins can bound the shared agent host and app service:

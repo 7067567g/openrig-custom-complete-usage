@@ -42,6 +42,42 @@ systemd-run --user --scope --quiet \
   -- dsh --profile headless "run one bounded task"
 ```
 
+## 全局 slice 与并发
+
+per-seat 限制不能约束并行 seat 的总和。加一个用户级 slice：
+
+```ini
+# ~/.config/systemd/user/dsh.slice
+[Unit]
+Description=DSH agent workload slice
+
+[Slice]
+MemoryAccounting=yes
+MemoryHigh=8G
+MemoryMax=9G
+MemorySwapMax=2G
+```
+
+seat 启动：
+
+```bash
+systemd-run --user --scope --slice=dsh.slice \
+  --property=MemoryHigh=5G \
+  --property=MemoryMax=6G \
+  --property=MemorySwapMax=1G \
+  -- dsh --profile headless "..."
+```
+
+并发档位：
+
+```text
+第一个 seat：heavy  5G high / 6G max / 1G swap
+第二个 seat：light  3.5G high / 4.5G max / 0.5G swap
+全局：             8G high / 9G max / 2G swap
+```
+
+用锁文件让第二个 seat 自动降级到 light，不阻塞、不杀已有工作流。
+
 ## 长驻服务
 
 用户级 drop-in 可以限制共享的 agent host 和 app service：

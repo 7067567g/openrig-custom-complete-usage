@@ -1,0 +1,8 @@
+[Unit]
+Description=DSH agent workload slice
+
+[Slice]
+MemoryAccounting=yes
+MemoryHigh=8G
+MemoryMax=9G
+MemorySwapMax=2G

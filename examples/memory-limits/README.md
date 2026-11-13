@@ -6,6 +6,7 @@ Reference patterns for running an agent seat under a cgroup and for a
 non-destructive memory guard.
 
 ```text
+`dsh.slice`  global slice 8G/9G/2G
 service drop-ins: `agent-host-memory.conf`, `app-service-memory.conf`
 seat-launch.example.sh   systemd-run --scope with 5G/6G/1G
 guard.example.sh         dry-run cgroup throttle for dsh-terminal scopes
