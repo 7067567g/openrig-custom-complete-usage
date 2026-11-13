@@ -430,3 +430,5 @@ Close:
 - It does not claim model quality or benchmark results.
 - It does not make `rig workflow run` a replacement for role contracts; the
   control plane still owns goals, decisions, and acceptance.
+- This is not yet part of formal expense management; in practice the cost is
+  likely non-trivial, so budget it separately before real use.

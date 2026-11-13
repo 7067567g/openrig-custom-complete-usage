@@ -3,8 +3,8 @@
   "openrigGuide": {
     "version": "0.1.12",
     "mainDoc": "docs/OPENRIG-WORKFLOW-GUIDE.zh-CN.md",
-    "mainDocSha256": "c6fcab4b0c11befb8457e55ff0e7a8bd06bae66e0cac866cffb7234c08e9871c",
-    "commitAtPin": "c1d9c11ef60a891745c2f5b02647b755a140c779"
+    "mainDocSha256": "3c76b2126a42e8d967d73d96038adf1e54f896b5cd9ad59c5c028fef7115e310",
+    "commitAtPin": "working-tree"
   },
   "entries": [
     {

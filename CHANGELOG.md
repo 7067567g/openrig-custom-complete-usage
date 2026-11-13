@@ -18,6 +18,11 @@
   drift blocking, and 17 local tests wired into `make test`.
 - `make bench-smoke` is now budget-gated and prints `BENCHMARK NOT RUN` instead
   of invoking the paid benchmark harness.
+- Added a standard `docs/assets/openrig-overview.png` hero card and linked it
+  from both READMEs.
+- Added a main-guide note: this is not yet part of formal expense management,
+  but the real cost is likely non-trivial and should be budgeted separately.
+- Re-pinned the Lead onboarding guide to v1.0.2 after the main-document change.
 
 ## 0.1.12
 

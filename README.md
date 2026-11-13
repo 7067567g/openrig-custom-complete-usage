@@ -14,6 +14,10 @@ This repository is the "full usage" companion to the distilled
 > bundles passed render + bridge doctor + `rig workflow validate` + `rig up --plan`.
 > No live 5-seat execution is claimed yet; see [`VALIDATION.md`](VALIDATION.md).
 
+## Overview
+
+![OpenRig complete usage overview](docs/assets/openrig-overview.png)
+
 ## What is inside
 
 ```text

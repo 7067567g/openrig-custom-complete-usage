@@ -9,6 +9,10 @@
 - `SCTG-public`：稳定的 reference kit（task card、gates、submission schema、ledger、最小示例）。
 - 本仓库：操作层（roles、多轮状态机、templates、headless adapters、OpenRig preflight/render/bridge、端到端示例）。
 
+## 总览
+
+![OpenRig 完整用法总览](docs/assets/openrig-overview.png)
+
 ## 文档
 
 - **OpenRig + workflow 完整指引：** [`docs/OPENRIG-WORKFLOW-GUIDE.zh-CN.md`](docs/OPENRIG-WORKFLOW-GUIDE.zh-CN.md)

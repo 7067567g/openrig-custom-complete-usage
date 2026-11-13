@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  :root{--bg:#070b16;--panel:rgba(255,255,255,.055);--line:rgba(255,255,255,.13);--text:#f4f7ff;--muted:#9aa8c7;--cyan:#5ee7ff;--blue:#60a5fa;--violet:#a78bfa;--green:#7dffb2;--amber:#ffd166}
+  *{box-sizing:border-box}
+  html,body{margin:0;width:1200px;height:630px;overflow:hidden}
+  body{background:radial-gradient(900px 520px at 80% -12%,rgba(96,165,250,.20),transparent 65%),radial-gradient(760px 520px at 8% 112%,rgba(94,231,255,.16),transparent 65%),linear-gradient(145deg,#070b16 0%,#0b1224 55%,#09101f 100%);color:var(--text);font-family:Inter,"Noto Sans SC","Microsoft YaHei",sans-serif;position:relative}
+  body::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.8),transparent 88%)}
+  .card{position:relative;width:1200px;height:630px;padding:38px 48px 28px}
+  .top{display:flex;justify-content:space-between;align-items:flex-start}
+  .brand{display:flex;align-items:center;gap:14px}
+  .mark{width:46px;height:46px;border-radius:13px;background:linear-gradient(135deg,var(--cyan),var(--blue));box-shadow:0 0 34px rgba(96,165,250,.30);display:grid;place-items:center;color:#07101f;font-weight:900;font-size:21px}
+  .brand-name{font-size:24px;font-weight:850;letter-spacing:.04em}
+  .brand-sub{font-size:11px;color:var(--muted);letter-spacing:.16em;text-transform:uppercase;margin-top:3px}
+  .pill{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(94,231,255,.35);background:rgba(94,231,255,.07);padding:9px 14px;border-radius:999px;white-space:nowrap}
+  .main{display:grid;grid-template-columns:1.2fr .8fr;gap:38px;margin-top:30px;align-items:start}
+  .kicker{color:var(--cyan);font-size:13px;font-weight:750;letter-spacing:.18em;text-transform:uppercase}
+  h1{margin:8px 0 0;font-size:54px;line-height:1.06;letter-spacing:-.04em;font-weight:900;max-width:690px;background:linear-gradient(100deg,#ffffff 5%,#bdf7ff 45%,#93c5fd 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .cn{margin-top:12px;font-size:25px;font-weight:750;color:#e8eeff;letter-spacing:.01em}
+  .sub{margin-top:9px;color:var(--muted);font-size:13.5px;line-height:1.5;max-width:660px}
+  .flow{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:20px}
+  .chip{border:1px solid rgba(96,165,250,.25);background:rgba(96,165,250,.07);border-radius:9px;padding:8px 10px;font-size:12px;font-weight:700;color:#dff8ff;white-space:nowrap}
+  .arrow{color:rgba(154,168,199,.6);font-size:13px}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px 20px;backdrop-filter:blur(8px)}
+  .panel-title{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+  .layer{display:flex;gap:12px;padding:10px 0;border-top:1px solid rgba(255,255,255,.08)}
+  .layer:first-of-type{border-top:0;padding-top:0}
+  .num{color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:.06em;min-width:22px;padding-top:2px}
+  .layer b{display:block;font-size:13.5px;line-height:1.25}
+  .layer span{display:block;color:var(--muted);font-size:11.5px;line-height:1.35;margin-top:3px}
+  .bottom{position:absolute;left:48px;right:48px;bottom:24px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.10);padding-top:14px}
+  .bottom .left{font-size:12px;color:var(--muted)}
+  .bottom .left b{color:var(--amber);font-weight:750;letter-spacing:.02em}
+  .bottom .right{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="top">
+      <div class="brand">
+        <div class="mark">O</div>
+        <div>
+          <div class="brand-name">OpenRig</div>
+          <div class="brand-sub">SCTG · Workflow-group · OpenRig</div>
+        </div>
+      </div>
+      <div class="pill">Complete usage · OpenRig 0.1.12</div>
+    </div>
+
+    <div class="main">
+      <div>
+        <div class="kicker">Three layers, one runnable system</div>
+        <h1>From control plane<br>to execution.</h1>
+        <div class="cn">从控制面到执行面的完整用法</div>
+        <div class="sub">SCTG defines the evidence contract. workflow-group owns goals and rounds. OpenRig runs the seats, queue, and workflow steps.</div>
+        <div class="flow">
+          <span class="chip">SCTG kit</span><span class="arrow">→</span>
+          <span class="chip">workflow-group</span><span class="arrow">→</span>
+          <span class="chip">OpenRig run</span><span class="arrow">→</span>
+          <span class="chip">QA / close</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">What this repo gives you</div>
+        <div class="layer"><div class="num">01</div><div><b>Runnable multi-round control</b><span>Roles, templates, state machine, close lint.</span></div></div>
+        <div class="layer"><div class="num">02</div><div><b>OpenRig hybrid execution</b><span>Render, preflight, bridge, workflow specs.</span></div></div>
+        <div class="layer"><div class="num">03</div><div><b>Sanitized process archive</b><span>How the practice evolved; pitfalls included.</span></div></div>
+        <div class="layer"><div class="num">04</div><div><b>Lead onboarding guide</b><span>Staged questions + headless review.</span></div></div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="left"><b>Packet closure is not acceptance.</b> &nbsp; OpenRig · complete usage</div>
+      <div class="right">One-line run · bounded seats</div>
+    </div>
+  </div>
+</body>
+</html>
