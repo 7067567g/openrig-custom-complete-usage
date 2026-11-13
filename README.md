@@ -131,6 +131,7 @@ make test
 
 - **OpenRig + workflow complete guide:** [`docs/OPENRIG-WORKFLOW-GUIDE.md`](docs/OPENRIG-WORKFLOW-GUIDE.md)
 - **LLM quick reference for common user misreads:** [`docs/LLM-MISREAD-QUICKREF.md`](docs/LLM-MISREAD-QUICKREF.md)
+- **Project-local governance layers** (Command Center / General Staff / SOLO / Medical Center): see guide §0.2.
   - Default ask: **“用 OpenRig 跑工作流。”** Precise ask: **“用 OpenRig 执行 SCTG 工作流，单线跑。”**
 
 - Bilingual index: [`docs/INDEX.md`](docs/INDEX.md)

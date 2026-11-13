@@ -53,6 +53,56 @@ After the run starts:
 
 Question budget: **one consolidated batch before start, zero after start.**
 
+## 0.2 Project-local governance layers (not OpenRig core)
+
+OpenRig core provides rigs, seats, queue packets and workflow instances. Mature
+projects usually add a project-local governance layer on top. An agent that
+reads only this guide must still know that layer exists; otherwise it will
+misread a governance problem as an OpenRig bug.
+
+| Layer | One-line job | Read it before... | Typical entry (inside the project repo) |
+|---|---|---|---|
+| **Command Center** (round organization) | Registers non-SOLO long-running rounds/branches; exposes branch/worktree/resourceKey conflicts | starting, switching, stopping, or merging a long-running round | `docs/command-center/`, `ROUND-REGISTRY.json` |
+| **General Staff** | Indexes thinking rounds, scores them, reuses dimensions, and requires consultation before analysis | any analysis/design/governance/research task; run `consult_staff` before `analyze` | `docs/general-staff/`, `THINKING-ROUNDS.json`, `THINKING-DIMENSIONS.json` |
+| **Standalone round (SOLO)** | A one-off governed container with ID, anchor, branch, rejoin, QA, evidence and closeout | a one-off task that is neither a formal round nor a long-running branch | `docs/rounds/`, `.solo-round.json` |
+| **Medical Center** (optional, on demand) | Triages injured data/processes, isolates evidence, stamps patients, proposes patches without applying them, and writes RCA | corrupt data, orphan worktrees, half-finished workflows, wrong conclusions | `docs/medical-center/`, `reports/medical-center/` |
+
+Boundaries:
+
+- These layers are **project-local governance**, not OpenRig kernel features.
+  No `rig ...` command replaces them.
+- Long-running round -> Command Center; one-off governed task -> SOLO; thinking
+  consultation -> General Staff; stop/closeout -> CLOSEOUT manual; injured
+  object -> Medical Center.
+- If the project repo has no such directories, use the three-layer model in this
+  guide and do not invent governance layers.
+
+### 0.2.1 Common aliases and semantic matching
+
+The same governance dimension may have different names in different projects or
+domains. **Match by responsibility, not by exact name.**
+
+| Dimension | Canonical name | Common aliases / misuses | How to recognize it |
+|---|---|---|---|
+| Round/conflict governance | **Command Center** | organization department, round registry, round collection center, Command Center, Round Registry | It registers long-running rounds/branches or answers "what is running now and what may collide?" |
+| Thinking/evaluation governance | **General Staff** | staff department, staff center, General Staff, Thinking Staff | It indexes thinking rounds, scores them, reuses dimensions, or requires consultation before analysis |
+| One-off governed round | **Standalone round (SOLO)** | discrete round, scattered round, Standalone Round, DISCRETE, SCATTERED | It is a one-off container with ID/anchor/branch/rejoin/QA/evidence/closeout |
+| Injured data/process governance | **Medical Center** | medical center, patient intake center, Medical Center, Medic Center | It triages/isolates/stamps, proposes patches without applying them, and writes RCA; it is not a monitor or auto-fixer |
+
+Semantic-matching rules:
+
+1. Match by the governance dimension, not by exact wording;
+2. If it maps to one row above, use that layer and keep the original wording in the current record;
+3. If a name could mean two layers, inspect what it actually reads/writes:
+   - `ROUND-REGISTRY.json` / branch / worktree -> Command Center;
+   - `THINKING-ROUNDS.json` / scoring / consultation -> General Staff;
+4. If it matches nothing, or the decision changes scope/cost/irreversible action,
+   **ask once before acting**, with concrete options:
+   "By X do you mean: A Command Center (rounds/conflicts); B General Staff
+   (thinking/consultation); C SOLO; D Medical Center?"
+5. Do not invent a fifth governance layer just because the name is unfamiliar;
+   match semantics or ask first.
+
 ## 1. One-page decision table
 
 | You want to... | Use | Entry |

@@ -68,6 +68,7 @@ run 开始之前。
 | “脱敏” | 删密钥；删路径；重写历史；脱敏 transcript | 问目标 | 公开发布前 |
 | “内存 / 资源” | cgroup 限制；主机压力；模型上下文 | 问是哪种资源 | 提到 OOM/限制 |
 | “多轮” | workflow-group rounds；OpenRig rework loop | 有 `wf.py` 上下文时理解为 rounds | OpenRig workflow 上下文 |
+| “总指挥部 / 总参谋部 / 组织部 / 单独轮 / 医护中心” | 项目本地治理层，不是 OpenRig 内核 | 先读主指引 §0.2；再查项目仓库对应目录 | 项目仓库没有对应治理目录 |
 
 ## 2. “OpenRig”不是一个东西
 
@@ -84,6 +85,25 @@ run 开始之前。
 > 你说的 OpenRig 是指：
 > A. 起 rig / seat；B. 用 `rig workflow run` 跑工作流；C. 手动 `rig send` 调试；
 > D. 你的 SCTG 工作流（不启动 OpenRig）？
+
+### 2.1 项目侧治理层：总指挥部 / 总参谋部 / 单独轮 / 医护中心
+
+读到“总指挥部”“总参谋部”“组织部”“单独轮”“医护中心”时，先判断它是不是项目本地治理层，
+不要当成 OpenRig 内核命令：
+
+| 说法 | 正确理解 | 动作 |
+|---|---|---|
+| “总指挥部 / 组织部 / 轮次集散中心 / Command Center” | 登记非 SOLO 长运行轮/主支，查 branch/worktree 冲突 | 先看项目仓库 `docs/command-center/` 与 `ROUND-REGISTRY.json` |
+| “总参谋部 / 参谋部 / General Staff” | 思考类轮索引/评分/维度复用，分析前强制咨询 | 先看 `docs/general-staff/`，run `consult_staff` before `analyze` |
+| “单独轮 / SOLO / 离散轮 / 零散轮” | 一次性受控轮，有 ID/anchor/branch/QA/收尾 | 看 `docs/rounds/` 与 `.solo-round.json` |
+| “医护中心 / 医疗中心 / 伤员收治中心” | 伤员分诊/隔离/标戳/只提案补丁/RCA | 看 `docs/medical-center/`；不是 OpenRig 内核 |
+| 项目仓库没有这些目录 | 只按三层模型工作 | 不要虚构治理层 |
+
+详见主指引 [`OPENRIG-WORKFLOW-GUIDE.zh-CN.md`](OPENRIG-WORKFLOW-GUIDE.zh-CN.md) §0.2。
+
+**含义匹配**：名字不要求逐字一致，按“它在治理什么维度”匹配。能落到总指挥部/总参谋部/单独轮/医护中心之一就按该层处理；
+同时像两层时，看它读写的是 `ROUND-REGISTRY.json`（总指挥部）还是 `THINKING-ROUNDS.json`（总参谋部）；
+匹配不到或会改变 scope/成本/不可逆动作，先给 A/B/C/D 选项问一次，不要新建第五层。
 
 ## 3. “工作流”不是一个东西
 

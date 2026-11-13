@@ -75,6 +75,7 @@ after start:  zero questions
 | “脱敏” | remove secrets; remove paths; rewrite history; redact transcripts | ask which target | public release |
 | “内存 / 资源” | cgroup limit; host pressure; model context window | ask which resource | OOM/limits mentioned |
 | “多轮” | workflow-group rounds; OpenRig rework loop | workflow-group rounds if `wf.py` context | OpenRig workflow context |
+| “Command Center / General Staff / organization department / SOLO / Medical Center” | Project-local governance layers, not OpenRig kernel | Read guide §0.2, then the project repo's matching directory | The project repo has no such governance directory |
 
 ## 2. “OpenRig” is not one thing
 
@@ -91,6 +92,29 @@ after start:  zero questions
 > 你说的 OpenRig 是指：
 > A. 起 rig / seat；B. 用 `rig workflow run` 跑工作流；C. 手动 `rig send` 调试；
 > D. 你的 SCTG 工作流（不启动 OpenRig）？
+
+### 2.1 Project-local governance: Command Center / General Staff / SOLO / Medical Center
+
+When you see “Command Center”, “General Staff”, “organization department”, “SOLO”,
+or “Medical Center”, first check whether it is a project-local governance layer,
+not an OpenRig kernel command:
+
+| Phrase | What it means | Action |
+|---|---|---|
+| “Command Center / organization department / round registry” | Registers non-SOLO long-running rounds/branches and exposes branch/worktree conflicts | Read `docs/command-center/` and `ROUND-REGISTRY.json` in the project repo |
+| “General Staff / staff department” | Indexes thinking rounds, scores them, reuses dimensions, and requires consultation before analysis | Read `docs/general-staff/`; run `consult_staff` before `analyze` |
+| “Standalone round / SOLO / discrete / scattered” | One-off governed round with ID/anchor/branch/QA/closeout | Read `docs/rounds/` and `.solo-round.json` |
+| “Medical Center / medical center / patient intake” | Triage/isolation/stamps/propose-only patches/RCA for injured objects | Read `docs/medical-center/`; not an OpenRig kernel feature |
+| The project repo has none of these | Work with the three-layer model only | Do not invent governance layers |
+
+See [`OPENRIG-WORKFLOW-GUIDE.md`](OPENRIG-WORKFLOW-GUIDE.md) §0.2.
+
+**Semantic matching**: names need not match exactly; match by the governance
+dimension. If a name maps to Command Center / General Staff / SOLO / Medical
+Center, use that layer. If it could be two layers, inspect whether it reads
+`ROUND-REGISTRY.json` (Command Center) or `THINKING-ROUNDS.json` (General Staff).
+If it matches nothing, or the decision changes scope/cost/irreversible action,
+ask once with A/B/C/D options; do not invent a fifth layer.
 
 ## 3. “Workflow” is not one thing
 
