@@ -1,4 +1,4 @@
-# OpenRig Personal Use and Workflow
+# OpenRig Custom Complete Usage
 
 **A complete, runnable example of SCTG + workflow-group multi-round orchestration + OpenRig hybrid execution.**
 
@@ -138,7 +138,7 @@ Never write a `local-only` result as a real hybrid E2E pass.
 ## Two-repository policy
 
 - **`SCTG-public`** — stable reference kit, minimal examples, public case studies.
-- **`openrig-personnal-use-and-workflow`** — complete operational usage, OpenRig integration, multi-round scripts, benchmark harness.
+- **`openrig-custom-complete-usage`** — complete operational usage, OpenRig integration, multi-round scripts, benchmark harness.
 
 See [`docs/PUBLISHING.md`](docs/PUBLISHING.md) for what is intentionally excluded
 (secrets, real run data, personal paths, internal dashboard configs).

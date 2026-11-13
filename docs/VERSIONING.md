@@ -27,7 +27,7 @@ Current version: `0.1.0`.
 | Repository | Role |
 |---|---|
 | `SCTG-public` | stable reference kit |
-| `openrig-personnal-use-and-workflow` | complete operational usage |
+| `openrig-custom-complete-usage` | complete operational usage |
 
 The kit version and this usage version are intentionally independent. Record the
 tested pair in the release notes.

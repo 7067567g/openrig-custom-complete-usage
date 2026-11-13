@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "openrig-personnal-use-and-workflow"
+name = "openrig-custom-complete-usage"
 version = "0.1.0"
 description = "Complete SCTG + workflow-group multi-round + OpenRig hybrid usage example"
 readme = "README.md"
@@ -28,8 +28,8 @@ dependencies = [
 dev = ["pytest>=8,<10"]
 
 [project.urls]
-Homepage = "https://github.com/7067567g/openrig-personnal-use-and-workflow"
-Changelog = "https://github.com/7067567g/openrig-personnal-use-and-workflow/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/7067567g/openrig-custom-complete-usage"
+Changelog = "https://github.com/7067567g/openrig-custom-complete-usage/blob/main/CHANGELOG.md"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

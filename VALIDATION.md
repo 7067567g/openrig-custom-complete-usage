@@ -2,7 +2,7 @@
 
 Environment:
 
-- repository: `openrig-personnal-use-and-workflow`
+- repository: `openrig-custom-complete-usage`
 - Python: 3.12 (workflow-group venv)
 - OpenRig CLI: local `rig` 0.1.4
 - no live seats launched for this validation; this is a spec/render/bridge check
