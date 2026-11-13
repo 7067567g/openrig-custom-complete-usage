@@ -4,6 +4,12 @@
 
 # Multi-round workflow
 
+## Clarification gate
+
+For an automated multi-round run, resolve material ambiguity once before the
+first round. After round 1 starts, do not ask questions; record assumptions in
+`DECISIONS.md` and blockers in `STATUS`.
+
 ## Roles
 
 - **MAIN** — delegates, collects, decides, closes; does not write TDO/QA content.

@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.12
+
+- Replaced per-turn question budgeting with a clarification gate:
+  one consolidated batch before an automated multi-round run starts, then zero
+  questions after start.
+- Added the gate to the LLM misread quick reference, the OpenRig + workflow
+  guide, `AGENTS.md`, and MULTI-ROUND.
+- Mid-flow blockers are written to `BLOCKED`/`NEED_MAIN` instead of asked.
+
+
 ## 0.1.11
 
 - Added fuzzy-tolerance and question-budget policy to the LLM misread quick

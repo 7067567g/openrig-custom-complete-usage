@@ -21,31 +21,45 @@ decide when to **ask instead of guessing**.
 5. If you proceed on an assumption, state it in one line.
 6. Never silently switch layers or substitute a different command path.
 
-### Deviation threshold and question budget
+### Clarification gate: ask once, then never mid-flow
 
-Small deviations are allowed. Prefer a reasonable interpretation and state the
-assumption in one line. Questions are a limited resource.
+This policy is for a **complete multi-round automated flow**, not a per-turn
+chat. Questions are allowed only **before** the run starts.
 
-| Deviation | Action |
-|---|---|
-| Wording only, same layer | proceed; state the assumption; do **not** ask |
-| Same layer, different artifact, reversible | proceed; state the assumption; do **not** ask |
-| Ambiguous but low-risk | choose the most likely meaning; state the assumption |
-| Cross-layer (SCTG ↔ workflow-group ↔ OpenRig) | ask **one** consolidated question |
-| Publish / delete / teardown / cost / credentials | ask **one** consolidated question |
-| User says “10+ rounds” but context has steps | ask **one** question only if the count changes scope/close |
+#### Before start: one consolidated clarification pass
 
-**Question budget**
+Resolve all material ambiguity in one batch:
 
-- At most **one question per turn**.
-- Never run a multi-turn interrogation for low-risk ambiguity.
-- If there are several ambiguities, ask only about the highest-risk one, or
-  choose safe defaults for the rest and state the assumptions.
-- Do not ask if the repository context, open rig, workflow state, or recent
-  commands already resolve the ambiguity.
-- If the action is reversible and cheap, proceed first; ask only if the result
-  would be misleading or destructive.
+1. **Layer** — SCTG kit, workflow-group control plane, or OpenRig execution plane?
+2. **Count unit** — rounds or steps? How many?
+3. **Output / acceptance** — what file or state proves completion?
+4. **Irreversible actions** — publish, delete, teardown, cost, credentials?
+5. **Budget / timeout** — max wall time, token/cost, or concurrency?
 
+Prefer 1-3 concrete A/B/C questions in one message. Do not run a multi-turn
+interrogation.
+
+Small deviations at this stage are allowed: choose the most likely meaning,
+state the assumption, and include it in the run notes.
+
+#### After start: no questions
+
+Once the automated run starts:
+
+- **Do not ask the user anything.**
+- Use documented defaults for low-risk ambiguity; record the assumption in
+  `DECISIONS.md`, `STATUS`, or a run note.
+- If genuinely blocked, write `BLOCKED` / `NEED_MAIN` with the exact decision
+  needed, continue unblocked work, and report at the end.
+- If the next action is irreversible/destructive and was not authorized at the
+  start gate, stop with a written blocker; do not ask interactively.
+
+#### Question budget
+
+```text
+before start: one consolidated batch (1-3 concrete questions max preferred)
+after start:  zero questions
+```
 
 ## 1. Master quick table
 

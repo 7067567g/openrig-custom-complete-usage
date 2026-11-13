@@ -37,12 +37,21 @@ Use an intent-specific phrase. A bare “use OpenRig” is ambiguous — it can 
 Default recommendation: **“用 OpenRig 跑工作流。”**  
 Most precise: **“用 OpenRig 执行 SCTG 工作流，单线跑。”**
 
-### Fuzzy tolerance and question budget
+### Clarification gate: ask once before start, never mid-flow
 
-Small deviations are allowed: proceed with the most likely meaning and state the
-assumption. Ask only when the difference is cross-layer, irreversible, costly,
-or would make the result misleading. **At most one consolidated question per
-turn**; do not run a multi-turn interrogation for low-risk ambiguity.
+For a complete multi-round automated flow, questions are allowed only **before**
+the run starts. Do one consolidated clarification pass covering: layer
+(SCTG/workflow-group/OpenRig), count unit (rounds vs steps), output/acceptance,
+irreversible actions, and budget/timeout. Prefer 1-3 concrete A/B/C questions.
+
+After the run starts:
+
+- do not ask the user anything;
+- use documented defaults and record assumptions in `DECISIONS.md` / `STATUS`;
+- if blocked, write `BLOCKED` / `NEED_MAIN` and continue unblocked work;
+- if an unauthorized irreversible action is next, stop with a written blocker.
+
+Question budget: **one consolidated batch before start, zero after start.**
 
 ## 1. One-page decision table
 
