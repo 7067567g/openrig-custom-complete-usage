@@ -37,6 +37,13 @@ Use an intent-specific phrase. A bare “use OpenRig” is ambiguous — it can 
 Default recommendation: **“用 OpenRig 跑工作流。”**  
 Most precise: **“用 OpenRig 执行 SCTG 工作流，单线跑。”**
 
+### Fuzzy tolerance and question budget
+
+Small deviations are allowed: proceed with the most likely meaning and state the
+assumption. Ask only when the difference is cross-layer, irreversible, costly,
+or would make the result misleading. **At most one consolidated question per
+turn**; do not run a multi-turn interrogation for low-risk ambiguity.
+
 ## 1. One-page decision table
 
 | You want to... | Use | Entry |

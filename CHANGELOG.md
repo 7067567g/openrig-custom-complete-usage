@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.11
+
+- Added fuzzy-tolerance and question-budget policy to the LLM misread quick
+  reference and the OpenRig + workflow guide:
+  - small deviation: proceed and state the assumption;
+  - cross-layer / irreversible / costly: ask one consolidated question;
+  - at most one question per turn.
+
+
 ## 0.1.10
 
 - Added bilingual `docs/LLM-MISREAD-QUICKREF.md` / `.zh-CN.md`: common user

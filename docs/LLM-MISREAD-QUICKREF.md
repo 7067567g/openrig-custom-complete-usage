@@ -21,15 +21,31 @@ decide when to **ask instead of guessing**.
 5. If you proceed on an assumption, state it in one line.
 6. Never silently switch layers or substitute a different command path.
 
-### Deviation threshold
+### Deviation threshold and question budget
+
+Small deviations are allowed. Prefer a reasonable interpretation and state the
+assumption in one line. Questions are a limited resource.
 
 | Deviation | Action |
 |---|---|
-| Wording only, same layer | proceed; state the assumption |
-| Same layer, different artifact | proceed only if reversible; otherwise ask |
-| Cross-layer (SCTG ↔ workflow-group ↔ OpenRig) | **ask** |
-| Publish / delete / teardown / cost / credentials | **ask** |
-| User says “10+ rounds” but context has steps | **ask** which count is meant |
+| Wording only, same layer | proceed; state the assumption; do **not** ask |
+| Same layer, different artifact, reversible | proceed; state the assumption; do **not** ask |
+| Ambiguous but low-risk | choose the most likely meaning; state the assumption |
+| Cross-layer (SCTG ↔ workflow-group ↔ OpenRig) | ask **one** consolidated question |
+| Publish / delete / teardown / cost / credentials | ask **one** consolidated question |
+| User says “10+ rounds” but context has steps | ask **one** question only if the count changes scope/close |
+
+**Question budget**
+
+- At most **one question per turn**.
+- Never run a multi-turn interrogation for low-risk ambiguity.
+- If there are several ambiguities, ask only about the highest-risk one, or
+  choose safe defaults for the rest and state the assumptions.
+- Do not ask if the repository context, open rig, workflow state, or recent
+  commands already resolve the ambiguity.
+- If the action is reversible and cheap, proceed first; ask only if the result
+  would be misleading or destructive.
+
 
 ## 1. Master quick table
 
