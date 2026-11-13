@@ -14,3 +14,4 @@
 | `sanitized-run` | 脱敏控制面 + 生成 bundle | 见 `README.md` |
 | `live-run` | 脱敏单步 OpenRig run 证据 | `examples/live-run/` |
 | `round-cases` | three complete 12-round workflow-group cases | `examples/round-cases/` |
+| `memory-limits` | cgroup seat 示例 + 非破坏性 guard | `examples/memory-limits/` |

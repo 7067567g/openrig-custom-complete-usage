@@ -24,9 +24,11 @@ PAIRS = [
     ("docs/cases/02-12-round-cases.md", "docs/cases/02-12-round-cases.zh-CN.md"),
     ("docs/REFERENCE.md", "docs/REFERENCE.zh-CN.md"),
     ("docs/CONCEPTS.md", "docs/CONCEPTS.zh-CN.md"),
+    ("docs/MEMORY-SAFETY.md", "docs/MEMORY-SAFETY.zh-CN.md"),
+    ("docs/cases/03-memory-incident.md", "docs/cases/03-memory-incident.zh-CN.md"),
     ("examples/README.md", "examples/README.zh-CN.md"),
 ]
-EXAMPLES = ["openrig-minimal", "multi-round", "sctg-minimal", "sanitized-run", "multi-card", "decision", "rollback", "two-seat-handoff", "live-run", "round-cases"]
+EXAMPLES = ["openrig-minimal", "multi-round", "sctg-minimal", "sanitized-run", "multi-card", "decision", "rollback", "two-seat-handoff", "live-run", "round-cases", "memory-limits"]
 SANITIZED = [
     "examples/sanitized-run/PROJECT.md",
     "examples/sanitized-run/SPEC.md",

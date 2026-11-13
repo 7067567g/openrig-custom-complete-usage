@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.5
+
+- Added `docs/MEMORY-SAFETY.md` + Chinese counterpart: cgroup semantics,
+  5G/6G/1G seat limits, and pressure-order guidance.
+- Added `examples/memory-limits/`: seat launch and non-destructive guard
+  examples.
+- Added case study 03: cgroup page cache and a sanitized host OOM.
+- Documented that `MemoryHigh` is not additive with `MemoryMax`/`MemorySwapMax`
+  and that disposable GUI/image workloads are reclaimed before the agent
+  workflow.
+- Tests: 154 passed, 1 skipped.
+
+
 ## 0.1.4
 
 - Added runnable `multi-card`, `decision`, `rollback`, and `two-seat-handoff` examples.

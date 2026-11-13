@@ -13,6 +13,7 @@
 
 - 中英双语索引：[`docs/INDEX.md`](docs/INDEX.md)
 - 脱敏控制面样例：[`examples/sanitized-run/`](examples/sanitized-run/)
+- 内存安全与 cgroup 限制：[`docs/MEMORY-SAFETY.zh-CN.md`](docs/MEMORY-SAFETY.zh-CN.md)
 - 验证记录：[`VALIDATION.zh-CN.md`](VALIDATION.zh-CN.md)
 
 ## 快速开始

@@ -26,7 +26,7 @@ scripts/openrig_preflight.py        inject mandatory preflight into a seat works
 scripts/wf_close_lint.py            close-semantics linter
 scripts/doc_consistency.py          template/index/reference consistency checker
 sctg-kit/                           SCTG reference kit (gates, schema, ledger, decision)
-examples/                           local multi-round, SCTG minimal, OpenRig minimal
+examples/                           local multi-round, SCTG minimal, OpenRig minimal, memory limits
 docs/                               quickstart, architecture, multi-round, publishing
 tests/                              workflow and adapter tests
 ```
@@ -132,6 +132,7 @@ make test
 - Bilingual index: [`docs/INDEX.md`](docs/INDEX.md)
 - Sanitized control-plane sample: [`examples/sanitized-run/`](examples/sanitized-run/)
 - Three complete 12-round workflow cases: [`examples/round-cases/`](examples/round-cases/)
+- Memory safety and cgroup limits: [`docs/MEMORY-SAFETY.md`](docs/MEMORY-SAFETY.md)
 - Validation report: [`VALIDATION.md`](VALIDATION.md)
 
 ## Three execution modes

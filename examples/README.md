@@ -14,3 +14,4 @@
 | `sanitized-run` | sanitized control-plane + generated bundle | see `README.md` |
 | `live-run` | sanitized single-step OpenRig run evidence | `examples/live-run/` |
 | `round-cases` | three complete 12-round workflow-group cases | `examples/round-cases/` |
+| `memory-limits` | cgroup seat examples + non-destructive guard | `examples/memory-limits/` |

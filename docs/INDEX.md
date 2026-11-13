@@ -21,3 +21,4 @@
 | Security | [../SECURITY.md](../SECURITY.md) | — |
 | Workflow tags | [../WORKFLOW-TAGS.md](../WORKFLOW-TAGS.md) | — |
 | Content gap audit | [../reports/content_gap_audit.md](../reports/content_gap_audit.md) | [../reports/content_gap_audit.zh-CN.md](../reports/content_gap_audit.zh-CN.md) |
+| Memory safety | [MEMORY-SAFETY.md](MEMORY-SAFETY.md) | [MEMORY-SAFETY.zh-CN.md](MEMORY-SAFETY.zh-CN.md) |
