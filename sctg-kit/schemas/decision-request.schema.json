@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SCTG DecisionRequest",
+  "type": "object",
+  "required": [
+    "id",
+    "requested_by",
+    "subject",
+    "object_hash",
+    "scope",
+    "options",
+    "recommendation",
+    "conditions",
+    "expiry"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "schema": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "round": {
+      "type": "string"
+    },
+    "requested_by": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "object": {
+      "type": "string"
+    },
+    "object_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]+$"
+    },
+    "scope": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "options": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "summary"
+        ]
+      }
+    },
+    "recommendation": {
+      "type": "string"
+    },
+    "conditions": {
+      "type": "string"
+    },
+    "expiry": {
+      "type": "string"
+    },
+    "mode_change": {
+      "type": "object",
+      "required": [
+        "from_mode",
+        "to_mode",
+        "rollback"
+      ]
+    }
+  }
+}

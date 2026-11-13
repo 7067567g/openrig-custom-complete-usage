@@ -1,0 +1,10 @@
+SCTG
+Copyright 2026 SCTG contributors
+
+This product integrates with OpenRig
+(https://github.com/mvschwarz/openrig), which is licensed under the
+Apache License, Version 2.0.
+
+No OpenRig source code is included unless explicitly noted.
+"OpenRig" is used only to describe interoperability; no endorsement by
+the OpenRig project is implied.

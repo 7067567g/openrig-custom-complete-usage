@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SCTG submission v0.2",
+  "type": "object",
+  "required": ["task_id", "card_hash", "summary", "findings", "changed_files", "produced_files", "commands", "test_command", "evidence_paths", "status"],
+  "properties": {
+    "task_id": {"type": "string"},
+    "card_hash": {"type": "string", "pattern": "^sha256:"},
+    "summary": {"type": "string"},
+    "findings": {"type": "array", "items": {"type": "string"}},
+    "changed_files": {"type": "array", "items": {"type": "string"}, "description": "已存在文件被修改/删除的 repo-relative 路径；新建文件放 produced_files。"},
+    "produced_files": {"type": "array", "items": {"type": "string"}, "description": "本任务新建的 repo-relative 文件路径；修改已有文件放 changed_files。"},
+    "commands": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["cmd", "exit_code"],
+        "properties": {"cmd": {"type": "string"}, "exit_code": {"type": "integer"}, "expect_exit": {"type": "integer"}}
+      }
+    },
+    "test_command": {"type": "string"},
+    "test_expect_exit": {"type": "integer"},
+    "evidence_paths": {"type": "array", "items": {"type": "string"}},
+    "status": {"type": "string", "enum": ["OK", "BLOCKED"]}
+  }
+}

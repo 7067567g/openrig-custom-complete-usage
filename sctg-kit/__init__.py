@@ -1,0 +1,3 @@
+# Copyright 2026 SCTG contributors
+# Licensed under the Apache License, Version 2.0.
+"""SCTG reference kit."""
