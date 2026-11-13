@@ -19,6 +19,22 @@ different layers, and because LLMs reliably conflate them.
 If you remember only one thing: **rounds belong to workflow-group; steps and
 queue packets belong to OpenRig.**
 
+## 0.1 How to ask for this (short phrases)
+
+Use an intent-specific phrase. A bare “use OpenRig” is ambiguous — it can mean
+“create a rig”, “open a seat”, or “run a workflow”.
+
+| Intent | Short Chinese phrase | What it should mean |
+|---|---|---|
+| One-line automated OpenRig workflow | **“用 OpenRig 跑工作流。”** | render -> validate -> `rig workflow run` |
+| Full SCTG control plane + OpenRig execution | **“用 OpenRig 执行 SCTG 工作流，单线跑。”** | workflow-group owns goals/decisions; OpenRig owns seats/queue/workflow |
+| SCTG rounds only, no OpenRig | **“跑 SCTG 多轮。”** | `wf.py new-run` / `new-round` |
+| Manual seat debugging | **“OpenRig 手动调试。”** | `rig up` + `rig send` + queue inspection |
+| Spec/plan check only | **“OpenRig 预检。”** | `workflow validate` / `rig up --plan` |
+
+Default recommendation: **“用 OpenRig 跑工作流。”**  
+Most precise: **“用 OpenRig 执行 SCTG 工作流，单线跑。”**
+
 ## 1. One-page decision table
 
 | You want to... | Use | Entry |

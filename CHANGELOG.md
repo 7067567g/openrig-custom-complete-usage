@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.9
+
+- Added a “how to ask for this” phrase table to the OpenRig + workflow guide
+  (English and Chinese).
+- Documented the default ask **“用 OpenRig 跑工作流。”** and the precise ask
+  **“用 OpenRig 执行 SCTG 工作流，单线跑。”**
+- Added the same short note to README / README.zh-CN.
+
+
 ## 0.1.8
 
 - Added bilingual `docs/OPENRIG-WORKFLOW-GUIDE.md` / `.zh-CN.md`:

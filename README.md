@@ -130,6 +130,7 @@ make test
 ## Documentation
 
 - **OpenRig + workflow complete guide:** [`docs/OPENRIG-WORKFLOW-GUIDE.md`](docs/OPENRIG-WORKFLOW-GUIDE.md)
+  - Default ask: **“用 OpenRig 跑工作流。”** Precise ask: **“用 OpenRig 执行 SCTG 工作流，单线跑。”**
 
 - Bilingual index: [`docs/INDEX.md`](docs/INDEX.md)
 - Sanitized control-plane sample: [`examples/sanitized-run/`](examples/sanitized-run/)

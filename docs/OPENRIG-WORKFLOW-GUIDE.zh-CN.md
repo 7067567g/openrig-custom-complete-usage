@@ -17,6 +17,22 @@
 
 只记一句话：**round 属于 workflow-group；step 和 queue packet 属于 OpenRig。**
 
+## 0.1 怎么用一句话要求
+
+用带意图的短句。只说“使用 OpenRig”太容易歧义——它可能被理解成“建个 rig”、
+“开个 seat”或“跑 workflow”。
+
+| 你想表达 | 简短说法 | 应理解成 |
+|---|---|---|
+| 用 OpenRig 一条命令自动跑完 | **“用 OpenRig 跑工作流。”** | render -> validate -> `rig workflow run` |
+| 完整 SCTG 控制面 + OpenRig 执行面 | **“用 OpenRig 执行 SCTG 工作流，单线跑。”** | workflow-group 管目标/决策；OpenRig 管 seat/queue/workflow |
+| 只跑 SCTG 多轮，不启动 OpenRig | **“跑 SCTG 多轮。”** | `wf.py new-run` / `new-round` |
+| 手动开 seat 调试 | **“OpenRig 手动调试。”** | `rig up` + `rig send` + queue 检查 |
+| 只检查 spec / 启动计划 | **“OpenRig 预检。”** | `workflow validate` / `rig up --plan` |
+
+默认建议：**“用 OpenRig 跑工作流。”**  
+最精确：**“用 OpenRig 执行 SCTG 工作流，单线跑。”**
+
 ## 1. 一页决策表
 
 | 你想做什么 | 用什么 | 入口 |
