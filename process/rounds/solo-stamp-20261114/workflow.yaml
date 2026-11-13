@@ -1,0 +1,55 @@
+workflow:
+  id: solo-20261114-08
+  version: 1
+  objective: >
+    为单独轮建立独立识别标戳：标准协议、.solo-round.json、stamp/collect/verify/find CLI、
+    全量现有 SOLO 条目 retrofit、collection/verify 报告和引用更新。只写治理/工具/报告。
+  target:
+    rig: monitor-lite
+  entry:
+    role: builder
+  exception_routing:
+    default: orchestrator
+    orchestrator_role: builder
+  coordination_terminal_turn_rule: hot_potato
+  roles:
+    builder:
+      preferred_targets: [main-builder@monitor-lite]
+  context_refs:
+    - <WORKSPACE>/discussions/solo-20261114-08/BRIEF.md
+    - <BRIDGE_REPO>/docs/rounds/STANDALONE-ROUND-PROTOCOL.md
+    - <BRIDGE_REPO>/reports/rounds/STANDALONE-ROUNDS.json
+    - <BRIDGE_REPO>/reports/rounds/STANDALONE-ROUNDS.md
+    - <BRIDGE_REPO>/docs/branches/REFERENCE-INDEX.md
+  steps:
+    - id: t1_protocol_tool
+      actor_role: builder
+      objective: >
+        写 docs/rounds/SOLO-STAMP-PROTOCOL.md 和 tools/solo-round-stamp.mjs。
+        实现 stamp/collect/verify/find；定义 .solo-round.json schema/字段/版本/更新规则；
+        明确 stamp 是主真值，主文档 marker 可选。
+        然后读取 STANDALONE-ROUNDS.json，为所有 confirmed/candidate 单独轮在对应根目录写 .solo-round.json；
+        登记 SOLO-20261114-07 和 SOLO-20261114-08 自身。
+        完成后 handoff 到 t2_verify。
+      allowed_exits: [handoff, failed]
+    - id: t2_verify
+      actor_role: builder
+      objective: >
+        运行 node tools/solo-round-stamp.mjs collect/verify/find 和必要的 node --check；
+        写 reports/rounds/SOLO-STAMP-COLLECTION.json/.md、reports/rounds/SOLO-STAMP-VERIFY.md；
+        更新 STANDALONE-ROUNDS.json/.md 的 stampPath/stampStatus；
+        更新 REFERENCE-INDEX/STANDALONE-ROUND-PROTOCOL/BRANCHING-PROTOCOL 引用。
+        完成后 done 关闭。
+      allowed_exits: [done, failed]
+  invariants:
+    continuation_required: true
+    preserve_lineage: true
+    closure_required: true
+    allowed_exits: [waiting, handoff, done, failed]
+  loop_guards:
+    max_hops: 4
+    spawn_budget: 0
+  closure:
+    success: 所有单独轮有 stamp，collect/verify/find 通过并落盘。
+    degraded: 部分来源目录不确定，必须标 UNKNOWN。
+    failed: 未产出或越界改产品代码。

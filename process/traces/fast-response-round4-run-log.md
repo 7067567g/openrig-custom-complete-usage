@@ -1,0 +1,23 @@
+# RUN-LOG — Round 4 debug-only HTTP+SSE 输入通道
+
+- Date: 2026-11-13
+- OpenRig workflow instance: `01M7AAZSNJTR8BTMVT38KGNG6X`
+- Spec: `discussions/fast-response-adb-20261113/round4/workflow-round4.yaml`
+- Status: **completed**
+- Steps: `r4_brief` → `r4_backend` / `r4_frontend` → `r4_synthesis`
+- Outcome: **PASS（离线实现）/ CONDITIONAL（live/真机）**
+- Product changes:
+  - `bridge repo/lib/local-io.mjs`
+  - `bridge repo/sim/app.js`
+  - `bridge repo/tools/debug-input.mjs`（新）
+  - `bridge repo/test/debug-channel.test.mjs`（新）
+  - `bridge repo/test/debug-channel-page.test.mjs`（新）
+  - `bridge repo/docs/DEBUG-CHANNEL.md`（新）
+- Offline verification:
+  - debug tests 24/24
+  - existing local-io/app-server 9/9
+  - app-ui-fixes 25/25
+  - `node --check` three files exit 0
+  - isolated E2E: CLI list → composer → search → SSE frames; `E2E PASS`
+- Not verified: live service restart/env activation, real WebView SSE + handler, real composer/search application, multi-tab, proxy, production release.
+- Evidence: `evidence/e2e-summary.json`, `evidence/e2e-sse.out`, `WORKFLOW-TRACE.json`

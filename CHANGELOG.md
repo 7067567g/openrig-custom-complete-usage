@@ -1,5 +1,19 @@
 # Changelog
 
+## Unreleased
+
+- Added project-local governance layers to the OpenRig + workflow guide
+  (Command Center / General Staff / SOLO / Medical Center), including aliases
+  such as “组织部” = Command Center and semantic-matching rules for unfamiliar
+  names.
+- Added a sanitized `process/` archive: story, decisions, pitfalls, governance
+  protocols, registries, round briefs, workflow specs, stamps, traces, case
+  studies, provenance, and round/QA notes from a real OpenRig publication run.
+- Added an explicit benchmark status: **not run due to budget**; no benchmark,
+  cost, latency, or model-quality result is claimed.
+- Added a public index link and validation note for the process archive and
+  benchmark status.
+
 ## 0.1.12
 
 - Replaced per-turn question budgeting with a clarification gate:

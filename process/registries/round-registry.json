@@ -1,0 +1,266 @@
+{
+  "schema": "example-round-registry/v1",
+  "registryVersion": "v1.0.0",
+  "generatedAt": "2026-11-14T00:44:00+08:00",
+  "updatedAt": "2026-11-14T00:58:00+08:00",
+  "purpose": "非 SOLO 的长运行轮/主支总指挥部；只读 registry 查询，不遍历全库。",
+  "owner": "Lead/MAIN",
+  "sourceRefs": [
+    "reports/branches/BRANCH-LEDGER.json",
+    "reports/sctg/FORMAL-RUN-STATE.json",
+    "docs/branches/UX6-R15.md",
+    "docs/branches/QUIET-200.md",
+    "docs/branches/FAST-RESPONSE.md",
+    "reports/branches/BASELINE-SPLIT-STRATEGY.md"
+  ],
+  "activeStatuses": [
+    "active",
+    "active-qa-ready",
+    "blocked",
+    "waiting",
+    "qa"
+  ],
+  "statusValues": [
+    "active",
+    "active-qa-ready",
+    "blocked",
+    "waiting",
+    "qa",
+    "planned",
+    "paused",
+    "done",
+    "merged",
+    "abandoned"
+  ],
+  "kindValues": [
+    "formal",
+    "integration",
+    "branch",
+    "external"
+  ],
+  "conflictPolicy": "两个 active 条目共享同一 resourceKey = 冲突候选；冲突查询只读本 registry。",
+  "entries": [
+    {
+      "id": "FORMAL-30-20261113",
+      "kind": "formal",
+      "title": "正式 30 轮（SCTG）",
+      "status": "blocked",
+      "owner": "MAIN",
+      "branch": "remediation/20261113",
+      "worktree": "<BRIDGE_REPO>",
+      "baseCommit": "54b23dc",
+      "headCommit": "be9840f108049fc3c64d15ced3dec5e14378cda5",
+      "anchorRound": "R15",
+      "rejoinRound": "R16",
+      "currentRound": "R16",
+      "scope": [
+        "R01-R30",
+        "R16 NEED_MAIN"
+      ],
+      "resourceKeys": [
+        "round:R16",
+        "formal:sctg"
+      ],
+      "conflictKeys": [
+        "round:R16",
+        "formal:sctg"
+      ],
+      "lastSeenAt": "2026-11-14T00:58:00+08:00",
+      "updatedAt": "2026-11-14T00:44:00+08:00",
+      "links": {
+        "state": "reports/sctg/FORMAL-RUN-STATE.json",
+        "round": "reports/sctg/R16.md",
+        "qa": "reports/sctg/QA-R16-LIVE.md"
+      },
+      "notes": "15/30 passed; R16 blocked NEED_MAIN; terminal=false; no DONE."
+    },
+    {
+      "id": "REMEDIATION-20261113",
+      "kind": "integration",
+      "title": "R15-R16 集成线 remediation",
+      "status": "active",
+      "owner": "Lead/MAIN",
+      "branch": "remediation/20261113",
+      "worktree": "<BRIDGE_REPO>",
+      "baseCommit": "54b23dc",
+      "headCommit": "be9840f108049fc3c64d15ced3dec5e14378cda5",
+      "anchorRound": "R15",
+      "rejoinRound": "R16",
+      "currentRound": "R16",
+      "scope": [
+        "integration",
+        "UX6/QUIET/FAST merge target"
+      ],
+      "resourceKeys": [
+        "branch:remediation/20261113",
+        "integration:remediation"
+      ],
+      "conflictKeys": [
+        "branch:remediation/20261113",
+        "integration:remediation"
+      ],
+      "lastSeenAt": "2026-11-14T00:58:00+08:00",
+      "updatedAt": "2026-11-14T00:44:00+08:00",
+      "links": {
+        "ledger": "reports/branches/BRANCH-LEDGER.json",
+        "protocol": "docs/BRANCHING-PROTOCOL.md"
+      },
+      "notes": "Branch head dcd9f93; main worktree clean at audit; final convergence remediation -> main."
+    },
+    {
+      "id": "UX6-R15",
+      "kind": "branch",
+      "title": "UX6-R15 父支线（I1-I6 Web）",
+      "status": "active",
+      "owner": "Lead",
+      "branch": "feat/r15-ux6",
+      "worktree": "<BRIDGE_REPO>",
+      "baseCommit": "f973b3f3e8e14184312f4e9e9f0085873f8c621e",
+      "headCommit": "be9840f108049fc3c64d15ced3dec5e14378cda5",
+      "anchorRound": "R15",
+      "rejoinRound": "R16",
+      "currentRound": "UX6-R15",
+      "scope": [
+        "I4/I6/I2/I1/I5",
+        "I3 external"
+      ],
+      "resourceKeys": [
+        "branch:feat/r15-ux6",
+        "scope:UX6-R15",
+        "path:sim/app.js",
+        "path:sim/styles.css"
+      ],
+      "conflictKeys": [
+        "branch:feat/r15-ux6",
+        "scope:UX6-R15",
+        "path:sim/app.js",
+        "path:sim/styles.css"
+      ],
+      "lastSeenAt": "2026-11-14T00:58:00+08:00",
+      "updatedAt": "2026-11-14T00:44:00+08:00",
+      "links": {
+        "doc": "docs/branches/UX6-R15.md",
+        "ledger": "reports/branches/BRANCH-LEDGER.json"
+      },
+      "notes": "Active parent branch; QUIET-200 child shares sim/app.js; conflict is intentional parent/child, resolve before concurrent edits."
+    },
+    {
+      "id": "QUIET-200",
+      "kind": "branch",
+      "title": "QUIET-200 子支线（U2a/U2b）",
+      "status": "active",
+      "owner": "Lead",
+      "branch": "feat/quiet-200",
+      "worktree": "<BRIDGE_REPO>",
+      "baseCommit": "f973b3f3e8e14184312f4e9e9f0085873f8c621e",
+      "headCommit": "be9840f108049fc3c64d15ced3dec5e14378cda5",
+      "anchorRound": "R15",
+      "rejoinRound": "R16",
+      "currentRound": "UX6-R15-02a/02b",
+      "scope": [
+        "U2a silent preload",
+        "U2b 200-row IndexedDB"
+      ],
+      "resourceKeys": [
+        "branch:feat/quiet-200",
+        "scope:QUIET-200",
+        "path:sim/app.js",
+        "path:sim/message-cache.js"
+      ],
+      "conflictKeys": [
+        "branch:feat/quiet-200",
+        "scope:QUIET-200",
+        "path:sim/app.js",
+        "path:sim/message-cache.js"
+      ],
+      "lastSeenAt": "2026-11-14T00:58:00+08:00",
+      "updatedAt": "2026-11-14T00:44:00+08:00",
+      "links": {
+        "doc": "docs/branches/QUIET-200.md",
+        "plan": "reports/issues/QUIET-200-IMPLEMENTATION-PLAN.md"
+      },
+      "notes": "Analysis complete, implementation pending; shares sim/app.js with UX6 parent; intentional parent/child."
+    },
+    {
+      "id": "FAST-RESPONSE",
+      "kind": "branch",
+      "title": "FAST-RESPONSE 支线（ADB/IME/debug channel）",
+      "status": "active-qa-ready",
+      "owner": "Lead/QA",
+      "branch": "feat/fast-response",
+      "worktree": "<FAST_RESPONSE_WORKTREE>",
+      "baseCommit": "7680b1d39d27cb92fe6832c375adf4644c5306ec",
+      "headCommit": "7ad2c24",
+      "anchorRound": "R15",
+      "rejoinRound": "R16",
+      "currentRound": "FAST-RESPONSE-QA",
+      "scope": [
+        "tools/adb/**",
+        "tools/debug-input.mjs",
+        "debug channel tests",
+        "docs/DEBUG-CHANNEL.md"
+      ],
+      "resourceKeys": [
+        "branch:feat/fast-response",
+        "worktree:fast-response",
+        "path:tools/adb",
+        "path:tools/debug-input.mjs"
+      ],
+      "conflictKeys": [
+        "branch:feat/fast-response",
+        "worktree:fast-response",
+        "path:tools/adb",
+        "path:tools/debug-input.mjs"
+      ],
+      "lastSeenAt": "2026-11-14T00:58:00+08:00",
+      "updatedAt": "2026-11-14T00:44:00+08:00",
+      "links": {
+        "doc": "docs/branches/FAST-RESPONSE.md",
+        "audit": "reports/rounds/SOLO-20261114-06-REPO-AUDIT.md",
+        "next": "reports/rounds/SOLO-20261114-06-NEXT-STEP.md"
+      },
+      "notes": "QA-ready; ledger base f973b3f but audit observed merge-base B2 7680b1d; fix base metadata before QA; no merge yet."
+    },
+    {
+      "id": "ANDROID-UX6-R15-06",
+      "kind": "external",
+      "title": "Android I3 原生齿轮/返回",
+      "status": "planned",
+      "owner": "Android/Lead",
+      "branch": "TBD",
+      "worktree": "<WORKSPACE>/bridge-app",
+      "baseCommit": "bridge-app workspace",
+      "headCommit": "UNKNOWN",
+      "anchorRound": "R15",
+      "rejoinRound": "R16",
+      "currentRound": "ANDROID-UX6-R15-06",
+      "scope": [
+        "I3 native gear/back"
+      ],
+      "resourceKeys": [
+        "external:bridge-app",
+        "scope:I3"
+      ],
+      "conflictKeys": [
+        "external:bridge-app",
+        "scope:I3"
+      ],
+      "lastSeenAt": "2026-11-14T00:58:00+08:00",
+      "updatedAt": "2026-11-14T00:44:00+08:00",
+      "links": {
+        "ledger": "reports/branches/BRANCH-LEDGER.json",
+        "doc": "docs/branches/UX6-R15.md"
+      },
+      "notes": "External planned; not in Web workspace; planned status excluded from active conflict detection."
+    }
+  ],
+  "verifiedAt": "2026-11-14T00:46:00+08:00",
+  "verification": {
+    "validate": "OK",
+    "entries": 6,
+    "active": 5,
+    "conflicts": 1,
+    "strict": "expected fail on known UX6/QUIET conflict",
+    "cli": "tools/round-command-center.mjs"
+  }
+}

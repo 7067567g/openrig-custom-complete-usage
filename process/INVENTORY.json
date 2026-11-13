@@ -1,0 +1,401 @@
+{
+  "schema": "openrig-public-process/v1",
+  "generatedAt": "2026-11-14",
+  "fileCount": 56,
+  "bytes": 610763,
+  "missing": [],
+  "files": [
+    {
+      "path": "governance/command-center.md",
+      "category": "governance-protocol",
+      "sourceKind": "bridge-repo",
+      "bytes": 9959,
+      "redacted": true
+    },
+    {
+      "path": "governance/general-staff.md",
+      "category": "governance-protocol",
+      "sourceKind": "bridge-repo",
+      "bytes": 7265,
+      "redacted": false
+    },
+    {
+      "path": "governance/thinking-consultation.md",
+      "category": "governance-protocol",
+      "sourceKind": "bridge-repo",
+      "bytes": 4623,
+      "redacted": true
+    },
+    {
+      "path": "governance/standalone-round-protocol.md",
+      "category": "governance-protocol",
+      "sourceKind": "bridge-repo",
+      "bytes": 9857,
+      "redacted": false
+    },
+    {
+      "path": "governance/solo-stamp-protocol.md",
+      "category": "governance-protocol",
+      "sourceKind": "bridge-repo",
+      "bytes": 7989,
+      "redacted": true
+    },
+    {
+      "path": "governance/midrun-insertion.md",
+      "category": "governance-protocol",
+      "sourceKind": "bridge-repo",
+      "bytes": 15666,
+      "redacted": true
+    },
+    {
+      "path": "governance/closeout-manual.md",
+      "category": "governance-protocol",
+      "sourceKind": "bridge-repo",
+      "bytes": 19650,
+      "redacted": true
+    },
+    {
+      "path": "governance/branching-protocol.md",
+      "category": "governance-protocol",
+      "sourceKind": "bridge-repo",
+      "bytes": 10869,
+      "redacted": false
+    },
+    {
+      "path": "governance/medical-center-plan.md",
+      "category": "governance-proposal",
+      "sourceKind": "bridge-repo",
+      "bytes": 12111,
+      "redacted": true
+    },
+    {
+      "path": "registries/round-registry.md",
+      "category": "registry",
+      "sourceKind": "bridge-repo",
+      "bytes": 4235,
+      "redacted": true
+    },
+    {
+      "path": "registries/round-registry.json",
+      "category": "registry-machine",
+      "sourceKind": "bridge-repo",
+      "bytes": 8106,
+      "redacted": true
+    },
+    {
+      "path": "registries/standalone-rounds.md",
+      "category": "registry",
+      "sourceKind": "bridge-repo",
+      "bytes": 13703,
+      "redacted": true
+    },
+    {
+      "path": "registries/standalone-rounds.json",
+      "category": "registry-machine",
+      "sourceKind": "bridge-repo",
+      "bytes": 39349,
+      "redacted": true
+    },
+    {
+      "path": "registries/thinking-rounds.md",
+      "category": "registry",
+      "sourceKind": "bridge-repo",
+      "bytes": 4784,
+      "redacted": true
+    },
+    {
+      "path": "registries/round-evaluations.md",
+      "category": "evaluation",
+      "sourceKind": "bridge-repo",
+      "bytes": 5127,
+      "redacted": false
+    },
+    {
+      "path": "registries/thinking-dimensions.md",
+      "category": "evaluation",
+      "sourceKind": "bridge-repo",
+      "bytes": 5472,
+      "redacted": false
+    },
+    {
+      "path": "registries/thinking-playbook.md",
+      "category": "evaluation",
+      "sourceKind": "bridge-repo",
+      "bytes": 5737,
+      "redacted": false
+    },
+    {
+      "path": "registries/talent-ledger.json",
+      "category": "evaluation-machine",
+      "sourceKind": "bridge-repo",
+      "bytes": 3990,
+      "redacted": true
+    },
+    {
+      "path": "rounds/stop-sweep-20261114/report.md",
+      "category": "round-report",
+      "sourceKind": "bridge-repo",
+      "bytes": 22526,
+      "redacted": true
+    },
+    {
+      "path": "rounds/insert-guard-20261114/report.md",
+      "category": "round-report",
+      "sourceKind": "bridge-repo",
+      "bytes": 15523,
+      "redacted": false
+    },
+    {
+      "path": "rounds/sync-guard-20261114/report.md",
+      "category": "round-report",
+      "sourceKind": "bridge-repo",
+      "bytes": 17773,
+      "redacted": true
+    },
+    {
+      "path": "rounds/issue-intake-20261113/report.md",
+      "category": "round-report",
+      "sourceKind": "bridge-repo",
+      "bytes": 47208,
+      "redacted": true
+    },
+    {
+      "path": "rounds/quiet-200-20261114/followup.md",
+      "category": "round-report",
+      "sourceKind": "bridge-repo",
+      "bytes": 16478,
+      "redacted": false
+    },
+    {
+      "path": "rounds/monitor-console-20261113/report.md",
+      "category": "round-report",
+      "sourceKind": "bridge-repo",
+      "bytes": 3660,
+      "redacted": true
+    },
+    {
+      "path": "rounds/solo-management-20261114/report.md",
+      "category": "round-report",
+      "sourceKind": "bridge-repo",
+      "bytes": 7851,
+      "redacted": false
+    },
+    {
+      "path": "rounds/repo-audit-20261114/report.md",
+      "category": "round-report",
+      "sourceKind": "bridge-repo",
+      "bytes": 7885,
+      "redacted": true
+    },
+    {
+      "path": "rounds/command-center-20261114/brief.md",
+      "category": "round-brief",
+      "sourceKind": "discussion-archive",
+      "bytes": 1843,
+      "redacted": false
+    },
+    {
+      "path": "rounds/solo-stamp-20261114/brief.md",
+      "category": "round-brief",
+      "sourceKind": "discussion-archive",
+      "bytes": 1812,
+      "redacted": false
+    },
+    {
+      "path": "rounds/general-staff-20261114/brief.md",
+      "category": "round-brief",
+      "sourceKind": "discussion-archive",
+      "bytes": 2488,
+      "redacted": false
+    },
+    {
+      "path": "rounds/thinking-dimensions-20261114/brief.md",
+      "category": "round-brief",
+      "sourceKind": "discussion-archive",
+      "bytes": 2405,
+      "redacted": false
+    },
+    {
+      "path": "rounds/stop-sweep-20261114/brief.md",
+      "category": "round-brief",
+      "sourceKind": "discussion-archive",
+      "bytes": 2429,
+      "redacted": false
+    },
+    {
+      "path": "rounds/insert-guard-20261114/brief.md",
+      "category": "round-brief",
+      "sourceKind": "discussion-archive",
+      "bytes": 2067,
+      "redacted": false
+    },
+    {
+      "path": "rounds/sync-guard-20261114/brief.md",
+      "category": "round-brief",
+      "sourceKind": "discussion-archive",
+      "bytes": 2886,
+      "redacted": true
+    },
+    {
+      "path": "rounds/quiet-200-20261114/brief.md",
+      "category": "round-brief",
+      "sourceKind": "discussion-archive",
+      "bytes": 2215,
+      "redacted": true
+    },
+    {
+      "path": "rounds/command-center-20261114/workflow.yaml",
+      "category": "workflow-spec",
+      "sourceKind": "discussion-archive",
+      "bytes": 2763,
+      "redacted": true
+    },
+    {
+      "path": "rounds/solo-stamp-20261114/workflow.yaml",
+      "category": "workflow-spec",
+      "sourceKind": "discussion-archive",
+      "bytes": 2335,
+      "redacted": true
+    },
+    {
+      "path": "rounds/general-staff-20261114/workflow.yaml",
+      "category": "workflow-spec",
+      "sourceKind": "discussion-archive",
+      "bytes": 2348,
+      "redacted": true
+    },
+    {
+      "path": "rounds/thinking-dimensions-20261114/workflow.yaml",
+      "category": "workflow-spec",
+      "sourceKind": "discussion-archive",
+      "bytes": 2534,
+      "redacted": true
+    },
+    {
+      "path": "rounds/stop-sweep-20261114/workflow.yaml",
+      "category": "workflow-spec",
+      "sourceKind": "discussion-archive",
+      "bytes": 3213,
+      "redacted": true
+    },
+    {
+      "path": "rounds/insert-guard-20261114/workflow.yaml",
+      "category": "workflow-spec",
+      "sourceKind": "discussion-archive",
+      "bytes": 3526,
+      "redacted": true
+    },
+    {
+      "path": "rounds/sync-guard-20261114/workflow.yaml",
+      "category": "workflow-spec",
+      "sourceKind": "discussion-archive",
+      "bytes": 3497,
+      "redacted": true
+    },
+    {
+      "path": "rounds/command-center-20261114/solo-round.json",
+      "category": "stamp",
+      "sourceKind": "discussion-archive",
+      "bytes": 1028,
+      "redacted": true
+    },
+    {
+      "path": "rounds/command-center-20261114/staff-thinking.json",
+      "category": "stamp",
+      "sourceKind": "discussion-archive",
+      "bytes": 726,
+      "redacted": true
+    },
+    {
+      "path": "rounds/general-staff-20261114/solo-round.json",
+      "category": "stamp",
+      "sourceKind": "discussion-archive",
+      "bytes": 1000,
+      "redacted": true
+    },
+    {
+      "path": "rounds/general-staff-20261114/staff-thinking.json",
+      "category": "stamp",
+      "sourceKind": "discussion-archive",
+      "bytes": 725,
+      "redacted": true
+    },
+    {
+      "path": "traces/fast-response-round3-trace.json",
+      "category": "workflow-trace",
+      "sourceKind": "discussion-archive",
+      "bytes": 4813,
+      "redacted": true
+    },
+    {
+      "path": "traces/fast-response-round3-run-log.md",
+      "category": "run-log",
+      "sourceKind": "discussion-archive",
+      "bytes": 873,
+      "redacted": false
+    },
+    {
+      "path": "traces/fast-response-round4-trace.json",
+      "category": "workflow-trace",
+      "sourceKind": "discussion-archive",
+      "bytes": 4767,
+      "redacted": true
+    },
+    {
+      "path": "traces/fast-response-round4-run-log.md",
+      "category": "run-log",
+      "sourceKind": "discussion-archive",
+      "bytes": 1132,
+      "redacted": true
+    },
+    {
+      "path": "case-studies/g3d-usage-sim-final.md",
+      "category": "case-study",
+      "sourceKind": "discussion-archive",
+      "bytes": 66427,
+      "redacted": false
+    },
+    {
+      "path": "case-studies/g3d-usage-sim-acceptance.md",
+      "category": "case-study",
+      "sourceKind": "discussion-archive",
+      "bytes": 11330,
+      "redacted": true
+    },
+    {
+      "path": "case-studies/fast-response-final.md",
+      "category": "case-study",
+      "sourceKind": "discussion-archive",
+      "bytes": 29920,
+      "redacted": false
+    },
+    {
+      "path": "reports/openrig-local-share-report.md",
+      "category": "share-report",
+      "sourceKind": "workspace-root",
+      "bytes": 20445,
+      "redacted": true
+    },
+    {
+      "path": "reports/openrig-upstream-eval.md",
+      "category": "evaluation-report",
+      "sourceKind": "workspace-root",
+      "bytes": 30533,
+      "redacted": true
+    },
+    {
+      "path": "reports/workflow-competitive-analysis.md",
+      "category": "analysis-report",
+      "sourceKind": "workspace-root",
+      "bytes": 55692,
+      "redacted": false
+    },
+    {
+      "path": "reports/workflow-review.md",
+      "category": "analysis-report",
+      "sourceKind": "workspace-root",
+      "bytes": 15595,
+      "redacted": false
+    }
+  ]
+}

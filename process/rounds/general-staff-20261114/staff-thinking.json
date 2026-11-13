@@ -1,0 +1,18 @@
+{
+  "schema": "example-staff-thinking/v1",
+  "stampVersion": "v1.0.0",
+  "thinkingId": "THINK-20261114-14",
+  "sourceSoloId": "SOLO-20261114-09",
+  "sourcePath": "<WORKSPACE>/discussions/solo-20261114-09",
+  "title": "总参谋部与思考类单独轮索引",
+  "staffClass": "primary",
+  "strategy": "GOVERN+ANALYZE",
+  "status": "CLOSED",
+  "owner": "Lead/QA",
+  "stampPath": "<WORKSPACE>/discussions/solo-20261114-09/.staff-thinking.json",
+  "stampTarget": "<WORKSPACE>/discussions/solo-20261114-09/.staff-thinking.json",
+  "stampMode": "in_place",
+  "createdAt": "2026-11-14T01:05:00+08:00",
+  "updatedAt": "2026-11-14T01:05:00+08:00",
+  "notes": "staff-thinking is an index supplement; do not modify .solo-round.json"
+}

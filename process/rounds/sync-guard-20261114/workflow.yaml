@@ -1,0 +1,70 @@
+workflow:
+  id: sync-guard-20261114
+  version: 1
+  objective: >
+    处理 QUIET-200 后续决策、引用链接索引、多文件夹 source-of-truth 与同步一致性门禁草案。
+    只写治理/报告文件，不改产品代码。
+  target:
+    rig: monitor-lite
+  entry:
+    role: builder
+  exception_routing:
+    default: orchestrator
+    orchestrator_role: builder
+  coordination_terminal_turn_rule: hot_potato
+  roles:
+    builder:
+      preferred_targets: [main-builder@monitor-lite]
+  context_refs:
+    - <WORKSPACE>/discussions/sync-guard-20261114/BRIEF.md
+    - <BRIDGE_REPO>/docs/BRANCHING-PROTOCOL.md
+    - <BRIDGE_REPO>/docs/branches/UX6-R15.md
+    - <BRIDGE_REPO>/docs/branches/QUIET-200.md
+    - <BRIDGE_REPO>/reports/branches/BRANCH-LEDGER.json
+    - <BRIDGE_REPO>/reports/issues/SIX-ISSUES-INTAKE-20261113.md
+    - <BRIDGE_REPO>/reports/issues/QUIET-200-IMPLEMENTATION-PLAN.md
+    - <BRIDGE_REPO>/reports/issues/QUIET-200-IMPLEMENTATION-PLAN.json
+  steps:
+    - id: s1_followup_refs
+      actor_role: builder
+      objective: >
+        只读输入，写：
+        bridge repo/reports/issues/QUIET-200-FOLLOWUP.md
+        bridge repo/docs/branches/REFERENCE-INDEX.md
+        必须：
+        1) 对 9 个 QUIET-200 待决问题逐条给出推荐默认值和理由，标注需 MAIN 最终拍板的点；
+        2) 建立双向引用索引：UX6-R15 ↔ QUIET-200 ↔ SIX-ISSUES ↔ QUIET PLAN ↔ branch ledger；
+        3) 索引中的路径必须是仓库相对路径或稳定绝对路径，列出每个引用的角色（源/汇总/证据/决策）；
+        4) 明确不引用 /tmp 原始截图、不引用聊天正文；
+        5) 给出后续行动顺序和“本轮不做什么”。
+        完成后 handoff 到 s2_sync_manifest。
+      allowed_exits: [handoff, failed]
+    - id: s2_sync_manifest
+      actor_role: builder
+      objective: >
+        基于上一轮输入，写：
+        bridge repo/reports/branches/SYNC-GUARD.md
+        bridge repo/reports/branches/SYNC-MANIFEST.json
+        必须：
+        1) 定义多文件夹职责：source-of-truth（bridge repo）、外部仓（bridge-app）、
+           只读历史快照（governance-20261110/snapshots）、旧 staging、生成分发包、无关备份；
+        2) 定义哪些内容必须一致、哪些允许差异、哪些禁止手改、哪些只校验存在/哈希；
+        3) 列出引用链接检查规则（相对路径存在、锚点/文件名、无 /tmp 引用、无原始截图）；
+        4) 列出 git 分支/台账/文档一致性检查规则（分支存在、base commit、anchor/rejoin、状态）；
+        5) 给出可复制检查命令/CI 门禁草案；若能稳健实现，可只写测试/脚本建议，不改产品代码；
+        6) 给出漂移处理 SOP：发现差异后如何判断主源、如何同步、如何回滚；
+        7) 产出 SYNC-MANIFEST.json 机器可读清单（目录角色、must_match、allow_diff、forbidden、checks）。
+        完成后 done 关闭 packet。
+      allowed_exits: [done, failed]
+  invariants:
+    continuation_required: true
+    preserve_lineage: true
+    closure_required: true
+    allowed_exits: [waiting, handoff, done, failed]
+  loop_guards:
+    max_hops: 4
+    spawn_budget: 0
+  closure:
+    success: QUIET-200 后续决策、引用索引、多文件夹同步门禁草案落盘。
+    degraded: 报告完成但部分目录/规则未验证，必须标注。
+    failed: 未产出文件或越界改产品代码。

@@ -1,0 +1,74 @@
+workflow:
+  id: stop-sweep-20261114
+  version: 1
+  objective: >
+    确认总任务中途停止时的清扫边界，定义 QA 收尾任务与三类残留判定
+    （CLOSE_OUT / ABANDON / ARCHIVE_RECYCLE），产出完整收尾手册、QA 任务模板和机器可读规则。
+    只写治理/文档，不改产品代码。
+  target:
+    rig: monitor-lite
+  entry:
+    role: builder
+  exception_routing:
+    default: orchestrator
+    orchestrator_role: builder
+  coordination_terminal_turn_rule: hot_potato
+  roles:
+    builder:
+      preferred_targets: [main-builder@monitor-lite]
+  context_refs:
+    - <WORKSPACE>/discussions/stop-sweep-20261114/BRIEF.md
+    - <BRIDGE_REPO>/docs/BRANCHING-PROTOCOL.md
+    - <BRIDGE_REPO>/docs/branches/UX6-R15.md
+    - <BRIDGE_REPO>/docs/branches/QUIET-200.md
+    - <BRIDGE_REPO>/reports/branches/SYNC-GUARD.md
+    - <BRIDGE_REPO>/reports/branches/SYNC-MANIFEST.json
+    - <BRIDGE_REPO>/reports/sctg/FORMAL-RUN-STATE.json
+  steps:
+    - id: c1_stop_boundaries
+      actor_role: builder
+      objective: >
+        只读输入，写：
+        bridge repo/reports/operations/STOP-SWEEP.md
+        bridge repo/reports/operations/STOP-SWEEP.json
+        必须：
+        1) 覆盖停止场景、清扫边界、禁止动作；
+        2) 定义 QA 收尾任务（新建/保留/重启 QA 步骤）的触发条件与 owner；
+        3) 定义 CLOSE_OUT / ABANDON / ARCHIVE_RECYCLE 三类判定标准、证据要求、回滚路径；
+        4) 盘点 workflow/qitem/queue/seat/git/branch/docs/temp/locks/services 等残留；
+        5) 给出 OpenRig 命令草案与状态映射，禁止把 stopped 伪装成 done；
+        6) 说明与主链 R15/R16 锚点、QUIET-200/UX6-R15 的关系。
+        完成后 handoff 到 c2_manual。
+      allowed_exits: [handoff, failed]
+    - id: c2_manual
+      actor_role: builder
+      objective: >
+        基于 c1 产出，写：
+        bridge repo/docs/CLOSEOUT-MANUAL.md
+        bridge repo/reports/operations/QA-CLOSEOUT-TASK.md
+        可选：
+        bridge repo/reports/operations/CLOSEOUT-LEDGER-TEMPLATE.json
+        手册必须是 **标准版、一份长期复用** 的 QA 操作手册，不是针对本次事件的临时报告；
+        必须包含版本号、适用范围、维护者/变更记录、参数化占位符和复用方法。
+        手册必须包含：
+        - 停止后 0–5 分钟冻结清单；
+        - QA 新任务模板/重启 QA 步骤；
+        - 残留分类表与判定树；
+        - 三类动作的 SOP（收尾/废弃/归档回收）；
+        - 证据/隐私/回滚边界；
+        - 收尾完成标准与主链回归 R16；
+        - 每步命令/检查项/记录字段。
+        完成后 done 关闭 packet。
+      allowed_exits: [done, failed]
+  invariants:
+    continuation_required: true
+    preserve_lineage: true
+    closure_required: true
+    allowed_exits: [waiting, handoff, done, failed]
+  loop_guards:
+    max_hops: 4
+    spawn_budget: 0
+  closure:
+    success: 收尾边界、QA 任务模板、完整收尾手册和机器规则落盘。
+    degraded: 手册可用但部分命令/边界未验证，必须标注。
+    failed: 未产出文件或越界改产品代码。

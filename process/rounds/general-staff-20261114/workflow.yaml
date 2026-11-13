@@ -1,0 +1,55 @@
+workflow:
+  id: solo-20261114-09
+  version: 1
+  objective: >
+    建立总参谋部第一版：索引旧 SOLO 中思考类轮次、分配 THINK ID、写 staff-thinking 标戳、
+    建立标准考评表，并对全部思考类轮次做第一轮评估。不移动/重命名旧内容，不改产品代码。
+  target:
+    rig: monitor-lite
+  entry:
+    role: builder
+  exception_routing:
+    default: orchestrator
+    orchestrator_role: builder
+  coordination_terminal_turn_rule: hot_potato
+  roles:
+    builder:
+      preferred_targets: [main-builder@monitor-lite]
+  context_refs:
+    - <WORKSPACE>/discussions/solo-20261114-09/BRIEF.md
+    - <BRIDGE_REPO>/reports/rounds/STANDALONE-ROUNDS.json
+    - <BRIDGE_REPO>/docs/rounds/STANDALONE-ROUND-PROTOCOL.md
+    - <BRIDGE_REPO>/docs/rounds/SOLO-STAMP-PROTOCOL.md
+    - <BRIDGE_REPO>/docs/command-center/COMMAND-CENTER.md
+  steps:
+    - id: s1_index
+      actor_role: builder
+      objective: >
+        写 docs/general-staff/GENERAL-STAFF.md、reports/general-staff/THINKING-ROUNDS.json/.md、
+        reports/general-staff/ROUND-EVALUATION-TEMPLATE.json。
+        读取全部 13 条 SOLO，分类 primary/secondary/none，分配 THINK-20261114-NN，
+        绑定 sourceSoloId/sourcePath；为入选项在原目录或 mirror 写 .staff-thinking.json；
+        不移动/改名/修改原 .solo-round.json。
+        handoff 到 s2_evaluate。
+      allowed_exits: [handoff, failed]
+    - id: s2_evaluate
+      actor_role: builder
+      objective: >
+        基于索引和源文档，对 primary/secondary 思考轮逐条按标准考评表评分，写
+        reports/general-staff/ROUND-EVALUATIONS.json/.md；补 strengths/blindSpots/
+        reusableIdeas/talentCandidate；更新 STANDALONE-ROUNDS.json 的 staffThinkingId/staffClass。
+        不选最终人才、不建维度索引（下一轮）。
+        完成后 done 关闭。
+      allowed_exits: [done, failed]
+  invariants:
+    continuation_required: true
+    preserve_lineage: true
+    closure_required: true
+    allowed_exits: [waiting, handoff, done, failed]
+  loop_guards:
+    max_hops: 4
+    spawn_budget: 0
+  closure:
+    success: 总参谋部索引/标签/考评模板/第一轮评估落盘。
+    degraded: 部分源文档缺失/不可读，标 UNKNOWN。
+    failed: 未产出或移动/修改原内容/改产品代码。

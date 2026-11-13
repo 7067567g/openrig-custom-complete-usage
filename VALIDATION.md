@@ -54,6 +54,7 @@ Warnings: permission_policy absent; launch_posture=floor
 
 - No live 5-seat execution was performed.
 - No model token/cost measurement is claimed.
+- No benchmark test was run; budget was unavailable. See `process/BENCHMARK-STATUS.md`.
 - No hybrid E2E pass is claimed.
 - Live launch requires configured OpenCode/DSH seats and an isolated `OPENRIG_HOME`.
 

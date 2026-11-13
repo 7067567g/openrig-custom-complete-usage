@@ -1,0 +1,63 @@
+workflow:
+  id: solo-20261114-07
+  version: 1
+  objective: >
+    建立 OpenRig 总指挥部/轮次集散中心：标准协议、机器台账、人读视图和 CLI；
+    登记所有非单独轮的长运行轮/主支，支持按 ID 和 resourceKey 查冲突，不遍历全库。
+    只写治理/台账/工具，不改产品代码。
+  target:
+    rig: monitor-lite
+  entry:
+    role: builder
+  exception_routing:
+    default: orchestrator
+    orchestrator_role: builder
+  coordination_terminal_turn_rule: hot_potato
+  roles:
+    builder:
+      preferred_targets: [main-builder@monitor-lite]
+  context_refs:
+    - <WORKSPACE>/discussions/solo-20261114-07/BRIEF.md
+    - <BRIDGE_REPO>/docs/rounds/STANDALONE-ROUND-PROTOCOL.md
+    - <BRIDGE_REPO>/docs/BRANCHING-PROTOCOL.md
+    - <BRIDGE_REPO>/reports/branches/BRANCH-LEDGER.json
+    - <BRIDGE_REPO>/reports/rounds/STANDALONE-ROUNDS.json
+    - <BRIDGE_REPO>/reports/sctg/FORMAL-RUN-STATE.json
+  steps:
+    - id: c1_build_center
+      actor_role: builder
+      objective: >
+        写标准协议/台账/视图/CLI：
+        docs/command-center/COMMAND-CENTER.md
+        reports/command-center/ROUND-REGISTRY.json
+        reports/command-center/ROUND-REGISTRY.md
+        tools/round-command-center.mjs
+        必须：
+        1) 定义总指挥部目的、登记边界（排除 SOLO）、维护时机、owner；
+        2) 字段包含 id/kind/title/status/owner/branch/worktree/base/head/anchor/rejoin/currentRound/scope/resourceKeys/conflictKeys/lastSeenAt/links/notes；
+        3) 初始登记 BRIEF 中所有非 SOLO 条目；状态/分支/base 与 ledger/formal state 一致；
+        4) CLI 支持 list/show/conflicts/validate；冲突按 resourceKey 重叠 + active 状态判定；
+        5) 明确冲突查询不遍历全库；只读 registry；
+        6) 标准更新流程：长运行轮开始/切轮/停止/合并时登记。
+        完成后 handoff 到 c2_verify。
+      allowed_exits: [handoff, failed]
+    - id: c2_verify
+      actor_role: builder
+      objective: >
+        运行 CLI validate/list/conflicts，修复错误；更新
+        docs/branches/REFERENCE-INDEX.md、docs/BRANCHING-PROTOCOL.md 的引用；
+        写 reports/command-center/COMMAND-CENTER-VERIFY.md，记录命令/结果/残余。
+        完成后 done 关闭。
+      allowed_exits: [done, failed]
+  invariants:
+    continuation_required: true
+    preserve_lineage: true
+    closure_required: true
+    allowed_exits: [waiting, handoff, done, failed]
+  loop_guards:
+    max_hops: 4
+    spawn_budget: 0
+  closure:
+    success: 总指挥部协议/registry/视图/CLI 落盘并通过 validate/list/conflicts。
+    degraded: 部分状态未确认，必须标注。
+    failed: 未产出或越界改产品代码。

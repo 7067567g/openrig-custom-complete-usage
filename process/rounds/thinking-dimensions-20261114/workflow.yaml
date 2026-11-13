@@ -1,0 +1,56 @@
+workflow:
+  id: solo-20261114-10
+  version: 1
+  objective: >
+    基于总参谋部索引与评估，建立思考维度索引、全扩展/定向扩展 playbook、人才台账、
+    1-2 seat 强制咨询协议和 thinking workflow 模板。只写治理/模板/报告，不改产品代码。
+  target:
+    rig: monitor-lite
+  entry:
+    role: builder
+  exception_routing:
+    default: orchestrator
+    orchestrator_role: builder
+  coordination_terminal_turn_rule: hot_potato
+  roles:
+    builder:
+      preferred_targets: [main-builder@monitor-lite]
+  context_refs:
+    - <WORKSPACE>/discussions/solo-20261114-10/BRIEF.md
+    - <BRIDGE_REPO>/docs/general-staff/GENERAL-STAFF.md
+    - <BRIDGE_REPO>/reports/general-staff/THINKING-ROUNDS.json
+    - <BRIDGE_REPO>/reports/general-staff/ROUND-EVALUATIONS.json
+    - <BRIDGE_REPO>/reports/general-staff/ROUND-EVALUATION-TEMPLATE.json
+    - <BRIDGE_REPO>/reports/rounds/STANDALONE-ROUNDS.json
+  steps:
+    - id: c1_consult_staff
+      actor_role: builder
+      objective: >
+        作为 1 个 staff-reader seat，先读 THINKING-ROUNDS.json、ROUND-EVALUATIONS.json、
+        GENERAL-STAFF.md，写 reports/general-staff/STAFF-CONSULTATION-20261114-10.json：
+        记录读了什么、命中哪些维度、哪些高分轮次可做人才、哪些角度缺失、建议的扩展路线。
+        这是本思考流程的强制咨询步骤；不进入综合分析前完成。
+        handoff 到 c2_synthesize。
+      allowed_exits: [handoff, failed]
+    - id: c2_synthesize
+      actor_role: builder
+      objective: >
+        写 THINKING-DIMENSIONS.json/.md、THINKING-PLAYBOOK.md、TALENT-LEDGER.json、
+        THINKING-CONSULTATION-PROTOCOL.md、templates/thinking-workflow.yaml、
+        templates/thinking-workflow-2seat.yaml；更新 THINKING/EVALUATION/STANDALONE registry。
+        必须覆盖：全扩展不留死角 checklist；定向扩展标准步骤；1-2 seat 强制咨询；人才选拔
+        证据/边界；维度索引字段；咨询输出字段；模板中 consult 先于 analyze。
+        完成后 done 关闭。
+      allowed_exits: [done, failed]
+  invariants:
+    continuation_required: true
+    preserve_lineage: true
+    closure_required: true
+    allowed_exits: [waiting, handoff, done, failed]
+  loop_guards:
+    max_hops: 4
+    spawn_budget: 0
+  closure:
+    success: 维度索引/playbook/人才台账/咨询协议/templates 落盘。
+    degraded: 部分维度/人才证据不足，必须标注。
+    failed: 未产出或越界改产品代码。

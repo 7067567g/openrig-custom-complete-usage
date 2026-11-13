@@ -1,0 +1,1033 @@
+{
+  "schema": "example-standalone-rounds/v1",
+  "registryVersion": "v1.0.9",
+  "generatedAt": "2026-11-14T00:56:00+08:00",
+  "workspaceRoot": "<WORKSPACE>",
+  "repoRoot": "<BRIDGE_REPO>",
+  "pathRules": {
+    "discussions/*": "workspaceRoot",
+    "reports/*": "repoRoot",
+    "docs/*": "repoRoot",
+    "test/*": "repoRoot"
+  },
+  "protocol": "docs/rounds/STANDALONE-ROUND-PROTOCOL.md",
+  "template": "docs/rounds/STANDALONE-ROUND-TEMPLATE.md",
+  "jsonTemplate": "reports/rounds/STANDALONE-ROUND-TEMPLATE.json",
+  "summary": {
+    "total": 15,
+    "confirmed": 14,
+    "candidate": 1,
+    "outOfScope": 10,
+    "active": 0,
+    "needsTreatment": 0,
+    "dispositions": {
+      "KEEP_CLOSED": 14,
+      "PROMOTE_TO_BRANCH": 1,
+      "KEEP_ACTIVE": 0
+    },
+    "stampStatus": {
+      "OK": 13,
+      "MIRROR": 2,
+      "PENDING": 0
+    },
+    "staffClasses": {
+      "primary": 9,
+      "secondary": 4,
+      "none": 0
+    },
+    "staffIndexed": 13,
+    "staffUnindexed": 2,
+    "staffGrades": {
+      "A": 9,
+      "B": 4,
+      "C": 0,
+      "D": 0
+    },
+    "staffAverage": 42.0,
+    "note": "SOLO-09/10 meta rounds added; not in 13-round staff index; their solo stamps are mirror (source dirs outside workspace); 13 old stamps in-place."
+  },
+  "entries": [
+    {
+      "id": "SOLO-20261026-01",
+      "title": "g3d overlay 使用场景/模式模拟复现",
+      "aliases": [
+        "DISCRETE"
+      ],
+      "classification": "confirmed",
+      "source": [
+        "discussions/g3d-usage-sim-20261026/AGENDA.md",
+        "discussions/g3d-usage-sim-20261026/FINAL.md",
+        "discussions/g3d-usage-sim-20261026/ACCEPTANCE.md"
+      ],
+      "anchor": "R15",
+      "anchorHistorical": "pre-R15 historical",
+      "branch": "discussion/read-only workspace (no repo branch)",
+      "rejoin": "R16",
+      "rejoinHistorical": "n/a (closed 2026-10-26)",
+      "strategy": "RESEARCH",
+      "secondaryStrategy": "ANALYZE",
+      "status": "CLOSED",
+      "lifecycle": "CLOSED",
+      "gate": "ACCEPTANCE PASS 6/6 (document-only)",
+      "qa": "Main/Turn-3 acceptance (PASS)",
+      "evidence": [
+        "discussions/g3d-usage-sim-20261026/FINAL.md",
+        "discussions/g3d-usage-sim-20261026/ACCEPTANCE.md",
+        "discussions/g3d-usage-sim-20261026/DONE"
+      ],
+      "relatedMainRounds": [],
+      "relatedBranches": [],
+      "needsTreatment": false,
+      "action": "none (closed; archive candidate only)",
+      "disposition": "KEEP_CLOSED",
+      "owner": "Lead/QA",
+      "nextAction": "Archive reference only; do not reopen.",
+      "dispositionReason": "Closed PASS 6/6; document-only simulation.",
+      "lastReviewedAt": "2026-11-14T00:31:00+08:00",
+      "sourceRoot": "<WORKSPACE>/discussions/g3d-usage-sim-20261026",
+      "stampPath": "<WORKSPACE>/discussions/g3d-usage-sim-20261026/.solo-round.json",
+      "stampStatus": "OK",
+      "stampTarget": "<WORKSPACE>/discussions/g3d-usage-sim-20261026/.solo-round.json",
+      "stampMode": "in_place",
+      "stampUpdatedAt": "2026-11-13T16:51:37.419Z",
+      "staffThinkingId": "THINK-20261114-01",
+      "staffClass": "primary",
+      "staffStampPath": "<WORKSPACE>/discussions/g3d-usage-sim-20261026/.staff-thinking.json",
+      "staffStampTarget": "<WORKSPACE>/discussions/g3d-usage-sim-20261026/.staff-thinking.json",
+      "staffStampMode": "in_place",
+      "staffGrade": "A",
+      "staffScore": 45,
+      "staffTalentCandidate": true,
+      "staffEvaluatedAt": "2026-11-14T00:58:00+08:00"
+    },
+    {
+      "id": "SOLO-20261113-01",
+      "title": "视觉预规划 + 固定布局下 Android 自动化快速响应",
+      "aliases": [
+        "DISCRETE"
+      ],
+      "classification": "candidate",
+      "source": [
+        "discussions/fast-response-adb-20261113/AGENDA.md",
+        "discussions/fast-response-adb-20261113/FINAL.md",
+        "discussions/fast-response-adb-20261113/round4/ROUND4-FINAL.md"
+      ],
+      "anchor": "R15",
+      "branch": "discussion/read-only + tools/adb (no standalone branch)",
+      "rejoin": "R16",
+      "strategy": "RESEARCH",
+      "secondaryStrategy": "ANALYZE",
+      "status": "CLOSED",
+      "lifecycle": "CLOSED",
+      "gate": "FINAL design close; no product/real-device acceptance",
+      "qa": "Lead final; no independent QA recorded",
+      "evidence": [
+        "discussions/fast-response-adb-20261113/FINAL.md",
+        "discussions/fast-response-adb-20261113/VISION.md",
+        "discussions/fast-response-adb-20261113/RUNTIME.md",
+        "discussions/fast-response-adb-20261113/round4/ROUND4-FINAL.md"
+      ],
+      "relatedMainRounds": [],
+      "relatedBranches": [],
+      "needsTreatment": false,
+      "action": "Next SOLO: decide whether 4 subrounds are one SOLO umbrella or promote to branch; verify no stale tooling/claims.",
+      "notes": "design closed; classification remains candidate because 4 subrounds/standalone boundary unresolved",
+      "disposition": "PROMOTE_TO_BRANCH",
+      "owner": "Lead/MAIN + independent QA",
+      "nextAction": "Use clean worktree; split fast-response pathspec/hunks, run targeted tests + independent QA; merge only after convergence gate.",
+      "dispositionReason": "4 subrounds + code/tooling + no standalone QA; umbrella would mix ANALYZE/RESEARCH/SMALL_FIX.",
+      "lastReviewedAt": "2026-11-14T00:32:41+08:00",
+      "resolved": true,
+      "branchPlan": {
+        "code": "FAST-RESPONSE",
+        "branch": "feat/fast-response",
+        "status": "CREATED",
+        "baseCommit": "f973b3f3e8e14184312f4e9e9f0085873f8c621e",
+        "worktree": "<FAST_RESPONSE_WORKTREE>",
+        "rejoin": "R16",
+        "baselineCommit": "f973b3f3e8e14184312f4e9e9f0085873f8c621e"
+      },
+      "sourceRoot": "<WORKSPACE>/discussions/fast-response-adb-20261113",
+      "stampPath": "<WORKSPACE>/discussions/fast-response-adb-20261113/.solo-round.json",
+      "stampStatus": "OK",
+      "stampTarget": "<WORKSPACE>/discussions/fast-response-adb-20261113/.solo-round.json",
+      "stampMode": "in_place",
+      "stampUpdatedAt": "2026-11-13T16:51:37.419Z",
+      "staffThinkingId": "THINK-20261114-02",
+      "staffClass": "primary",
+      "staffStampPath": "<WORKSPACE>/discussions/fast-response-adb-20261113/.staff-thinking.json",
+      "staffStampTarget": "<WORKSPACE>/discussions/fast-response-adb-20261113/.staff-thinking.json",
+      "staffStampMode": "in_place",
+      "staffGrade": "A",
+      "staffScore": 44,
+      "staffTalentCandidate": false,
+      "staffEvaluatedAt": "2026-11-14T00:58:00+08:00"
+    },
+    {
+      "id": "SOLO-20261113-02",
+      "title": "六条真机 UI 问题查收分析",
+      "aliases": [
+        "DISCRETE"
+      ],
+      "classification": "confirmed",
+      "source": [
+        "discussions/issue-intake-20261113/BRIEF.md",
+        "reports/issues/SIX-ISSUES-INTAKE-20261113.md",
+        "reports/issues/SIX-ISSUES-INTAKE-20261113.json"
+      ],
+      "anchor": "R15",
+      "branch": "feat/quiet-200 (working tree at analysis time) / read-only",
+      "rejoin": "R16",
+      "strategy": "ANALYZE",
+      "secondaryStrategy": "GOVERN",
+      "status": "CLOSED",
+      "lifecycle": "CLOSED",
+      "gate": "report + JSON; no product code changed",
+      "qa": "self-check + later SYNC-GUARD review",
+      "evidence": [
+        "reports/issues/SIX-ISSUES-INTAKE-20261113.md",
+        "reports/issues/SIX-ISSUES-INTAKE-20261113.json"
+      ],
+      "relatedMainRounds": [
+        "R15",
+        "R16"
+      ],
+      "relatedBranches": [
+        "UX6-R15"
+      ],
+      "needsTreatment": false,
+      "action": "none (analysis consumed by UX6/QUIET plans)",
+      "disposition": "KEEP_CLOSED",
+      "owner": "Lead",
+      "nextAction": "Consume I1-I6 under UX6/QUIET plans; no reopen.",
+      "dispositionReason": "Analysis complete; consumed by branch plans.",
+      "lastReviewedAt": "2026-11-14T00:31:00+08:00",
+      "sourceRoot": "<WORKSPACE>/discussions/issue-intake-20261113",
+      "stampPath": "<WORKSPACE>/discussions/issue-intake-20261113/.solo-round.json",
+      "stampStatus": "OK",
+      "stampTarget": "<WORKSPACE>/discussions/issue-intake-20261113/.solo-round.json",
+      "stampMode": "in_place",
+      "stampUpdatedAt": "2026-11-13T16:51:37.420Z",
+      "staffThinkingId": "THINK-20261114-03",
+      "staffClass": "primary",
+      "staffStampPath": "<WORKSPACE>/discussions/issue-intake-20261113/.staff-thinking.json",
+      "staffStampTarget": "<WORKSPACE>/discussions/issue-intake-20261113/.staff-thinking.json",
+      "staffStampMode": "in_place",
+      "staffGrade": "A",
+      "staffScore": 42,
+      "staffTalentCandidate": true,
+      "staffEvaluatedAt": "2026-11-14T00:58:00+08:00"
+    },
+    {
+      "id": "SOLO-20261113-03",
+      "title": "the assistant project 监控台 Round 1/2（设计+实现）",
+      "aliases": [
+        "DISCRETE"
+      ],
+      "classification": "confirmed",
+      "source": [
+        "discussions/monitor-console-20261113/round1/workflow.yaml",
+        "discussions/monitor-console-20261113/round2/workflow.yaml",
+        "reports/monitor/MONITOR-BUILD-REPORT.md",
+        "docs/MONITORING-DASHBOARD-PLAN.md"
+      ],
+      "anchor": "R15",
+      "branch": "remediation/20261113 worktree (monitor files)",
+      "rejoin": "R16",
+      "strategy": "SMALL_FIX",
+      "secondaryStrategy": "GOVERN",
+      "status": "CLOSED",
+      "lifecycle": "CLOSED",
+      "gate": "18/18 monitor tests; local-io 5/5; headless render; route 200",
+      "qa": "Lead auto-verify + report",
+      "evidence": [
+        "reports/monitor/MONITOR-BUILD-REPORT.md",
+        "docs/MONITORING-DASHBOARD-PLAN.md",
+        "test/monitor-components.test.mjs"
+      ],
+      "relatedMainRounds": [
+        "R15",
+        "R16"
+      ],
+      "relatedBranches": [],
+      "needsTreatment": false,
+      "action": "none for round; git hygiene via STOP-SWEEP",
+      "disposition": "KEEP_CLOSED",
+      "owner": "Lead",
+      "nextAction": "Keep as reference; git hygiene via STOP-SWEEP only.",
+      "dispositionReason": "Round1/2 complete; tests/report evidence.",
+      "lastReviewedAt": "2026-11-14T00:31:00+08:00",
+      "sourceRoot": "<WORKSPACE>/discussions/monitor-console-20261113",
+      "stampPath": "<WORKSPACE>/discussions/monitor-console-20261113/.solo-round.json",
+      "stampStatus": "OK",
+      "stampTarget": "<WORKSPACE>/discussions/monitor-console-20261113/.solo-round.json",
+      "stampMode": "in_place",
+      "stampUpdatedAt": "2026-11-13T16:51:37.420Z",
+      "staffThinkingId": "THINK-20261114-04",
+      "staffClass": "secondary",
+      "staffStampPath": "<WORKSPACE>/discussions/monitor-console-20261113/.staff-thinking.json",
+      "staffStampTarget": "<WORKSPACE>/discussions/monitor-console-20261113/.staff-thinking.json",
+      "staffStampMode": "in_place",
+      "staffGrade": "B",
+      "staffScore": 37,
+      "staffTalentCandidate": false,
+      "staffEvaluatedAt": "2026-11-14T00:58:00+08:00"
+    },
+    {
+      "id": "SOLO-20261113-04",
+      "title": "本地桥功能对比与取舍（老桥/新桥）",
+      "aliases": [
+        "DISCRETE"
+      ],
+      "classification": "confirmed",
+      "source": [
+        "reports/compare-20261113/COMPARISON-QUICK-REFERENCE.md",
+        "reports/compare-20261113/VERIFY-COMPARISON.md",
+        "reports/compare-20261113/APP-INVENTORY.md"
+      ],
+      "anchor": "R15",
+      "branch": "remediation/20261113 worktree (read-only analysis)",
+      "rejoin": "R16",
+      "strategy": "ANALYZE",
+      "secondaryStrategy": "RESEARCH",
+      "status": "CLOSED",
+      "lifecycle": "CLOSED",
+      "gate": "VERIFY-COMPARISON PASS WITH FIXES",
+      "qa": "independent comparison/verification",
+      "evidence": [
+        "reports/compare-20261113/COMPARISON-QUICK-REFERENCE.md",
+        "reports/compare-20261113/VERIFY-COMPARISON.md",
+        "reports/compare-20261113/APP-INVENTORY.md"
+      ],
+      "relatedMainRounds": [],
+      "relatedBranches": [],
+      "needsTreatment": false,
+      "action": "none (closed analysis; reference only)",
+      "disposition": "KEEP_CLOSED",
+      "owner": "Lead",
+      "nextAction": "Keep as reference for old/new bridge decisions.",
+      "dispositionReason": "Comparison/verification complete.",
+      "lastReviewedAt": "2026-11-14T00:31:00+08:00",
+      "sourceRoot": "<BRIDGE_REPO>/reports/compare-20261113",
+      "stampPath": "<BRIDGE_REPO>/reports/compare-20261113/.solo-round.json",
+      "stampStatus": "OK",
+      "stampTarget": "<BRIDGE_REPO>/reports/compare-20261113/.solo-round.json",
+      "stampMode": "in_place",
+      "stampUpdatedAt": "2026-11-13T16:52:45.238Z",
+      "staffThinkingId": "THINK-20261114-05",
+      "staffClass": "primary",
+      "staffStampPath": "<BRIDGE_REPO>/reports/compare-20261113/.staff-thinking.json",
+      "staffStampTarget": "<BRIDGE_REPO>/reports/compare-20261113/.staff-thinking.json",
+      "staffStampMode": "in_place",
+      "staffGrade": "A",
+      "staffScore": 46,
+      "staffTalentCandidate": true,
+      "staffEvaluatedAt": "2026-11-14T00:58:00+08:00"
+    },
+    {
+      "id": "SOLO-20261114-01",
+      "title": "SYNC-GUARD 多文件夹一致性/引用索引",
+      "aliases": [
+        "DISCRETE"
+      ],
+      "classification": "confirmed",
+      "source": [
+        "discussions/sync-guard-20261114/BRIEF.md",
+        "reports/issues/QUIET-200-FOLLOWUP.md",
+        "reports/branches/SYNC-GUARD.md",
+        "reports/branches/SYNC-MANIFEST.json"
+      ],
+      "anchor": "R15",
+      "branch": "feat/quiet-200 worktree (governance docs)",
+      "rejoin": "R16",
+      "strategy": "GOVERN",
+      "secondaryStrategy": "ANALYZE",
+      "status": "CLOSED",
+      "lifecycle": "CLOSED",
+      "gate": "s1/s2 completed; manifest/commands drafted; docs committed? (untracked)",
+      "qa": "Lead review",
+      "evidence": [
+        "reports/branches/SYNC-GUARD.md",
+        "reports/branches/SYNC-MANIFEST.json",
+        "reports/issues/QUIET-200-FOLLOWUP.md",
+        "docs/branches/REFERENCE-INDEX.md"
+      ],
+      "relatedMainRounds": [
+        "R15",
+        "R16"
+      ],
+      "relatedBranches": [
+        "UX6-R15",
+        "QUIET-200"
+      ],
+      "needsTreatment": false,
+      "action": "none for analysis; keep index/ledger maintained",
+      "disposition": "KEEP_CLOSED",
+      "owner": "Lead/QA",
+      "nextAction": "Keep SYNC-GUARD docs/manifest as standard reference.",
+      "dispositionReason": "s1/s2 complete; no product code.",
+      "lastReviewedAt": "2026-11-14T00:31:00+08:00",
+      "sourceRoot": "<WORKSPACE>/discussions/sync-guard-20261114",
+      "stampPath": "<WORKSPACE>/discussions/sync-guard-20261114/.solo-round.json",
+      "stampStatus": "OK",
+      "stampTarget": "<WORKSPACE>/discussions/sync-guard-20261114/.solo-round.json",
+      "stampMode": "in_place",
+      "stampUpdatedAt": "2026-11-13T16:51:37.422Z",
+      "staffThinkingId": "THINK-20261114-06",
+      "staffClass": "primary",
+      "staffStampPath": "<WORKSPACE>/discussions/sync-guard-20261114/.staff-thinking.json",
+      "staffStampTarget": "<WORKSPACE>/discussions/sync-guard-20261114/.staff-thinking.json",
+      "staffStampMode": "in_place",
+      "staffGrade": "A",
+      "staffScore": 42,
+      "staffTalentCandidate": true,
+      "staffEvaluatedAt": "2026-11-14T00:58:00+08:00"
+    },
+    {
+      "id": "SOLO-20261114-02",
+      "title": "STOP-SWEEP 停止边界/收尾手册",
+      "aliases": [
+        "DISCRETE"
+      ],
+      "classification": "confirmed",
+      "source": [
+        "discussions/stop-sweep-20261114/BRIEF.md",
+        "reports/operations/STOP-SWEEP.md",
+        "docs/CLOSEOUT-MANUAL.md",
+        "reports/operations/QA-CLOSEOUT-TASK.md"
+      ],
+      "anchor": "R15",
+      "branch": "feat/quiet-200 worktree (governance docs)",
+      "rejoin": "R16",
+      "strategy": "GOVERN",
+      "secondaryStrategy": "OPS",
+      "status": "CLOSED",
+      "lifecycle": "CLOSED",
+      "gate": "boundaries/manual/templates landed; no product code; no destructive action",
+      "qa": "Lead review",
+      "evidence": [
+        "reports/operations/STOP-SWEEP.md",
+        "reports/operations/STOP-SWEEP.json",
+        "docs/CLOSEOUT-MANUAL.md",
+        "reports/operations/QA-CLOSEOUT-TASK.md",
+        "reports/operations/CLOSEOUT-LEDGER-TEMPLATE.json"
+      ],
+      "relatedMainRounds": [
+        "R15",
+        "R16"
+      ],
+      "relatedBranches": [
+        "UX6-R15",
+        "QUIET-200"
+      ],
+      "needsTreatment": false,
+      "action": "none; use as standard closeout",
+      "disposition": "KEEP_CLOSED",
+      "owner": "Lead/QA",
+      "nextAction": "Keep CLOSEOUT-MANUAL/STOP-SWEEP as standard.",
+      "dispositionReason": "Closeout standards complete.",
+      "lastReviewedAt": "2026-11-14T00:31:00+08:00",
+      "sourceRoot": "<WORKSPACE>/discussions/stop-sweep-20261114",
+      "stampPath": "<WORKSPACE>/discussions/stop-sweep-20261114/.solo-round.json",
+      "stampStatus": "OK",
+      "stampTarget": "<WORKSPACE>/discussions/stop-sweep-20261114/.solo-round.json",
+      "stampMode": "in_place",
+      "stampUpdatedAt": "2026-11-13T16:51:37.422Z",
+      "staffThinkingId": "THINK-20261114-07",
+      "staffClass": "primary",
+      "staffStampPath": "<WORKSPACE>/discussions/stop-sweep-20261114/.staff-thinking.json",
+      "staffStampTarget": "<WORKSPACE>/discussions/stop-sweep-20261114/.staff-thinking.json",
+      "staffStampMode": "in_place",
+      "staffGrade": "A",
+      "staffScore": 47,
+      "staffTalentCandidate": true,
+      "staffEvaluatedAt": "2026-11-14T00:58:00+08:00"
+    },
+    {
+      "id": "SOLO-20261114-03",
+      "title": "INSERT-GUARD 中途插入标准协议",
+      "aliases": [
+        "DISCRETE"
+      ],
+      "classification": "confirmed",
+      "source": [
+        "discussions/insert-guard-20261114/BRIEF.md",
+        "docs/MIDRUN-INSERTION-PROTOCOL.md",
+        "reports/operations/MIDRUN-INSERTION.md",
+        "reports/operations/INSERTION-LEDGER-TEMPLATE.json"
+      ],
+      "anchor": "R15",
+      "branch": "feat/quiet-200 worktree (governance docs)",
+      "rejoin": "R16",
+      "strategy": "GOVERN",
+      "secondaryStrategy": "ANALYZE",
+      "status": "CLOSED",
+      "lifecycle": "CLOSED",
+      "gate": "protocol v1.0.0 + template + bidirectional index/BRANCHING §9",
+      "qa": "Lead review",
+      "evidence": [
+        "docs/MIDRUN-INSERTION-PROTOCOL.md",
+        "reports/operations/MIDRUN-INSERTION.md",
+        "reports/operations/MIDRUN-INSERTION.json",
+        "reports/operations/INSERTION-LEDGER-TEMPLATE.json"
+      ],
+      "relatedMainRounds": [
+        "R15",
+        "R16"
+      ],
+      "relatedBranches": [
+        "UX6-R15",
+        "QUIET-200"
+      ],
+      "needsTreatment": false,
+      "action": "none; use protocol for future insertions",
+      "disposition": "KEEP_CLOSED",
+      "owner": "Lead/QA",
+      "nextAction": "Keep INSERT-GUARD protocol/ledger as standard.",
+      "dispositionReason": "Protocol v1.0.0 complete.",
+      "lastReviewedAt": "2026-11-14T00:31:00+08:00",
+      "sourceRoot": "<WORKSPACE>/discussions/insert-guard-20261114",
+      "stampPath": "<WORKSPACE>/discussions/insert-guard-20261114/.solo-round.json",
+      "stampStatus": "OK",
+      "stampTarget": "<WORKSPACE>/discussions/insert-guard-20261114/.solo-round.json",
+      "stampMode": "in_place",
+      "stampUpdatedAt": "2026-11-13T16:51:37.423Z",
+      "staffThinkingId": "THINK-20261114-08",
+      "staffClass": "primary",
+      "staffStampPath": "<WORKSPACE>/discussions/insert-guard-20261114/.staff-thinking.json",
+      "staffStampTarget": "<WORKSPACE>/discussions/insert-guard-20261114/.staff-thinking.json",
+      "staffStampMode": "in_place",
+      "staffGrade": "A",
+      "staffScore": 44,
+      "staffTalentCandidate": true,
+      "staffEvaluatedAt": "2026-11-14T00:58:00+08:00"
+    },
+    {
+      "id": "SOLO-20261114-04",
+      "title": "SOLO-GUARD 单独轮协议/初始台账",
+      "aliases": [
+        "DISCRETE"
+      ],
+      "classification": "confirmed",
+      "source": [
+        "discussions/solo-guard-20261114/BRIEF.md",
+        "docs/rounds/STANDALONE-ROUND-PROTOCOL.md",
+        "docs/rounds/STANDALONE-ROUND-TEMPLATE.md",
+        "reports/rounds/STANDALONE-ROUND-TEMPLATE.json"
+      ],
+      "anchor": "R15",
+      "branch": "feat/quiet-200 worktree (governance docs)",
+      "rejoin": "R16",
+      "strategy": "GOVERN",
+      "secondaryStrategy": "ANALYZE",
+      "status": "CLOSED",
+      "lifecycle": "CLOSED",
+      "gate": "g1 protocol/template + g2 registry/links complete; no product code",
+      "qa": "Lead review",
+      "evidence": [
+        "docs/rounds/STANDALONE-ROUND-PROTOCOL.md",
+        "docs/rounds/STANDALONE-ROUND-TEMPLATE.md",
+        "reports/rounds/STANDALONE-ROUND-TEMPLATE.json"
+      ],
+      "relatedMainRounds": [
+        "R15",
+        "R16"
+      ],
+      "relatedBranches": [],
+      "needsTreatment": false,
+      "action": "CLOSED at g2; maintain registry/protocol; no permanent branch/worktree",
+      "disposition": "KEEP_CLOSED",
+      "owner": "Lead/QA",
+      "nextAction": "Keep SOLO protocol/registry; maintain as standard.",
+      "dispositionReason": "g1/g2 complete; closed at g2.",
+      "lastReviewedAt": "2026-11-14T00:31:00+08:00",
+      "sourceRoot": "<WORKSPACE>/discussions/solo-guard-20261114",
+      "stampPath": "<WORKSPACE>/discussions/solo-guard-20261114/.solo-round.json",
+      "stampStatus": "OK",
+      "stampTarget": "<WORKSPACE>/discussions/solo-guard-20261114/.solo-round.json",
+      "stampMode": "in_place",
+      "stampUpdatedAt": "2026-11-13T16:51:37.423Z",
+      "staffThinkingId": "THINK-20261114-09",
+      "staffClass": "primary",
+      "staffStampPath": "<WORKSPACE>/discussions/solo-guard-20261114/.staff-thinking.json",
+      "staffStampTarget": "<WORKSPACE>/discussions/solo-guard-20261114/.staff-thinking.json",
+      "staffStampMode": "in_place",
+      "staffGrade": "A",
+      "staffScore": 44,
+      "staffTalentCandidate": true,
+      "staffEvaluatedAt": "2026-11-14T00:58:00+08:00"
+    },
+    {
+      "id": "SOLO-20261114-05",
+      "title": "单独轮管理收治",
+      "aliases": [
+        "DISCRETE"
+      ],
+      "classification": "confirmed",
+      "source": [
+        "discussions/solo-20261114-05/BRIEF.md",
+        "reports/rounds/SOLO-20261114-05-MANAGEMENT.md",
+        "reports/rounds/SOLO-20261114-05-MANAGEMENT.json"
+      ],
+      "anchor": "R15",
+      "branch": "feat/quiet-200 @ dcd9f93 (governance docs)",
+      "rejoin": "R16",
+      "strategy": "GOVERN",
+      "secondaryStrategy": "OPS",
+      "status": "CLOSED",
+      "lifecycle": "CLOSED",
+      "gate": "9 entries disposition + registry v1.0.1 + management md/json",
+      "qa": "Lead/QA",
+      "evidence": [
+        "reports/rounds/SOLO-20261114-05-MANAGEMENT.md",
+        "reports/rounds/SOLO-20261114-05-MANAGEMENT.json",
+        "reports/rounds/STANDALONE-ROUNDS.json"
+      ],
+      "relatedMainRounds": [
+        "R15",
+        "R16"
+      ],
+      "relatedBranches": [
+        "FAST-RESPONSE"
+      ],
+      "needsTreatment": false,
+      "disposition": "KEEP_CLOSED",
+      "owner": "Lead/QA",
+      "nextAction": "none (closed; keep as reference)",
+      "dispositionReason": "Management report complete; fast-response promoted to branch plan.",
+      "lastReviewedAt": "2026-11-14T00:31:00+08:00",
+      "sourceRoot": "<WORKSPACE>/discussions/solo-20261114-05",
+      "stampPath": "<WORKSPACE>/discussions/solo-20261114-05/.solo-round.json",
+      "stampStatus": "OK",
+      "stampTarget": "<WORKSPACE>/discussions/solo-20261114-05/.solo-round.json",
+      "stampMode": "in_place",
+      "stampUpdatedAt": "2026-11-13T16:51:37.424Z",
+      "staffThinkingId": "THINK-20261114-10",
+      "staffClass": "secondary",
+      "staffStampPath": "<WORKSPACE>/discussions/solo-20261114-05/.staff-thinking.json",
+      "staffStampTarget": "<WORKSPACE>/discussions/solo-20261114-05/.staff-thinking.json",
+      "staffStampMode": "in_place",
+      "staffGrade": "B",
+      "staffScore": 35,
+      "staffTalentCandidate": false,
+      "staffEvaluatedAt": "2026-11-14T00:58:00+08:00"
+    },
+    {
+      "id": "SOLO-20261114-06",
+      "title": "全库近期更改与干净状态审计",
+      "aliases": [
+        "DISCRETE"
+      ],
+      "classification": "confirmed",
+      "source": [
+        "discussions/solo-20261114-06/BRIEF.md",
+        "discussions/solo-20261114-06/workflow.yaml",
+        "reports/rounds/SOLO-20261114-06-REPO-AUDIT.md",
+        "reports/rounds/SOLO-20261114-06-REPO-AUDIT.json"
+      ],
+      "anchor": "R15",
+      "branch": "feat/quiet-200 @ dcd9f93 (clean) + feat/fast-response @ 7ad2c24 (clean)",
+      "rejoin": "R16",
+      "strategy": "OPS",
+      "secondaryStrategy": "QA",
+      "status": "CLOSED",
+      "lifecycle": "CLOSED",
+      "gate": "audit report + r2 next-step + baseline metadata reconciliation",
+      "qa": "Lead/QA",
+      "evidence": [
+        "reports/rounds/SOLO-20261114-06-REPO-AUDIT.md",
+        "reports/rounds/SOLO-20261114-06-REPO-AUDIT.json",
+        "reports/rounds/SOLO-20261114-06-NEXT-STEP.md"
+      ],
+      "relatedMainRounds": [
+        "R15",
+        "R16"
+      ],
+      "relatedBranches": [
+        "UX6-R15",
+        "QUIET-200",
+        "FAST-RESPONSE"
+      ],
+      "needsTreatment": false,
+      "disposition": "KEEP_CLOSED",
+      "owner": "Lead/QA",
+      "nextAction": "Baseline metadata fixed; proceed to FAST-RESPONSE independent QA + merge readiness (not immediate merge).",
+      "dispositionReason": "Audit + next-step complete; baseline drift assigned as precondition to FAST-RESPONSE QA.",
+      "lastReviewedAt": "2026-11-14T00:52:00+08:00",
+      "postfix": {
+        "status": "PASS",
+        "report": "reports/rounds/SOLO-20261114-06-POSTFIX.md",
+        "baselineTags": [
+          "baseline-b1-20261114",
+          "baseline-b2-20261114",
+          "baseline-b3-20261114"
+        ],
+        "nextGoal": "FAST-RESPONSE independent QA + merge readiness"
+      },
+      "sourceRoot": "<WORKSPACE>/discussions/solo-20261114-06",
+      "stampPath": "<WORKSPACE>/discussions/solo-20261114-06/.solo-round.json",
+      "stampStatus": "OK",
+      "stampTarget": "<WORKSPACE>/discussions/solo-20261114-06/.solo-round.json",
+      "stampMode": "in_place",
+      "stampUpdatedAt": "2026-11-13T16:51:37.424Z",
+      "staffThinkingId": "THINK-20261114-11",
+      "staffClass": "secondary",
+      "staffStampPath": "<WORKSPACE>/discussions/solo-20261114-06/.staff-thinking.json",
+      "staffStampTarget": "<WORKSPACE>/discussions/solo-20261114-06/.staff-thinking.json",
+      "staffStampMode": "in_place",
+      "staffGrade": "B",
+      "staffScore": 39,
+      "staffTalentCandidate": false,
+      "staffEvaluatedAt": "2026-11-14T00:58:00+08:00"
+    },
+    {
+      "id": "SOLO-20261114-07",
+      "title": "OpenRig 总指挥部（轮次集散中心）",
+      "aliases": [
+        "DISCRETE"
+      ],
+      "classification": "confirmed",
+      "source": [
+        "discussions/solo-20261114-07/BRIEF.md",
+        "docs/command-center/COMMAND-CENTER.md",
+        "reports/command-center/ROUND-REGISTRY.json",
+        "tools/round-command-center.mjs",
+        "reports/command-center/COMMAND-CENTER-VERIFY.md"
+      ],
+      "anchor": "R15",
+      "branch": "feat/quiet-200 @ dcd9f93 (governance docs)",
+      "rejoin": "R16",
+      "strategy": "GOVERN",
+      "secondaryStrategy": "OPS",
+      "status": "CLOSED",
+      "lifecycle": "CLOSED",
+      "gate": "CLI validate OK 6 entries/5 active/1 known conflict; verify report",
+      "qa": "Lead/QA",
+      "evidence": [
+        "docs/command-center/COMMAND-CENTER.md",
+        "reports/command-center/ROUND-REGISTRY.json",
+        "reports/command-center/ROUND-REGISTRY.md",
+        "tools/round-command-center.mjs",
+        "reports/command-center/COMMAND-CENTER-VERIFY.md"
+      ],
+      "relatedMainRounds": [
+        "R15",
+        "R16"
+      ],
+      "relatedBranches": [],
+      "needsTreatment": false,
+      "disposition": "KEEP_CLOSED",
+      "owner": "Lead/QA",
+      "nextAction": "none (closed; use registry/CLI)",
+      "dispositionReason": "Command center + CLI verified; no product code.",
+      "lastReviewedAt": "2026-11-14T00:46:00+08:00",
+      "sourceRoot": "<WORKSPACE>/discussions/solo-20261114-07",
+      "stampPath": "<WORKSPACE>/discussions/solo-20261114-07/.solo-round.json",
+      "stampStatus": "OK",
+      "stampTarget": "<WORKSPACE>/discussions/solo-20261114-07/.solo-round.json",
+      "stampMode": "in_place",
+      "stampUpdatedAt": "2026-11-13T16:51:37.425Z",
+      "staffThinkingId": "THINK-20261114-12",
+      "staffClass": "primary",
+      "staffStampPath": "<WORKSPACE>/discussions/solo-20261114-07/.staff-thinking.json",
+      "staffStampTarget": "<WORKSPACE>/discussions/solo-20261114-07/.staff-thinking.json",
+      "staffStampMode": "in_place",
+      "staffGrade": "A",
+      "staffScore": 42,
+      "staffTalentCandidate": true,
+      "staffEvaluatedAt": "2026-11-14T00:58:00+08:00"
+    },
+    {
+      "id": "SOLO-20261114-08",
+      "title": "单独轮识别标戳",
+      "aliases": [
+        "DISCRETE"
+      ],
+      "classification": "confirmed",
+      "source": [
+        "discussions/solo-20261114-08/BRIEF.md",
+        "docs/rounds/SOLO-STAMP-PROTOCOL.md",
+        "tools/solo-round-stamp.mjs"
+      ],
+      "anchor": "R15",
+      "branch": "feat/quiet-200 @ dcd9f93 (governance docs/tool)",
+      "rejoin": "R16",
+      "strategy": "GOVERN",
+      "secondaryStrategy": "OPS",
+      "status": "CLOSED",
+      "lifecycle": "CLOSED",
+      "gate": "stamp protocol/tool + all confirmed/candidate stamps + collect/verify",
+      "qa": "Lead/QA",
+      "evidence": [
+        "docs/rounds/SOLO-STAMP-PROTOCOL.md",
+        "tools/solo-round-stamp.mjs",
+        "reports/rounds/SOLO-STAMP-COLLECTION.json",
+        "reports/rounds/SOLO-STAMP-COLLECTION.md",
+        "reports/rounds/SOLO-STAMP-VERIFY.md"
+      ],
+      "relatedMainRounds": [
+        "R15",
+        "R16"
+      ],
+      "relatedBranches": [],
+      "needsTreatment": false,
+      "disposition": "KEEP_CLOSED",
+      "owner": "Lead/QA",
+      "nextAction": "Host with write access: copy 12 mirror stamps to sourceRoot, rerun verify, set stampStatus=OK; no product code.",
+      "dispositionReason": "Stamp protocol/tool + 13 stamps + collect/verify complete; 12 mirrors pending host copy-back.",
+      "lastReviewedAt": "2026-11-14T00:51:00+08:00",
+      "sourceRoot": "<WORKSPACE>/discussions/solo-20261114-08",
+      "stampPath": "<WORKSPACE>/discussions/solo-20261114-08/.solo-round.json",
+      "stampStatus": "OK",
+      "stampTarget": "<WORKSPACE>/discussions/solo-20261114-08/.solo-round.json",
+      "stampMode": "in_place",
+      "stampUpdatedAt": "2026-11-13T16:51:37.425Z",
+      "staffThinkingId": "THINK-20261114-13",
+      "staffClass": "secondary",
+      "staffStampPath": "<WORKSPACE>/discussions/solo-20261114-08/.staff-thinking.json",
+      "staffStampTarget": "<WORKSPACE>/discussions/solo-20261114-08/.staff-thinking.json",
+      "staffStampMode": "in_place",
+      "staffGrade": "B",
+      "staffScore": 39,
+      "staffTalentCandidate": false,
+      "staffEvaluatedAt": "2026-11-14T00:58:00+08:00"
+    },
+    {
+      "id": "SOLO-20261114-09",
+      "title": "总参谋部与思考类单独轮索引",
+      "aliases": [
+        "DISCRETE"
+      ],
+      "classification": "confirmed",
+      "source": [
+        "discussions/solo-20261114-09/BRIEF.md",
+        "docs/general-staff/GENERAL-STAFF.md",
+        "reports/general-staff/THINKING-ROUNDS.json",
+        "reports/general-staff/ROUND-EVALUATIONS.json"
+      ],
+      "anchor": "R15",
+      "branch": "feat/quiet-200 @ dcd9f93 (governance docs)",
+      "rejoin": "R16",
+      "strategy": "GOVERN",
+      "secondaryStrategy": "ANALYZE",
+      "status": "CLOSED",
+      "lifecycle": "CLOSED",
+      "gate": "13 SOLO indexed; 13 staff stamps; first-pass evaluations",
+      "qa": "Lead/QA",
+      "evidence": [
+        "docs/general-staff/GENERAL-STAFF.md",
+        "reports/general-staff/THINKING-ROUNDS.json",
+        "reports/general-staff/ROUND-EVALUATIONS.json"
+      ],
+      "relatedMainRounds": [
+        "R15",
+        "R16"
+      ],
+      "relatedBranches": [],
+      "needsTreatment": false,
+      "disposition": "KEEP_CLOSED",
+      "owner": "Lead/QA",
+      "nextAction": "none; meta round closed; stamp pending next stamp pass",
+      "dispositionReason": "Staff index/evaluation complete.",
+      "lastReviewedAt": "2026-11-14T00:58:00+08:00",
+      "sourceRoot": "<WORKSPACE>/discussions/solo-20261114-09",
+      "stampStatus": "OK",
+      "stampMode": "in_place",
+      "staffClass": "primary",
+      "staffStatus": "not-indexed",
+      "notes": "meta round; not part of 13-round staff index; stamp pending",
+      "stampPath": "<WORKSPACE>/discussions/solo-20261114-09/.solo-round.json",
+      "stampTarget": "<WORKSPACE>/discussions/solo-20261114-09/.solo-round.json",
+      "staffThinkingId": "THINK-20261114-14"
+    },
+    {
+      "id": "SOLO-20261114-10",
+      "title": "思考维度/人才/咨询机制",
+      "aliases": [
+        "DISCRETE"
+      ],
+      "classification": "confirmed",
+      "source": [
+        "discussions/solo-20261114-10/BRIEF.md",
+        "reports/general-staff/THINKING-DIMENSIONS.json",
+        "reports/general-staff/THINKING-PLAYBOOK.md",
+        "reports/general-staff/TALENT-LEDGER.json",
+        "docs/general-staff/THINKING-CONSULTATION-PROTOCOL.md",
+        "reports/general-staff/STAFF-CONSULTATION-20261114-10.json"
+      ],
+      "anchor": "R15",
+      "branch": "feat/quiet-200 @ dcd9f93 (governance docs)",
+      "rejoin": "R16",
+      "strategy": "ANALYZE",
+      "secondaryStrategy": "GOVERN",
+      "status": "CLOSED",
+      "lifecycle": "CLOSED",
+      "gate": "24 dimensions; playbook; talent ledger; consultation protocol; 1/2-seat templates",
+      "qa": "Lead/QA",
+      "evidence": [
+        "reports/general-staff/THINKING-DIMENSIONS.json",
+        "reports/general-staff/THINKING-PLAYBOOK.md",
+        "reports/general-staff/TALENT-LEDGER.json",
+        "docs/general-staff/THINKING-CONSULTATION-PROTOCOL.md",
+        "templates/thinking-workflow.yaml",
+        "templates/thinking-workflow-2seat.yaml"
+      ],
+      "relatedMainRounds": [
+        "R15",
+        "R16"
+      ],
+      "relatedBranches": [],
+      "needsTreatment": false,
+      "disposition": "KEEP_CLOSED",
+      "owner": "Lead/QA",
+      "nextAction": "none; meta round closed; stamp pending next stamp pass",
+      "dispositionReason": "Dimensions/talent/consultation complete.",
+      "lastReviewedAt": "2026-11-14T01:01:00+08:00",
+      "sourceRoot": "<WORKSPACE>/discussions/solo-20261114-10",
+      "stampStatus": "OK",
+      "stampMode": "in_place",
+      "staffClass": "primary",
+      "staffStatus": "not-indexed",
+      "notes": "meta round; not part of 13-round staff index; stamp pending",
+      "stampPath": "<WORKSPACE>/discussions/solo-20261114-10/.solo-round.json",
+      "stampTarget": "<WORKSPACE>/discussions/solo-20261114-10/.solo-round.json",
+      "staffThinkingId": "THINK-20261114-15"
+    }
+  ],
+  "outOfScope": [
+    {
+      "ref": "QUIET-200",
+      "classification": "out-of-scope",
+      "reason": "child branch (feat/quiet-200), multi-round; not standalone",
+      "action": "handle under UX6-R15/QUIET-200 branch protocol; do not duplicate as SOLO",
+      "lastReviewedAt": "2026-11-14T00:31:00+08:00"
+    },
+    {
+      "ref": "UX6-R15",
+      "classification": "out-of-scope",
+      "reason": "parent branch (feat/r15-ux6), multi-round; not standalone",
+      "action": "handle under BRANCHING-PROTOCOL; SOLO can consume its results only",
+      "lastReviewedAt": "2026-11-14T00:31:00+08:00"
+    },
+    {
+      "ref": "reports/operations/*",
+      "classification": "out-of-scope",
+      "reason": "outputs/templates of STOP-SWEEP/INSERT-GUARD, not rounds",
+      "action": "reference only",
+      "lastReviewedAt": "2026-11-14T00:31:00+08:00"
+    },
+    {
+      "ref": "reports/branches/*",
+      "classification": "out-of-scope",
+      "reason": "branch ledger/sync artifacts, not rounds",
+      "action": "reference only",
+      "lastReviewedAt": "2026-11-14T00:31:00+08:00"
+    },
+    {
+      "ref": "reports/issues/*",
+      "classification": "out-of-scope",
+      "reason": "outputs of issue-intake/QUIET analysis, not rounds",
+      "action": "reference only",
+      "lastReviewedAt": "2026-11-14T00:31:00+08:00"
+    },
+    {
+      "ref": "reports/monitor/*",
+      "classification": "out-of-scope",
+      "reason": "output of monitor round; covered by SOLO-20261113-03",
+      "action": "reference only",
+      "lastReviewedAt": "2026-11-14T00:31:00+08:00"
+    },
+    {
+      "ref": "reports/R1..R7, reports/sctg/*",
+      "classification": "out-of-scope",
+      "reason": "formal 30-round / historical run artifacts",
+      "action": "formal round protocol only; do not register as SOLO",
+      "lastReviewedAt": "2026-11-14T00:31:00+08:00"
+    },
+    {
+      "ref": "reports/rounds/*",
+      "classification": "out-of-scope",
+      "reason": "standalone protocol/templates/registry themselves",
+      "action": "reference only",
+      "lastReviewedAt": "2026-11-14T00:31:00+08:00"
+    },
+    {
+      "ref": "discussions/quiet-200-20261114",
+      "classification": "out-of-scope",
+      "reason": "QUIET-200 branch analysis; not standalone",
+      "action": "branch protocol",
+      "lastReviewedAt": "2026-11-14T00:31:00+08:00"
+    },
+    {
+      "ref": "discussions/monitor-console-20261113",
+      "classification": "covered",
+      "reason": "covered by SOLO-20261113-03",
+      "action": "reference only",
+      "lastReviewedAt": "2026-11-14T00:31:00+08:00"
+    }
+  ],
+  "nextActions": [
+    {
+      "order": 1,
+      "action": "Stamp SOLO-09/10 (mirror or in-place) and regenerate collection/verify in a later stamp pass."
+    },
+    {
+      "order": 2,
+      "action": "Host copy-back 12 solo stamps + 12 staff-thinking mirrors."
+    },
+    {
+      "order": 3,
+      "action": "Use 24 dimensions/playbook/consultation protocol in next thinking workflow; independent talent review later."
+    },
+    {
+      "order": 4,
+      "action": "Execute SOLO-06 NEXT-STEP: fix B2/B3/base then FAST-RESPONSE independent QA."
+    },
+    {
+      "order": 5,
+      "action": "KEEP_CLOSED entries: reference only; no reopen."
+    }
+  ],
+  "review": {
+    "round": "SOLO-20261114-05",
+    "managedAt": "2026-11-14T00:31:00+08:00",
+    "dispositions": {
+      "KEEP_CLOSED": 8,
+      "PROMOTE_TO_BRANCH": 1,
+      "OUT_OF_SCOPE": 10
+    },
+    "note": "candidate fast-response resolved by branch plan (not created); all confirmed kept closed; out-of-scope unchanged."
+  },
+  "lastAudit": {
+    "round": "SOLO-20261114-06",
+    "at": "2026-11-14T00:43:00+08:00",
+    "worktreesClean": true,
+    "inconsistencies": 4,
+    "closed": true
+  },
+  "stampVerify": {
+    "at": "2026-11-14T01:02:00+08:00",
+    "ok": true,
+    "stamps": 15,
+    "inPlace": 13,
+    "mirror": 2,
+    "errors": 0,
+    "warnings": 2,
+    "note": "13 in-place + 2 mirror (SOLO-09/10)"
+  },
+  "staffIndex": {
+    "at": "2026-11-14T00:56:00+08:00",
+    "path": "reports/general-staff/THINKING-ROUNDS.json",
+    "indexed": 13,
+    "inPlace": 1,
+    "mirror": 12
+  },
+  "staffEvaluation": {
+    "at": "2026-11-14T00:58:00+08:00",
+    "path": "reports/general-staff/ROUND-EVALUATIONS.json",
+    "evaluated": 13,
+    "average": 42.0,
+    "talentCandidates": 8,
+    "type": "first-pass"
+  }
+}

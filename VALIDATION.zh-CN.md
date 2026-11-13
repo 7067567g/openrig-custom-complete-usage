@@ -51,6 +51,7 @@ Warnings: permission_policy absent; launch_posture=floor
 
 - 没有做 live 5-seat 执行；
 - 没有模型 token/成本测量；
+- 没有跑 benchmark；预算不可用，见 `process/BENCHMARK-STATUS.md`。
 - 没有 hybrid E2E 通过；
 - live 启动需要配置好的 OpenCode/DSH seat 和独立 `OPENRIG_HOME`。
 

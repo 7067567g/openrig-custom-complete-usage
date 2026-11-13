@@ -1,0 +1,126 @@
+{
+  "schema": "example-talent-ledger/v1",
+  "ledgerVersion": "v1.0.0",
+  "generatedAt": "2026-11-14T01:01:00+08:00",
+  "sourceEvaluations": "reports/general-staff/ROUND-EVALUATIONS.json",
+  "sourceIndex": "reports/general-staff/THINKING-ROUNDS.json",
+  "selectionType": "method-sample",
+  "notFinal": true,
+  "provisionalTalentCandidates": 8,
+  "methodSamples": [
+    {
+      "talentId": "TALENT-20261114-01",
+      "thinkingId": "THINK-20261114-07",
+      "sourceSoloId": "SOLO-20261114-02",
+      "title": "STOP-SWEEP 停止边界/收尾手册",
+      "score": 47,
+      "grade": "A",
+      "selected": true,
+      "selectionType": "method-sample",
+      "use": "full-round method sample: stop/closeout risk+decision+rollback",
+      "why": "high score + strong evidence/decision/closure",
+      "evidence": [
+        "reports/operations/STOP-SWEEP.md",
+        "reports/operations/STOP-SWEEP.json",
+        "docs/CLOSEOUT-MANUAL.md"
+      ],
+      "boundary": "命令多为草案；宿主 systemd/PID 未验证；不要直接执行破坏性命令",
+      "dimensionRefs": [
+        "riskRollback",
+        "failureModes",
+        "governanceOwnership",
+        "testingVerification"
+      ],
+      "strengths": [
+        "停止场景/冻结/禁止动作完整",
+        "三类分类+证据+回滚",
+        "QA 任务模板/手册标准版"
+      ],
+      "blindSpots": [
+        "沙箱无法验证宿主 systemd/PID",
+        "部分命令是草案未执行"
+      ]
+    },
+    {
+      "talentId": "TALENT-20261114-02",
+      "thinkingId": "THINK-20261114-05",
+      "sourceSoloId": "SOLO-20261113-04",
+      "title": "本地桥功能对比与取舍（老桥/新桥）",
+      "score": 46,
+      "grade": "A",
+      "selected": true,
+      "selectionType": "method-sample",
+      "use": "full-round method sample: comparison/decision matrix",
+      "why": "high score + breadth/alternatives/evidence",
+      "evidence": [
+        "reports/compare-20261113/COMPARISON-QUICK-REFERENCE.md",
+        "reports/compare-20261113/VERIFY-COMPARISON.md"
+      ],
+      "boundary": "只读分析，未做代码验证；旧桥语义可能变化",
+      "dimensionRefs": [
+        "alternativesTradeoffs",
+        "stakeholders",
+        "metricsMeasurement",
+        "secondOrderEffects"
+      ],
+      "strengths": [
+        "老/新桥能力矩阵与裁决",
+        "建议分级/不建议项清楚",
+        "证据/核查报告完整"
+      ],
+      "blindSpots": [
+        "只读分析，未做代码验证",
+        "部分能力依赖旧库/微信语义"
+      ]
+    }
+  ],
+  "runnerUp": {
+    "thinkingId": "THINK-20261114-01",
+    "sourceSoloId": "SOLO-20261026-01",
+    "title": "g3d overlay 使用场景/模式模拟复现",
+    "score": 45,
+    "grade": "A",
+    "selected": false,
+    "use": "simulation/acceptance method",
+    "boundary": "全部为推演，不是实测",
+    "dimensionRefs": [
+      "problemDefinition",
+      "unknownsBlindSpots",
+      "testingVerification"
+    ]
+  },
+  "notSelectedExamples": [
+    {
+      "thinkingId": "THINK-20261114-02",
+      "score": 44,
+      "reason": "evidence=3 (TARGET/UNVERIFIED), not enough for method sample; fix QA/base first"
+    },
+    {
+      "thinkingId": "THINK-20261114-04",
+      "score": 37,
+      "reason": "secondary/implementation-heavy; lower breadth/depth"
+    },
+    {
+      "thinkingId": "THINK-20261114-10",
+      "score": 35,
+      "reason": "ops/management-heavy; lower thinking breadth"
+    }
+  ],
+  "selectionCriteria": [
+    "totalScore>=40",
+    "evidence>=4",
+    "decisionQuality>=4",
+    "method reusability + boundary clarity"
+  ],
+  "limits": [
+    "first-pass evaluation; not independent audit",
+    "not a final talent decision",
+    "scores are not absolute truth",
+    "some source dirs are mirror-only"
+  ],
+  "next": [
+    "Use STOP/compare as method templates in next thinking workflow",
+    "Independent review of method samples",
+    "Dimension/talent analysis continues next round"
+  ]
+}

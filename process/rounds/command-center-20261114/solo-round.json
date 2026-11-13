@@ -1,0 +1,30 @@
+{
+  "schema": "example-solo-round-stamp/v1",
+  "stampVersion": "v1.0.0",
+  "id": "SOLO-20261114-07",
+  "aliases": [
+    "DISCRETE",
+    "SCATTERED"
+  ],
+  "title": "OpenRig 总指挥部（轮次集散中心）",
+  "strategy": "GOVERN+OPS",
+  "status": "CLOSED",
+  "anchor": "R15",
+  "rejoin": "R16",
+  "owner": "Lead/QA",
+  "registry": "<BRIDGE_REPO>/reports/rounds/STANDALONE-ROUNDS.json",
+  "source": [
+    "discussions/solo-20261114-07/BRIEF.md",
+    "docs/command-center/COMMAND-CENTER.md",
+    "reports/command-center/ROUND-REGISTRY.json",
+    "tools/round-command-center.mjs",
+    "reports/command-center/COMMAND-CENTER-VERIFY.md"
+  ],
+  "sourceRoot": "<WORKSPACE>/discussions/solo-20261114-07",
+  "stampTarget": "<WORKSPACE>/discussions/solo-20261114-07/.solo-round.json",
+  "stampPath": "<WORKSPACE>/discussions/solo-20261114-07/.solo-round.json",
+  "stampMode": "in_place",
+  "createdAt": "2026-11-13T16:49:06.578Z",
+  "updatedAt": "2026-11-13T16:52:45.239Z",
+  "notes": "stamp is primary truth; optional doc marker"
+}

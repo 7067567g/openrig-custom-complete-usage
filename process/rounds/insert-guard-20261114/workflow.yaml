@@ -1,0 +1,74 @@
+workflow:
+  id: insert-guard-20261114
+  version: 1
+  objective: >
+    商讨并定义总任务中途插入内容的标准流程：插入分类、插入点、默认排队策略、
+    硬中止条件、插入记录/ledger、QA 与 STOP-SWEEP 衔接、R15/R16 锚点兼容。
+    产出标准可复用协议和分析报告，不改产品代码。
+  target:
+    rig: monitor-lite
+  entry:
+    role: builder
+  exception_routing:
+    default: orchestrator
+    orchestrator_role: builder
+  coordination_terminal_turn_rule: hot_potato
+  roles:
+    builder:
+      preferred_targets: [main-builder@monitor-lite]
+  context_refs:
+    - <WORKSPACE>/discussions/insert-guard-20261114/BRIEF.md
+    - <BRIDGE_REPO>/docs/BRANCHING-PROTOCOL.md
+    - <BRIDGE_REPO>/docs/CLOSEOUT-MANUAL.md
+    - <BRIDGE_REPO>/docs/branches/UX6-R15.md
+    - <BRIDGE_REPO>/docs/branches/QUIET-200.md
+    - <BRIDGE_REPO>/docs/branches/REFERENCE-INDEX.md
+    - <BRIDGE_REPO>/reports/branches/SYNC-GUARD.md
+    - <BRIDGE_REPO>/reports/branches/SYNC-MANIFEST.json
+    - <BRIDGE_REPO>/reports/sctg/FORMAL-RUN-STATE.json
+  steps:
+    - id: i1_analysis
+      actor_role: builder
+      objective: >
+        只读输入，写：
+        bridge repo/reports/operations/MIDRUN-INSERTION.md
+        bridge repo/reports/operations/MIDRUN-INSERTION.json
+        必须：
+        1) 定义插入分类 CLARIFY / INLINE_EXTEND / NEXT_ROUND / SIDE_BRANCH / URGENT_STOP / GATE_CHANGE；
+        2) 定义每类的触发、允许动作、禁止动作、插入点、owner、证据和回归点；
+        3) 默认策略：不打断当前轮，新内容进 insertion queue，下一轮消费；
+        4) 硬中止条件：scope/gate/安全/数据/分支基线被破坏时走 STOP-SWEEP；
+        5) 定义插入记录字段（ID/来源/时间/anchor/current round/branch/scope/owner/status/decision/evidence）；
+        6) 与 QA、STOP-SWEEP、分支收敛、R15/R16 锚点的关系；
+        7) 给出 OpenRig 命令草案（rig send / queue create / workflow project / 不能做什么）。
+        完成后 handoff 到 i2_standard。
+      allowed_exits: [handoff, failed]
+    - id: i2_standard
+      actor_role: builder
+      objective: >
+        基于 i1，写标准可复用协议：
+        bridge repo/docs/MIDRUN-INSERTION-PROTOCOL.md
+        bridge repo/reports/operations/INSERTION-LEDGER-TEMPLATE.json
+        并更新：
+        bridge repo/docs/branches/REFERENCE-INDEX.md
+        bridge repo/docs/BRANCHING-PROTOCOL.md
+        要求：
+        - 协议是标准版、长期复用，不是本次个案；含版本号/维护者/变更记录/占位符/复用方法；
+        - 插入记录模板可复制到 reports/operations/insertions/<INSERT-ID>/；
+        - 明确“插入不是重写当前轮”：先记录，再决定 CLARIFY/INLINE_EXTEND/NEXT_ROUND/SIDE_BRANCH/URGENT_STOP/GATE_CHANGE；
+        - 明确 QA 何时介入、何时需要 STOP-SWEEP、何时可静默排队；
+        - 引用索引和分支协议增加双向链接。
+        完成后 done 关闭 packet。
+      allowed_exits: [done, failed]
+  invariants:
+    continuation_required: true
+    preserve_lineage: true
+    closure_required: true
+    allowed_exits: [waiting, handoff, done, failed]
+  loop_guards:
+    max_hops: 4
+    spawn_budget: 0
+  closure:
+    success: 中途插入标准协议、分析报告、ledger 模板和引用索引落盘。
+    degraded: 协议可用但部分命令/边界未验证，必须标注。
+    failed: 未产出文件或越界改产品代码。

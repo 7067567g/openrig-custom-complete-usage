@@ -1,0 +1,18 @@
+{
+  "schema": "example-staff-thinking/v1",
+  "stampVersion": "v1.0.0",
+  "thinkingId": "THINK-20261114-12",
+  "sourceSoloId": "SOLO-20261114-07",
+  "sourcePath": "<WORKSPACE>/discussions/solo-20261114-07",
+  "title": "OpenRig 总指挥部（轮次集散中心）",
+  "staffClass": "primary",
+  "strategy": "GOVERN+OPS",
+  "status": "CLOSED",
+  "owner": "Lead/QA",
+  "stampPath": "<WORKSPACE>/discussions/solo-20261114-07/.staff-thinking.json",
+  "stampTarget": "<WORKSPACE>/discussions/solo-20261114-07/.staff-thinking.json",
+  "stampMode": "in_place",
+  "createdAt": "2026-11-14T00:56:00+08:00",
+  "updatedAt": "2026-11-14T00:56:00+08:00",
+  "notes": "staff-thinking is an index supplement; do not modify .solo-round.json"
+}

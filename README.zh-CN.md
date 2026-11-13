@@ -14,6 +14,8 @@
 - **OpenRig + workflow 完整指引：** [`docs/OPENRIG-WORKFLOW-GUIDE.zh-CN.md`](docs/OPENRIG-WORKFLOW-GUIDE.zh-CN.md)
 - **LLM 常见用户误读速查：** [`docs/LLM-MISREAD-QUICKREF.zh-CN.md`](docs/LLM-MISREAD-QUICKREF.zh-CN.md)
 - **项目侧治理层**（总指挥部 / 总参谋部 / 单独轮 / 医护中心）：见主指引 §0.2。
+- **脱敏过程档案：** [`process/README.md`](process/README.md)——OpenRig 实践如何演进、关键决策、踩坑、轮次记录、trace 与来源说明。
+- **Benchmark 状态：** **因预算原因未跑**；见 [`process/BENCHMARK-STATUS.md`](process/BENCHMARK-STATUS.md)，不声称任何 benchmark 结果。
   - 默认说法：**“用 OpenRig 跑工作流。”** 最精确：**“用 OpenRig 执行 SCTG 工作流，单线跑。”**
 
 - 中英双语索引：[`docs/INDEX.md`](docs/INDEX.md)

@@ -1,0 +1,29 @@
+{
+  "schema": "example-solo-round-stamp/v1",
+  "stampVersion": "v1.0.0",
+  "id": "SOLO-20261114-09",
+  "aliases": [
+    "DISCRETE",
+    "SCATTERED"
+  ],
+  "title": "总参谋部与思考类单独轮索引",
+  "strategy": "GOVERN+ANALYZE",
+  "status": "CLOSED",
+  "anchor": "R15",
+  "rejoin": "R16",
+  "owner": "Lead/QA",
+  "registry": "<BRIDGE_REPO>/reports/rounds/STANDALONE-ROUNDS.json",
+  "source": [
+    "discussions/solo-20261114-09/BRIEF.md",
+    "docs/general-staff/GENERAL-STAFF.md",
+    "reports/general-staff/THINKING-ROUNDS.json",
+    "reports/general-staff/ROUND-EVALUATIONS.json"
+  ],
+  "sourceRoot": "<WORKSPACE>/discussions/solo-20261114-09",
+  "stampTarget": "<WORKSPACE>/discussions/solo-20261114-09/.solo-round.json",
+  "stampPath": "<WORKSPACE>/discussions/solo-20261114-09/.solo-round.json",
+  "stampMode": "in_place",
+  "createdAt": "2026-11-13T17:02:23.676Z",
+  "updatedAt": "2026-11-13T17:02:23.676Z",
+  "notes": "meta round; not part of 13-round staff index; stamp pending"
+}
