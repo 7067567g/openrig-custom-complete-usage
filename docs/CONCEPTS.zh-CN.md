@@ -8,7 +8,12 @@
 | 术语 | 在本仓库中的含义 |
 |---|---|
 | **Card** | 有界任务：输入、写范围、交付物、gate。 |
+| **Rig** | 一个 live team 拓扑：pods、seats、edges。 |
 | **Seat** | rig 中的一个 agent 身份；一次只接一张 active card。 |
+| **Qitem / packet** | 投递给 seat 的一条队列项。 |
+| **Workflow instance** | 一次 workflow spec 运行；有 frontier 和 step trail。 |
+| **Step** | workflow spec 的一个声明单元；不等于 round。 |
+| **Closure** | seat 报告 packet 结果（`done`、`failed`、`handoff` 等）。 |
 | **Submission** | 生产者结构化结果：summary、changed files、commands、evidence。 |
 | **Gate** | 确定性结构检查：schema、scope、evidence、command。 |
 | **Decision** | 不可逆动作的独立批准/replay 记录。 |

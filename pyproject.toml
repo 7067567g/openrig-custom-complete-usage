@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "openrig-custom-complete-usage"
-version = "0.1.7"
+version = "0.1.8"
 description = "Complete SCTG + workflow-group multi-round + OpenRig hybrid usage example"
 readme = "README.md"
 authors = [{name = "OpenRig usage contributors"}]

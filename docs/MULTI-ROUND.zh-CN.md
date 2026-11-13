@@ -1,4 +1,6 @@
 [English](MULTI-ROUND.md) | **简体中文**
+> 本文只讲 workflow-group 的 round。OpenRig 的 step/packet 和单线路径见 [`OPENRIG-WORKFLOW-GUIDE.zh-CN.md`](OPENRIG-WORKFLOW-GUIDE.zh-CN.md)。
+
 
 # 多轮工作流
 

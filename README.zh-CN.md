@@ -11,6 +11,8 @@
 
 ## 文档
 
+- **OpenRig + workflow 完整指引：** [`docs/OPENRIG-WORKFLOW-GUIDE.zh-CN.md`](docs/OPENRIG-WORKFLOW-GUIDE.zh-CN.md)
+
 - 中英双语索引：[`docs/INDEX.md`](docs/INDEX.md)
 - 脱敏控制面样例：[`examples/sanitized-run/`](examples/sanitized-run/)
 - 内存安全与 cgroup 限制：[`docs/MEMORY-SAFETY.zh-CN.md`](docs/MEMORY-SAFETY.zh-CN.md)

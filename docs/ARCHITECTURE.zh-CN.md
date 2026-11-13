@@ -1,4 +1,6 @@
 [English](ARCHITECTURE.md) | **简体中文**
+> 三层模型、step vs round、内存/并发见 [`OPENRIG-WORKFLOW-GUIDE.zh-CN.md`](OPENRIG-WORKFLOW-GUIDE.zh-CN.md)。
+
 
 # 架构
 

@@ -129,6 +129,8 @@ make test
 
 ## Documentation
 
+- **OpenRig + workflow complete guide:** [`docs/OPENRIG-WORKFLOW-GUIDE.md`](docs/OPENRIG-WORKFLOW-GUIDE.md)
+
 - Bilingual index: [`docs/INDEX.md`](docs/INDEX.md)
 - Sanitized control-plane sample: [`examples/sanitized-run/`](examples/sanitized-run/)
 - Three complete 12-round workflow cases: [`examples/round-cases/`](examples/round-cases/)

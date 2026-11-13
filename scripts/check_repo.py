@@ -14,6 +14,7 @@ REQUIRED = [
     "docs/ARCHITECTURE.md", "docs/ARCHITECTURE.zh-CN.md",
     "docs/MULTI-ROUND.md", "docs/MULTI-ROUND.zh-CN.md",
     "docs/OPENRIG.md", "docs/OPENRIG.zh-CN.md",
+    "docs/OPENRIG-WORKFLOW-GUIDE.md", "docs/OPENRIG-WORKFLOW-GUIDE.zh-CN.md",
     "docs/PUBLISHING.md", "docs/PUBLISHING.zh-CN.md",
     "docs/VERSIONING.md", "docs/VERSIONING.zh-CN.md",
     "docs/ENVIRONMENT.md", "docs/ENVIRONMENT.zh-CN.md",

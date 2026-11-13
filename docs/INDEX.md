@@ -6,6 +6,7 @@
 | Architecture | [ARCHITECTURE.md](ARCHITECTURE.md) | [ARCHITECTURE.zh-CN.md](ARCHITECTURE.zh-CN.md) |
 | Multi-round | [MULTI-ROUND.md](MULTI-ROUND.md) | [MULTI-ROUND.zh-CN.md](MULTI-ROUND.zh-CN.md) |
 | OpenRig | [OPENRIG.md](OPENRIG.md) | [OPENRIG.zh-CN.md](OPENRIG.zh-CN.md) |
+| **OpenRig + workflow guide** | [OPENRIG-WORKFLOW-GUIDE.md](OPENRIG-WORKFLOW-GUIDE.md) | [OPENRIG-WORKFLOW-GUIDE.zh-CN.md](OPENRIG-WORKFLOW-GUIDE.zh-CN.md) |
 | Publishing | [PUBLISHING.md](PUBLISHING.md) | [PUBLISHING.zh-CN.md](PUBLISHING.zh-CN.md) |
 | Versioning | [VERSIONING.md](VERSIONING.md) | [VERSIONING.zh-CN.md](VERSIONING.zh-CN.md) |
 | Environment | [ENVIRONMENT.md](ENVIRONMENT.md) | [ENVIRONMENT.zh-CN.md](ENVIRONMENT.zh-CN.md) |

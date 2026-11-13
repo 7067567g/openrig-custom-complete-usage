@@ -1,4 +1,6 @@
 [English](OPENRIG.md) | **简体中文**
+> 不熟悉 step/round 区别和单线 `rig workflow run`？先读 [`OPENRIG-WORKFLOW-GUIDE.zh-CN.md`](OPENRIG-WORKFLOW-GUIDE.zh-CN.md)。
+
 
 # OpenRig 集成
 

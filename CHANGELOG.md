@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.8
+
+- Added bilingual `docs/OPENRIG-WORKFLOW-GUIDE.md` / `.zh-CN.md`:
+  one-page decision table, three-layer model, step-vs-round, one-line
+  `rig workflow run`, queue closure, preflight side effects, memory/concurrency,
+  and troubleshooting matrix.
+- Linked the guide from README, QUICKSTART, OPENRIG, ARCHITECTURE, and
+  MULTI-ROUND.
+- Expanded CONCEPTS with rig, qitem/packet, workflow instance, step, and closure.
+- Tests: 154 passed, 1 skipped; content audit: 22 pairs, 11 examples.
+
+
 ## 0.1.7
 
 - Added global `dsh.slice` example (8G/9G/2G).

@@ -1,4 +1,6 @@
 **English** | [简体中文](ARCHITECTURE.zh-CN.md)
+> For the three-layer model, step vs round, and memory/concurrency, see [`OPENRIG-WORKFLOW-GUIDE.md`](OPENRIG-WORKFLOW-GUIDE.md).
+
 
 # Architecture
 

@@ -1,4 +1,6 @@
 **English** | [简体中文](OPENRIG.zh-CN.md)
+> New to the step/round distinction and the one-line `rig workflow run` path? Start with [`OPENRIG-WORKFLOW-GUIDE.md`](OPENRIG-WORKFLOW-GUIDE.md).
+
 
 # OpenRig integration
 

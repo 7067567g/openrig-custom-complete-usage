@@ -1,4 +1,6 @@
 **English** | [简体中文](QUICKSTART.zh-CN.md)
+> Need the one-line OpenRig path or the step/round mental model? Read [`OPENRIG-WORKFLOW-GUIDE.md`](OPENRIG-WORKFLOW-GUIDE.md).
+
 
 # Quickstart
 

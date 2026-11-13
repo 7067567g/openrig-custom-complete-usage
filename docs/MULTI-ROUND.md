@@ -1,4 +1,6 @@
 **English** | [简体中文](MULTI-ROUND.zh-CN.md)
+> This document covers workflow-group rounds. For OpenRig steps, packets, and the one-line path, see [`OPENRIG-WORKFLOW-GUIDE.md`](OPENRIG-WORKFLOW-GUIDE.md).
+
 
 # Multi-round workflow
 

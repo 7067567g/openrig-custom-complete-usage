@@ -1,4 +1,6 @@
 [English](QUICKSTART.md) | **简体中文**
+> 需要单线 OpenRig 路径或 step/round 心智模型？读 [`OPENRIG-WORKFLOW-GUIDE.zh-CN.md`](OPENRIG-WORKFLOW-GUIDE.zh-CN.md)。
+
 
 # 快速开始
 
