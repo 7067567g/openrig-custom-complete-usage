@@ -5,3 +5,5 @@
 - [01 — 渲染与 bridge 冒烟](01-render-smoke.zh-CN.md)：12 个独立 OpenRig bundle
   的 render、bridge doctor、workflow validate 和 rig up --plan。
 - [03 — cgroup page cache 与主机 OOM](03-memory-incident.zh-CN.md)：为什么 agent terminal 会显示 4–11G，以及如何限制。
+- [04 — 跨三仓的文档治理](04-multi-repo-docs-governance.zh-CN.md)：盘点→建图→入口校正，以及收口后才暴露的问题。
+- [05 — 返工环与微工作流](05-openrig-rework-loops.zh-CN.md)：一次通过的修补，与一次评审失败后返工的修补。

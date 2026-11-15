@@ -12,6 +12,7 @@ It is not a product manual. Start with the main guide:
 ## Reading order
 
 1. [`STORY.md`](STORY.md) — how the practice evolved, in narrative form.
+1. [`ideas/2026-11-openrig-ideas.md`](ideas/2026-11-openrig-ideas.md) — distilled ideas with state, next action and risk.
 2. [`DECISIONS.md`](DECISIONS.md) — the decisions that shaped it and why.
 3. [`PITFALLS.md`](PITFALLS.md) — concrete mistakes, symptoms, and fixes.
 4. [`BENCHMARK-STATUS.md`](BENCHMARK-STATUS.md) — why benchmark tests were not run.

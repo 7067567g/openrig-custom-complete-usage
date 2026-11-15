@@ -4,6 +4,9 @@
 
 **A complete, runnable example of SCTG + workflow-group multi-round orchestration + OpenRig hybrid execution.**
 
+> **文档地图：** 使用入口见 [DOCS-MAP.md](DOCS-MAP.md)；跨仓总图见 团队内部 KB（私有，不随本仓发布）。
+> **改道：** 本仓是 sanitized 使用/运维示例，**不是源码开发文档**；源码行为以独立的源码线仓为准（不随本仓发布）。
+
 This repository is the "full usage" companion to the distilled
 [`SCTG-public`](https://github.com/7067567g/SCTG-public) reference kit:
 
@@ -142,6 +145,7 @@ make test
   - Default ask: **“用 OpenRig 跑工作流。”** Precise ask: **“用 OpenRig 执行 SCTG 工作流，单线跑。”**
 
 - Bilingual index: [`docs/INDEX.md`](docs/INDEX.md)
+- Docs checks: `make doc` runs `scripts/doc_consistency.py --check` — index coverage, bilingual pairs, documented paths, and the OpenRig mechanism facts this guide quotes (workflow exit kinds, closure reasons) checked against the official source when it is reachable (`OPENRIG_SOURCE_ROOT`), otherwise reported as UNKNOWN.
 - Sanitized control-plane sample: [`examples/sanitized-run/`](examples/sanitized-run/)
 - Three complete 12-round workflow cases: [`examples/round-cases/`](examples/round-cases/)
 - Memory safety and cgroup limits: [`docs/MEMORY-SAFETY.md`](docs/MEMORY-SAFETY.md)

@@ -2,6 +2,8 @@
 
 This repository is a public, sanitized usage example.
 
+> **文档地图：** 使用入口见 [DOCS-MAP.md](DOCS-MAP.md)；跨仓总图见 团队内部 KB（私有，不随本仓发布）。
+
 ## Rules for agents working here
 
 1. Never add real credentials, tokens, cookies, or `.dsh` auth files.

@@ -6,3 +6,5 @@
   rendered, checked with `openrig_bridge.py doctor`, `rig workflow validate`, and
   `rig up --plan`.
 - [03 — cgroup page cache and a host OOM](03-memory-incident.md): why an agent terminal can show 4–11G, and how to bound it.
+- [04 — Documentation governance across three repositories](04-multi-repo-docs-governance.md): inventory → maps → entry correction, and what broke after closing.
+- [05 — Rework loops and micro-workflows](05-openrig-rework-loops.md): one patch that passed first time, one that failed review and was reworked.
